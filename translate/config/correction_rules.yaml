@@ -1,0 +1,47 @@
+artifacts:
+  patterns:
+    - "BMADPROTECT[0-9]*End"
+    - "BADPROTECT[0-9]*"
+    - "BMADPROTECT[0-9]*"
+  action: "remove"
+  description: "Remove artefatos de proteção deixados pelo processo de tradução"
+
+formatting:
+  headers:
+    fix_spacing: true
+    normalize_levels: true
+    description: "Corrige espaçamento em headers (## Title ao invés de ##  Title)"
+  
+  lists:
+    fix_indentation: true
+    preserve_markers: true
+    description: "Corrige indentação de listas mantendo marcadores"
+  
+  tables:
+    preserve_structure: true
+    fix_alignment: true
+    description: "Preserva estrutura de tabelas e corrige alinhamento"
+  
+  code_blocks:
+    preserve_content: true
+    fix_fences: true
+    description: "Preserva conteúdo de blocos de código e corrige cercas"
+
+encoding:
+  target: "utf-8"
+  normalize_unicode: true
+  fix_special_chars: true
+  description: "Normaliza encoding para UTF-8 e corrige caracteres especiais"
+
+translation:
+  preserve_emojis: true
+  preserve_hashtags: true
+  preserve_code: true
+  preserve_urls: true
+  description: "Preserva elementos especiais durante tradução"
+
+validation:
+  check_completeness: true
+  check_formatting: true
+  check_encoding: true
+  description: "Validações a executar após correções"

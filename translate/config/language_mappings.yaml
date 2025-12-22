@@ -1,0 +1,172 @@
+# Mapeamentos de idiomas suportados pelo BMAD Translation System
+
+# Configurações de idiomas suportados
+languages:
+  # Inglês (source)
+  en:
+    name: "English"
+    code: "en"
+    argos_code: "en"
+    languagetool_code: "en-US"
+    is_source: true
+    
+  # Português (target principal)
+  pt:
+    name: "Português"
+    code: "pt"
+    argos_code: "pt"
+    languagetool_code: "pt-BR"
+    is_target: true
+    
+  # Espanhol
+  es:
+    name: "Español"
+    code: "es"
+    argos_code: "es"
+    languagetool_code: "es-ES"
+    is_target: true
+    
+  # Francês
+  fr:
+    name: "Français"
+    code: "fr"
+    argos_code: "fr"
+    languagetool_code: "fr"
+    is_target: true
+    
+  # Alemão
+  de:
+    name: "Deutsch"
+    code: "de"
+    argos_code: "de"
+    languagetool_code: "de"
+    is_target: true
+    
+  # Italiano
+  it:
+    name: "Italiano"
+    code: "it"
+    argos_code: "it"
+    languagetool_code: "it"
+    is_target: true
+
+# Pares de tradução suportados
+translation_pairs:
+  # Pares com suporte completo
+  en-pt:
+    source: "en"
+    target: "pt"
+    description: "Inglês para Português"
+    supported_by: ["argos"]
+    
+  en-es:
+    source: "en"
+    target: "es"
+    description: "Inglês para Espanhol"
+    supported_by: ["argos"]
+    
+  en-fr:
+    source: "en"
+    target: "fr"
+    description: "Inglês para Francês"
+    supported_by: ["argos"]
+    
+  en-de:
+    source: "en"
+    target: "de"
+    description: "Inglês para Alemão"
+    supported_by: ["argos"]
+    
+  en-it:
+    source: "en"
+    target: "it"
+    description: "Inglês para Italiano"
+    supported_by: ["argos"]
+
+# Configurações de refinamento por idioma
+refinement_settings:
+  pt:
+    languagetool_code: "pt-BR"
+    refinement_rules:
+    refinement_rules:
+      - "grammar"
+      - "spelling"
+      - "style"
+    exceptions:
+      # Palavras técnicas que não devem ser corrigidas
+      technical_terms:
+        - "workflow"
+        - "stakeholder"
+        - "backlog"
+        - "sprint"
+        - "scrum"
+        - "kanban"
+        - "devops"
+        - "pipeline"
+        - "framework"
+        - "bug"
+        - "feature"
+        - "setup"
+        - "deploy"
+        - "merge"
+        - "branch"
+      technical_terms:
+        - "workflow"
+        - "stakeholder"
+        - "backlog"
+        - "sprint"
+        - "scrum"
+        - "kanban"
+        - "devops"
+        - "pipeline"
+        
+  es:
+    languagetool_code: "es-ES"
+    refinement_rules:
+      - "grammar"
+      - "spelling"
+      
+  fr:
+    languagetool_code: "fr"
+    refinement_rules:
+      - "grammar"
+      - "spelling"
+      
+  de:
+    languagetool_code: "de"
+    refinement_rules:
+      - "grammar"
+      - "spelling"
+      
+  it:
+    languagetool_code: "it"
+    refinement_rules:
+      - "grammar"
+      - "spelling"
+
+# Sufixos de arquivo por idioma
+file_suffixes:
+  en: "_en"
+  pt: "_pt-br"
+  es: "_es"
+  fr: "_fr"
+  de: "_de"
+  it: "_it"
+
+# Configurações regionais específicas
+regional_variants:
+  pt:
+    pt-PT:
+      name: "Português de Portugal"
+      default: true
+    pt-BR:
+      name: "Português do Brasil"
+      file_suffix: "_pt-br"
+      
+  en:
+    en-US:
+      name: "American English"
+      default: true
+    en-GB:
+      name: "British English"
+      file_suffix: "_en-gb"

@@ -1,0 +1,1142 @@
+{
+  "_bmad/bmm/data/README.md": {
+    "hash": "947a4255184a8b1d327cbb7d8d7d9c0d",
+    "translated_file": "_bmad/bmm/data/README_pt-br.md",
+    "timestamp": 1766337521.7822728
+  },
+  "_bmad/bmm/data/documentation-standards.md": {
+    "hash": "bfd13ecc81e1146cf502aee16abd6cf9",
+    "translated_file": "_bmad/bmm/data/documentation-standards_pt-br.md",
+    "timestamp": 1766337521.7822728
+  },
+  "_bmad/bmm/data/project-context-template.md": {
+    "hash": "0d40c792c7d3665a38c214834f66bc9a",
+    "translated_file": "_bmad/bmm/data/project-context-template_pt-br.md",
+    "timestamp": 1766337521.7832727
+  },
+  "_bmad/bmm/docs/README.md": {
+    "hash": "63f4a9545e53f7cf289eb743bc127974",
+    "translated_file": "_bmad/bmm/docs/README_pt-br.md",
+    "timestamp": 1766337521.7832727
+  },
+  "_bmad/bmm/docs/agents-guide.md": {
+    "hash": "03f1e339bc5caca56a50c62612003553",
+    "translated_file": "_bmad/bmm/docs/agents-guide_pt-br.md",
+    "timestamp": 1766337521.7832727
+  },
+  "_bmad/bmm/docs/bmad-quick-flow.md": {
+    "hash": "77759b45706c32adce7993bc49f18d82",
+    "translated_file": "_bmad/bmm/docs/bmad-quick-flow_pt-br.md",
+    "timestamp": 1766337521.7842727
+  },
+  "_bmad/bmm/docs/brownfield-guide.md": {
+    "hash": "e963db762186c67115fa79d04ed29466",
+    "translated_file": "_bmad/bmm/docs/brownfield-guide_pt-br.md",
+    "timestamp": 1766337521.7842727
+  },
+  "_bmad/bmm/docs/enterprise-agentic-development.md": {
+    "hash": "f6ad56c527f7745ee05cd2ffbe3af5a5",
+    "translated_file": "_bmad/bmm/docs/enterprise-agentic-development_pt-br.md",
+    "timestamp": 1766337521.7852728
+  },
+  "_bmad/bmm/docs/faq.md": {
+    "hash": "c9809f775c7ed17c6e82b4bc1632e84b",
+    "translated_file": "_bmad/bmm/docs/faq_pt-br.md",
+    "timestamp": 1766337521.7852728
+  },
+  "_bmad/bmm/docs/glossary.md": {
+    "hash": "8d75fadcf72f858efb47eacc239466d2",
+    "translated_file": "_bmad/bmm/docs/glossary_pt-br.md",
+    "timestamp": 1766337521.7852728
+  },
+  "_bmad/bmm/docs/party-mode.md": {
+    "hash": "ae0c5885598f0808dbe12b899b265051",
+    "translated_file": "_bmad/bmm/docs/party-mode_pt-br.md",
+    "timestamp": 1766337521.7872727
+  },
+  "_bmad/bmm/docs/quick-flow-solo-dev.md": {
+    "hash": "1f558259e826ae4f3682f5a798f9a819",
+    "translated_file": "_bmad/bmm/docs/quick-flow-solo-dev_pt-br.md",
+    "timestamp": 1766337521.7882729
+  },
+  "_bmad/bmm/docs/quick-spec-flow.md": {
+    "hash": "55d72c5716f4c3b4b4fcceb17032adad",
+    "translated_file": "_bmad/bmm/docs/quick-spec-flow_pt-br.md",
+    "timestamp": 1766337521.7882729
+  },
+  "_bmad/bmm/docs/quick-start.md": {
+    "hash": "faf1b2566b050130f81a71241d9e4b63",
+    "translated_file": "_bmad/bmm/docs/quick-start_pt-br.md",
+    "timestamp": 1766337521.7882729
+  },
+  "_bmad/bmm/docs/scale-adaptive-system.md": {
+    "hash": "e4cbd1c000e200376a20d7444fae0e2b",
+    "translated_file": "_bmad/bmm/docs/scale-adaptive-system_pt-br.md",
+    "timestamp": 1766337521.7892728
+  },
+  "_bmad/bmm/docs/test-architecture.md": {
+    "hash": "b03cffc965360c9c2a89e503cb99c4ce",
+    "translated_file": "_bmad/bmm/docs/test-architecture_pt-br.md",
+    "timestamp": 1766337521.7892728
+  },
+  "_bmad/bmm/docs/troubleshooting.md": {
+    "hash": "8b18d4e75ec1e56cf8ac5568c0efce91",
+    "translated_file": "_bmad/bmm/docs/troubleshooting_pt-br.md",
+    "timestamp": 1766337521.7892728
+  },
+  "_bmad/bmm/docs/workflow-architecture-reference.md": {
+    "hash": "d88a865b5a823be4dc8712d1f3972a45",
+    "translated_file": "_bmad/bmm/docs/workflow-architecture-reference_pt-br.md",
+    "timestamp": 1766337521.7892728
+  },
+  "_bmad/bmm/docs/workflow-document-project-reference.md": {
+    "hash": "3d124dde4445a8bb701a5ab738c4e489",
+    "translated_file": "_bmad/bmm/docs/workflow-document-project-reference_pt-br.md",
+    "timestamp": 1766337521.7902727
+  },
+  "_bmad/bmm/docs/workflows-analysis.md": {
+    "hash": "63936d8d3f698945bfcd8c9e78a20b42",
+    "translated_file": "_bmad/bmm/docs/workflows-analysis_pt-br.md",
+    "timestamp": 1766337521.7902727
+  },
+  "_bmad/bmm/docs/workflows-implementation.md": {
+    "hash": "9f01fdd88572547bb5d095a8d238a226",
+    "translated_file": "_bmad/bmm/docs/workflows-implementation_pt-br.md",
+    "timestamp": 1766337521.7902727
+  },
+  "_bmad/bmm/docs/workflows-planning.md": {
+    "hash": "b56da3566cd1c5c5156dd790bdc192a5",
+    "translated_file": "_bmad/bmm/docs/workflows-planning_pt-br.md",
+    "timestamp": 1766337521.7902727
+  },
+  "_bmad/bmm/docs/workflows-solutioning.md": {
+    "hash": "7e47b2e7294527913f33a0a4b2ba4405",
+    "translated_file": "_bmad/bmm/docs/workflows-solutioning_pt-br.md",
+    "timestamp": 1766337521.7912729
+  },
+  "_bmad/bmm/workflows/1-analysis/create-product-brief/steps/step-01-init.md": {
+    "hash": "0f9738b8701c02216524ad95f7039ea8",
+    "translated_file": "_bmad/bmm/workflows/1-analysis/create-product-brief/steps/step-01-init_pt-br.md",
+    "timestamp": 1766337521.8022728
+  },
+  "_bmad/bmm/workflows/1-analysis/create-product-brief/steps/step-01b-continue.md": {
+    "hash": "f101392bf73739359ddcb009470bcb08",
+    "translated_file": "_bmad/bmm/workflows/1-analysis/create-product-brief/steps/step-01b-continue_pt-br.md",
+    "timestamp": 1766337521.803273
+  },
+  "_bmad/bmm/workflows/1-analysis/create-product-brief/steps/step-02-vision.md": {
+    "hash": "8f6f1d8f67dabf2b4dfc62b0acd0f38a",
+    "translated_file": "_bmad/bmm/workflows/1-analysis/create-product-brief/steps/step-02-vision_pt-br.md",
+    "timestamp": 1766337521.803273
+  },
+  "_bmad/bmm/workflows/1-analysis/create-product-brief/steps/step-03-users.md": {
+    "hash": "fdd88265822e74c9ab5740f045e51b07",
+    "translated_file": "_bmad/bmm/workflows/1-analysis/create-product-brief/steps/step-03-users_pt-br.md",
+    "timestamp": 1766337521.803273
+  },
+  "_bmad/bmm/workflows/1-analysis/create-product-brief/steps/step-04-metrics.md": {
+    "hash": "586e0bf5f7375545031186764403c41e",
+    "translated_file": "_bmad/bmm/workflows/1-analysis/create-product-brief/steps/step-04-metrics_pt-br.md",
+    "timestamp": 1766337521.804273
+  },
+  "_bmad/bmm/workflows/1-analysis/create-product-brief/steps/step-05-scope.md": {
+    "hash": "8c48eaf518486677ed320155b0eb1ef5",
+    "translated_file": "_bmad/bmm/workflows/1-analysis/create-product-brief/steps/step-05-scope_pt-br.md",
+    "timestamp": 1766337521.804273
+  },
+  "_bmad/bmm/workflows/1-analysis/create-product-brief/steps/step-06-complete.md": {
+    "hash": "7d404e9d2de2d481bd4dc1449814ecc5",
+    "translated_file": "_bmad/bmm/workflows/1-analysis/create-product-brief/steps/step-06-complete_pt-br.md",
+    "timestamp": 1766337521.804273
+  },
+  "_bmad/bmm/workflows/1-analysis/create-product-brief/product-brief.template.md": {
+    "hash": "39e0f990ccd2e388b4fba8ee9671a648",
+    "translated_file": "_bmad/bmm/workflows/1-analysis/create-product-brief/product-brief.template_pt-br.md",
+    "timestamp": 1766337521.8012729
+  },
+  "_bmad/bmm/workflows/1-analysis/create-product-brief/workflow.md": {
+    "hash": "582d4db2876809b529c7b05613ff7b2b",
+    "translated_file": "_bmad/bmm/workflows/1-analysis/create-product-brief/workflow_pt-br.md",
+    "timestamp": 1766337521.8052728
+  },
+  "_bmad/bmm/workflows/1-analysis/research/domain-steps/step-01-init.md": {
+    "hash": "68d0aa7d21eff6197314a6f8a7032a5c",
+    "translated_file": "_bmad/bmm/workflows/1-analysis/research/domain-steps/step-01-init_pt-br.md",
+    "timestamp": 1766337521.8052728
+  },
+  "_bmad/bmm/workflows/1-analysis/research/domain-steps/step-02-domain-analysis.md": {
+    "hash": "d5bd5c378824be401dcb7498ec2e4f51",
+    "translated_file": "_bmad/bmm/workflows/1-analysis/research/domain-steps/step-02-domain-analysis_pt-br.md",
+    "timestamp": 1766337521.8052728
+  },
+  "_bmad/bmm/workflows/1-analysis/research/domain-steps/step-03-competitive-landscape.md": {
+    "hash": "7526a2aa63b31e1c8d8713d96a59660a",
+    "translated_file": "_bmad/bmm/workflows/1-analysis/research/domain-steps/step-03-competitive-landscape_pt-br.md",
+    "timestamp": 1766337521.8052728
+  },
+  "_bmad/bmm/workflows/1-analysis/research/domain-steps/step-04-regulatory-focus.md": {
+    "hash": "eed3e2ff12e32a1fdc545573fa884c84",
+    "translated_file": "_bmad/bmm/workflows/1-analysis/research/domain-steps/step-04-regulatory-focus_pt-br.md",
+    "timestamp": 1766337521.8062727
+  },
+  "_bmad/bmm/workflows/1-analysis/research/domain-steps/step-05-technical-trends.md": {
+    "hash": "3f4a0d981af15847ef641f8d10d8b489",
+    "translated_file": "_bmad/bmm/workflows/1-analysis/research/domain-steps/step-05-technical-trends_pt-br.md",
+    "timestamp": 1766337521.8062727
+  },
+  "_bmad/bmm/workflows/1-analysis/research/domain-steps/step-06-research-synthesis.md": {
+    "hash": "83294bd444104494dd9ff7ff9c8d4630",
+    "translated_file": "_bmad/bmm/workflows/1-analysis/research/domain-steps/step-06-research-synthesis_pt-br.md",
+    "timestamp": 1766337521.8062727
+  },
+  "_bmad/bmm/workflows/1-analysis/research/market-steps/step-01-init.md": {
+    "hash": "fa665b342ffd577abba8aeab4c70c7a5",
+    "translated_file": "_bmad/bmm/workflows/1-analysis/research/market-steps/step-01-init_pt-br.md",
+    "timestamp": 1766337521.8062727
+  },
+  "_bmad/bmm/workflows/1-analysis/research/market-steps/step-02-customer-behavior.md": {
+    "hash": "ec0133f13b49356a9b1dfdf82340ed11",
+    "translated_file": "_bmad/bmm/workflows/1-analysis/research/market-steps/step-02-customer-behavior_pt-br.md",
+    "timestamp": 1766337521.8062727
+  },
+  "_bmad/bmm/workflows/1-analysis/research/market-steps/step-02-customer-insights.md": {
+    "hash": "a4d549c619bc5765dbcba6dab69191ff",
+    "translated_file": "_bmad/bmm/workflows/1-analysis/research/market-steps/step-02-customer-insights_pt-br.md",
+    "timestamp": 1766337521.807273
+  },
+  "_bmad/bmm/workflows/1-analysis/research/market-steps/step-03-customer-pain-points.md": {
+    "hash": "ae2458e1d414df3f73e5ed4c13d0b43e",
+    "translated_file": "_bmad/bmm/workflows/1-analysis/research/market-steps/step-03-customer-pain-points_pt-br.md",
+    "timestamp": 1766337521.807273
+  },
+  "_bmad/bmm/workflows/1-analysis/research/market-steps/step-04-customer-decisions.md": {
+    "hash": "582c26b6a06f7fc54d42b37aa08bddad",
+    "translated_file": "_bmad/bmm/workflows/1-analysis/research/market-steps/step-04-customer-decisions_pt-br.md",
+    "timestamp": 1766337521.807273
+  },
+  "_bmad/bmm/workflows/1-analysis/research/market-steps/step-05-competitive-analysis.md": {
+    "hash": "548402e21456fd7eaefbfb1ce7db8119",
+    "translated_file": "_bmad/bmm/workflows/1-analysis/research/market-steps/step-05-competitive-analysis_pt-br.md",
+    "timestamp": 1766337521.807273
+  },
+  "_bmad/bmm/workflows/1-analysis/research/market-steps/step-06-research-completion.md": {
+    "hash": "01f31e0c9debaad7d2019cad6a200d36",
+    "translated_file": "_bmad/bmm/workflows/1-analysis/research/market-steps/step-06-research-completion_pt-br.md",
+    "timestamp": 1766337521.8082728
+  },
+  "_bmad/bmm/workflows/1-analysis/research/technical-steps/step-01-init.md": {
+    "hash": "096c5abd5d47390d25ad74394a452687",
+    "translated_file": "_bmad/bmm/workflows/1-analysis/research/technical-steps/step-01-init_pt-br.md",
+    "timestamp": 1766337521.8082728
+  },
+  "_bmad/bmm/workflows/1-analysis/research/technical-steps/step-02-technical-overview.md": {
+    "hash": "6b82d296b31dfa046c33ca9b08850b48",
+    "translated_file": "_bmad/bmm/workflows/1-analysis/research/technical-steps/step-02-technical-overview_pt-br.md",
+    "timestamp": 1766337521.8082728
+  },
+  "_bmad/bmm/workflows/1-analysis/research/technical-steps/step-03-integration-patterns.md": {
+    "hash": "4ad907b6ef7cad4a8c71786cb6319dcb",
+    "translated_file": "_bmad/bmm/workflows/1-analysis/research/technical-steps/step-03-integration-patterns_pt-br.md",
+    "timestamp": 1766337521.8092728
+  },
+  "_bmad/bmm/workflows/1-analysis/research/technical-steps/step-04-architectural-patterns.md": {
+    "hash": "7adb54d153f17607d99d1958473ac1aa",
+    "translated_file": "_bmad/bmm/workflows/1-analysis/research/technical-steps/step-04-architectural-patterns_pt-br.md",
+    "timestamp": 1766337521.8092728
+  },
+  "_bmad/bmm/workflows/1-analysis/research/technical-steps/step-05-implementation-research.md": {
+    "hash": "7995ac293ea580108e378f7098072a6d",
+    "translated_file": "_bmad/bmm/workflows/1-analysis/research/technical-steps/step-05-implementation-research_pt-br.md",
+    "timestamp": 1766337521.8092728
+  },
+  "_bmad/bmm/workflows/1-analysis/research/technical-steps/step-06-research-synthesis.md": {
+    "hash": "0439b142620d80565989a1f6968fe36f",
+    "translated_file": "_bmad/bmm/workflows/1-analysis/research/technical-steps/step-06-research-synthesis_pt-br.md",
+    "timestamp": 1766337521.810273
+  },
+  "_bmad/bmm/workflows/1-analysis/research/research.template.md": {
+    "hash": "61b77ce9d35294a52646316a4bf2b60e",
+    "translated_file": "_bmad/bmm/workflows/1-analysis/research/research.template_pt-br.md",
+    "timestamp": 1766337521.8082728
+  },
+  "_bmad/bmm/workflows/1-analysis/research/workflow.md": {
+    "hash": "b21c36a403da6592e63016da6e7f8345",
+    "translated_file": "_bmad/bmm/workflows/1-analysis/research/workflow_pt-br.md",
+    "timestamp": 1766337521.810273
+  },
+  "_bmad/bmm/workflows/2-plan-workflows/create-ux-design/steps/step-01-init.md": {
+    "hash": "34a4516841e99ee152deb3fea46f8a85",
+    "translated_file": "_bmad/bmm/workflows/2-plan-workflows/create-ux-design/steps/step-01-init_pt-br.md",
+    "timestamp": 1766337521.810273
+  },
+  "_bmad/bmm/workflows/2-plan-workflows/create-ux-design/steps/step-01b-continue.md": {
+    "hash": "6c3a88204f18a5335a608cd79ddade5b",
+    "translated_file": "_bmad/bmm/workflows/2-plan-workflows/create-ux-design/steps/step-01b-continue_pt-br.md",
+    "timestamp": 1766337521.8112729
+  },
+  "_bmad/bmm/workflows/2-plan-workflows/create-ux-design/steps/step-02-discovery.md": {
+    "hash": "792523d1ba1685a3a2c4e78cb9677c91",
+    "translated_file": "_bmad/bmm/workflows/2-plan-workflows/create-ux-design/steps/step-02-discovery_pt-br.md",
+    "timestamp": 1766337521.8122728
+  },
+  "_bmad/bmm/workflows/2-plan-workflows/create-ux-design/steps/step-03-core-experience.md": {
+    "hash": "a5846c383f4145b5e29a686725f4bb6c",
+    "translated_file": "_bmad/bmm/workflows/2-plan-workflows/create-ux-design/steps/step-03-core-experience_pt-br.md",
+    "timestamp": 1766337521.813273
+  },
+  "_bmad/bmm/workflows/2-plan-workflows/create-ux-design/steps/step-04-emotional-response.md": {
+    "hash": "0e6559ee720c5ee261c90ff8c2fce84f",
+    "translated_file": "_bmad/bmm/workflows/2-plan-workflows/create-ux-design/steps/step-04-emotional-response_pt-br.md",
+    "timestamp": 1766337521.813273
+  },
+  "_bmad/bmm/workflows/2-plan-workflows/create-ux-design/steps/step-05-inspiration.md": {
+    "hash": "4ec1c4a46873cbcb071a82d07c7a4719",
+    "translated_file": "_bmad/bmm/workflows/2-plan-workflows/create-ux-design/steps/step-05-inspiration_pt-br.md",
+    "timestamp": 1766337521.813273
+  },
+  "_bmad/bmm/workflows/2-plan-workflows/create-ux-design/steps/step-06-design-system.md": {
+    "hash": "e9ee0655dfaec3908669d922ce7029cb",
+    "translated_file": "_bmad/bmm/workflows/2-plan-workflows/create-ux-design/steps/step-06-design-system_pt-br.md",
+    "timestamp": 1766337521.8142729
+  },
+  "_bmad/bmm/workflows/2-plan-workflows/create-ux-design/steps/step-07-defining-experience.md": {
+    "hash": "7d2055f651b7d0869327b5589254d00a",
+    "translated_file": "_bmad/bmm/workflows/2-plan-workflows/create-ux-design/steps/step-07-defining-experience_pt-br.md",
+    "timestamp": 1766337521.8142729
+  },
+  "_bmad/bmm/workflows/2-plan-workflows/create-ux-design/steps/step-08-visual-foundation.md": {
+    "hash": "3e660f29c1431f9defc9f673101df6db",
+    "translated_file": "_bmad/bmm/workflows/2-plan-workflows/create-ux-design/steps/step-08-visual-foundation_pt-br.md",
+    "timestamp": 1766337521.8152728
+  },
+  "_bmad/bmm/workflows/2-plan-workflows/create-ux-design/steps/step-09-design-directions.md": {
+    "hash": "0a64d7ac2bfb6a3994649d7dc2f5b928",
+    "translated_file": "_bmad/bmm/workflows/2-plan-workflows/create-ux-design/steps/step-09-design-directions_pt-br.md",
+    "timestamp": 1766337521.8152728
+  },
+  "_bmad/bmm/workflows/2-plan-workflows/create-ux-design/steps/step-10-user-journeys.md": {
+    "hash": "46d0d67b52e1a4ddf8883ef4dfe38553",
+    "translated_file": "_bmad/bmm/workflows/2-plan-workflows/create-ux-design/steps/step-10-user-journeys_pt-br.md",
+    "timestamp": 1766337521.8152728
+  },
+  "_bmad/bmm/workflows/2-plan-workflows/create-ux-design/steps/step-11-component-strategy.md": {
+    "hash": "efcee5713d1c95a62bdc4e35445b3715",
+    "translated_file": "_bmad/bmm/workflows/2-plan-workflows/create-ux-design/steps/step-11-component-strategy_pt-br.md",
+    "timestamp": 1766337521.816273
+  },
+  "_bmad/bmm/workflows/2-plan-workflows/create-ux-design/steps/step-12-ux-patterns.md": {
+    "hash": "9db62a835b393d598d2803e8bcf29197",
+    "translated_file": "_bmad/bmm/workflows/2-plan-workflows/create-ux-design/steps/step-12-ux-patterns_pt-br.md",
+    "timestamp": 1766337521.816273
+  },
+  "_bmad/bmm/workflows/2-plan-workflows/create-ux-design/steps/step-13-responsive-accessibility.md": {
+    "hash": "7e02abd0e84da729a0166a3c77b82bff",
+    "translated_file": "_bmad/bmm/workflows/2-plan-workflows/create-ux-design/steps/step-13-responsive-accessibility_pt-br.md",
+    "timestamp": 1766337521.816273
+  },
+  "_bmad/bmm/workflows/2-plan-workflows/create-ux-design/steps/step-14-complete.md": {
+    "hash": "7545bd4a74dde2a7298cfbf3258702f5",
+    "translated_file": "_bmad/bmm/workflows/2-plan-workflows/create-ux-design/steps/step-14-complete_pt-br.md",
+    "timestamp": 1766337521.817273
+  },
+  "_bmad/bmm/workflows/2-plan-workflows/create-ux-design/ux-design-template.md": {
+    "hash": "021dd5616440b2dbc40c9b4cbd6c8722",
+    "translated_file": "_bmad/bmm/workflows/2-plan-workflows/create-ux-design/ux-design-template_pt-br.md",
+    "timestamp": 1766337521.817273
+  },
+  "_bmad/bmm/workflows/2-plan-workflows/create-ux-design/workflow.md": {
+    "hash": "4d177856ff59eed5a66419c31e07a2ba",
+    "translated_file": "_bmad/bmm/workflows/2-plan-workflows/create-ux-design/workflow_pt-br.md",
+    "timestamp": 1766337521.817273
+  },
+  "_bmad/bmm/workflows/2-plan-workflows/prd/steps/step-01-init.md": {
+    "hash": "36aad4afb42b6dfe1e4122d731c0d7a4",
+    "translated_file": "_bmad/bmm/workflows/2-plan-workflows/prd/steps/step-01-init_pt-br.md",
+    "timestamp": 1766337521.8182728
+  },
+  "_bmad/bmm/workflows/2-plan-workflows/prd/steps/step-01b-continue.md": {
+    "hash": "c14026e647645f5efe8ac96b91408e25",
+    "translated_file": "_bmad/bmm/workflows/2-plan-workflows/prd/steps/step-01b-continue_pt-br.md",
+    "timestamp": 1766337521.819273
+  },
+  "_bmad/bmm/workflows/2-plan-workflows/prd/steps/step-02-discovery.md": {
+    "hash": "c108ebc7f3f56ff1f8ecaf0678e7f6e5",
+    "translated_file": "_bmad/bmm/workflows/2-plan-workflows/prd/steps/step-02-discovery_pt-br.md",
+    "timestamp": 1766337521.820273
+  },
+  "_bmad/bmm/workflows/2-plan-workflows/prd/steps/step-03-success.md": {
+    "hash": "0b87b94e3178955c2340955338b31cd5",
+    "translated_file": "_bmad/bmm/workflows/2-plan-workflows/prd/steps/step-03-success_pt-br.md",
+    "timestamp": 1766337521.8212729
+  },
+  "_bmad/bmm/workflows/2-plan-workflows/prd/steps/step-04-journeys.md": {
+    "hash": "3641370caa19508e4e5ddd5a1fb93363",
+    "translated_file": "_bmad/bmm/workflows/2-plan-workflows/prd/steps/step-04-journeys_pt-br.md",
+    "timestamp": 1766337521.8212729
+  },
+  "_bmad/bmm/workflows/2-plan-workflows/prd/steps/step-05-domain.md": {
+    "hash": "e80d056b7ba6ec8180648bb9dafe24e1",
+    "translated_file": "_bmad/bmm/workflows/2-plan-workflows/prd/steps/step-05-domain_pt-br.md",
+    "timestamp": 1766337521.8212729
+  },
+  "_bmad/bmm/workflows/2-plan-workflows/prd/steps/step-06-innovation.md": {
+    "hash": "e19e45eaad1e4aa27c0164b0f198d7e7",
+    "translated_file": "_bmad/bmm/workflows/2-plan-workflows/prd/steps/step-06-innovation_pt-br.md",
+    "timestamp": 1766337521.8212729
+  },
+  "_bmad/bmm/workflows/2-plan-workflows/prd/steps/step-07-project-type.md": {
+    "hash": "2f8b197f9bfa2428131892484b96ee25",
+    "translated_file": "_bmad/bmm/workflows/2-plan-workflows/prd/steps/step-07-project-type_pt-br.md",
+    "timestamp": 1766337521.8212729
+  },
+  "_bmad/bmm/workflows/2-plan-workflows/prd/steps/step-08-scoping.md": {
+    "hash": "f1c8cd08d950bdeebc5f231b932f7c6d",
+    "translated_file": "_bmad/bmm/workflows/2-plan-workflows/prd/steps/step-08-scoping_pt-br.md",
+    "timestamp": 1766337521.822273
+  },
+  "_bmad/bmm/workflows/2-plan-workflows/prd/steps/step-09-functional.md": {
+    "hash": "558905f2614bbae0c9511c77923764c9",
+    "translated_file": "_bmad/bmm/workflows/2-plan-workflows/prd/steps/step-09-functional_pt-br.md",
+    "timestamp": 1766337521.822273
+  },
+  "_bmad/bmm/workflows/2-plan-workflows/prd/steps/step-10-nonfunctional.md": {
+    "hash": "c25ceb340f188fe349035f4a957621a9",
+    "translated_file": "_bmad/bmm/workflows/2-plan-workflows/prd/steps/step-10-nonfunctional_pt-br.md",
+    "timestamp": 1766337521.822273
+  },
+  "_bmad/bmm/workflows/2-plan-workflows/prd/steps/step-11-complete.md": {
+    "hash": "d590d4963a01220410cea558f6ef0116",
+    "translated_file": "_bmad/bmm/workflows/2-plan-workflows/prd/steps/step-11-complete_pt-br.md",
+    "timestamp": 1766337521.822273
+  },
+  "_bmad/bmm/workflows/2-plan-workflows/prd/prd-template.md": {
+    "hash": "fff59d2ce7b3963ab3649320f78d13ca",
+    "translated_file": "_bmad/bmm/workflows/2-plan-workflows/prd/prd-template_pt-br.md",
+    "timestamp": 1766337521.8182728
+  },
+  "_bmad/bmm/workflows/2-plan-workflows/prd/workflow.md": {
+    "hash": "f4832918eecdca2aa5e414ed287fd989",
+    "translated_file": "_bmad/bmm/workflows/2-plan-workflows/prd/workflow_pt-br.md",
+    "timestamp": 1766337521.823273
+  },
+  "_bmad/bmm/workflows/3-solutioning/check-implementation-readiness/steps/step-01-document-discovery.md": {
+    "hash": "37b8aa6ff8c731a0415f2ba107fd2eef",
+    "translated_file": "_bmad/bmm/workflows/3-solutioning/check-implementation-readiness/steps/step-01-document-discovery_pt-br.md",
+    "timestamp": 1766337521.823273
+  },
+  "_bmad/bmm/workflows/3-solutioning/check-implementation-readiness/steps/step-02-prd-analysis.md": {
+    "hash": "b1ca51f447cb4df66b68cece72e33d55",
+    "translated_file": "_bmad/bmm/workflows/3-solutioning/check-implementation-readiness/steps/step-02-prd-analysis_pt-br.md",
+    "timestamp": 1766337521.823273
+  },
+  "_bmad/bmm/workflows/3-solutioning/check-implementation-readiness/steps/step-03-epic-coverage-validation.md": {
+    "hash": "564369d155fe2b22996c8a86b9a5224d",
+    "translated_file": "_bmad/bmm/workflows/3-solutioning/check-implementation-readiness/steps/step-03-epic-coverage-validation_pt-br.md",
+    "timestamp": 1766337521.823273
+  },
+  "_bmad/bmm/workflows/3-solutioning/check-implementation-readiness/steps/step-04-ux-alignment.md": {
+    "hash": "680f67b5d7e6cb642efb3a5c656a0385",
+    "translated_file": "_bmad/bmm/workflows/3-solutioning/check-implementation-readiness/steps/step-04-ux-alignment_pt-br.md",
+    "timestamp": 1766337521.8242729
+  },
+  "_bmad/bmm/workflows/3-solutioning/check-implementation-readiness/steps/step-05-epic-quality-review.md": {
+    "hash": "a3ef4bba70f5f53a758cc74cbead38b8",
+    "translated_file": "_bmad/bmm/workflows/3-solutioning/check-implementation-readiness/steps/step-05-epic-quality-review_pt-br.md",
+    "timestamp": 1766337521.8242729
+  },
+  "_bmad/bmm/workflows/3-solutioning/check-implementation-readiness/steps/step-06-final-assessment.md": {
+    "hash": "8e7782c4304ece1f0b779a6084a9e8d2",
+    "translated_file": "_bmad/bmm/workflows/3-solutioning/check-implementation-readiness/steps/step-06-final-assessment_pt-br.md",
+    "timestamp": 1766337521.8242729
+  },
+  "_bmad/bmm/workflows/3-solutioning/check-implementation-readiness/templates/readiness-report-template.md": {
+    "hash": "43d400e828f71112b562460421ed3630",
+    "translated_file": "_bmad/bmm/workflows/3-solutioning/check-implementation-readiness/templates/readiness-report-template_pt-br.md",
+    "timestamp": 1766337521.8242729
+  },
+  "_bmad/bmm/workflows/3-solutioning/check-implementation-readiness/workflow.md": {
+    "hash": "3ef46d31654d0d57acd09e1bd5367a8f",
+    "translated_file": "_bmad/bmm/workflows/3-solutioning/check-implementation-readiness/workflow_pt-br.md",
+    "timestamp": 1766337521.825273
+  },
+  "_bmad/bmm/workflows/3-solutioning/create-architecture/steps/step-01-init.md": {
+    "hash": "479b79175c1f8b6ac325b81e35517bb8",
+    "translated_file": "_bmad/bmm/workflows/3-solutioning/create-architecture/steps/step-01-init_pt-br.md",
+    "timestamp": 1766337521.825273
+  },
+  "_bmad/bmm/workflows/3-solutioning/create-architecture/steps/step-01b-continue.md": {
+    "hash": "cab75a62948443c1d8be5331cc6513fc",
+    "translated_file": "_bmad/bmm/workflows/3-solutioning/create-architecture/steps/step-01b-continue_pt-br.md",
+    "timestamp": 1766337521.826273
+  },
+  "_bmad/bmm/workflows/3-solutioning/create-architecture/steps/step-02-context.md": {
+    "hash": "e10758a40992bd00cd406e05f327e6bc",
+    "translated_file": "_bmad/bmm/workflows/3-solutioning/create-architecture/steps/step-02-context_pt-br.md",
+    "timestamp": 1766337521.826273
+  },
+  "_bmad/bmm/workflows/3-solutioning/create-architecture/steps/step-03-starter.md": {
+    "hash": "b2b6756a4fd25ebb476d84e04a231a16",
+    "translated_file": "_bmad/bmm/workflows/3-solutioning/create-architecture/steps/step-03-starter_pt-br.md",
+    "timestamp": 1766337521.826273
+  },
+  "_bmad/bmm/workflows/3-solutioning/create-architecture/steps/step-04-decisions.md": {
+    "hash": "add3703b77771cb5fc6651f692922bb1",
+    "translated_file": "_bmad/bmm/workflows/3-solutioning/create-architecture/steps/step-04-decisions_pt-br.md",
+    "timestamp": 1766337521.826273
+  },
+  "_bmad/bmm/workflows/3-solutioning/create-architecture/steps/step-05-patterns.md": {
+    "hash": "a6fbdb71f18dd6d995764fc0eebc440b",
+    "translated_file": "_bmad/bmm/workflows/3-solutioning/create-architecture/steps/step-05-patterns_pt-br.md",
+    "timestamp": 1766337521.827273
+  },
+  "_bmad/bmm/workflows/3-solutioning/create-architecture/steps/step-06-structure.md": {
+    "hash": "38d0d810cb9d84efa57d4c80e707e251",
+    "translated_file": "_bmad/bmm/workflows/3-solutioning/create-architecture/steps/step-06-structure_pt-br.md",
+    "timestamp": 1766337521.827273
+  },
+  "_bmad/bmm/workflows/3-solutioning/create-architecture/steps/step-07-validation.md": {
+    "hash": "2362c159c14797cbd9bdb6e87e174620",
+    "translated_file": "_bmad/bmm/workflows/3-solutioning/create-architecture/steps/step-07-validation_pt-br.md",
+    "timestamp": 1766337521.828273
+  },
+  "_bmad/bmm/workflows/3-solutioning/create-architecture/steps/step-08-complete.md": {
+    "hash": "e38768b751e212cdf8821cdc09d4d320",
+    "translated_file": "_bmad/bmm/workflows/3-solutioning/create-architecture/steps/step-08-complete_pt-br.md",
+    "timestamp": 1766337521.828273
+  },
+  "_bmad/bmm/workflows/3-solutioning/create-architecture/architecture-decision-template.md": {
+    "hash": "65222be23f7a1c6e135d81e90e8dd7fd",
+    "translated_file": "_bmad/bmm/workflows/3-solutioning/create-architecture/architecture-decision-template_pt-br.md",
+    "timestamp": 1766337521.825273
+  },
+  "_bmad/bmm/workflows/3-solutioning/create-architecture/workflow.md": {
+    "hash": "ed58f6aba5fe11a84ab00933aec4c630",
+    "translated_file": "_bmad/bmm/workflows/3-solutioning/create-architecture/workflow_pt-br.md",
+    "timestamp": 1766337521.829273
+  },
+  "_bmad/bmm/workflows/3-solutioning/create-epics-and-stories/steps/step-01-validate-prerequisites.md": {
+    "hash": "41db6e33b3f282a57254e6da6d79d2fd",
+    "translated_file": "_bmad/bmm/workflows/3-solutioning/create-epics-and-stories/steps/step-01-validate-prerequisites_pt-br.md",
+    "timestamp": 1766337521.829273
+  },
+  "_bmad/bmm/workflows/3-solutioning/create-epics-and-stories/steps/step-02-design-epics.md": {
+    "hash": "ab96579faadba63c6b155bd5d7c552dd",
+    "translated_file": "_bmad/bmm/workflows/3-solutioning/create-epics-and-stories/steps/step-02-design-epics_pt-br.md",
+    "timestamp": 1766337521.830273
+  },
+  "_bmad/bmm/workflows/3-solutioning/create-epics-and-stories/steps/step-03-create-stories.md": {
+    "hash": "34a041db4dfe4eb2fd868e45481b053c",
+    "translated_file": "_bmad/bmm/workflows/3-solutioning/create-epics-and-stories/steps/step-03-create-stories_pt-br.md",
+    "timestamp": 1766337521.830273
+  },
+  "_bmad/bmm/workflows/3-solutioning/create-epics-and-stories/steps/step-04-final-validation.md": {
+    "hash": "9bba2fdce00d20b89a634d6e63ed0b76",
+    "translated_file": "_bmad/bmm/workflows/3-solutioning/create-epics-and-stories/steps/step-04-final-validation_pt-br.md",
+    "timestamp": 1766337521.831273
+  },
+  "_bmad/bmm/workflows/3-solutioning/create-epics-and-stories/templates/epics-template.md": {
+    "hash": "9de8d3a555a58db5818ebae2a2fb3eaf",
+    "translated_file": "_bmad/bmm/workflows/3-solutioning/create-epics-and-stories/templates/epics-template_pt-br.md",
+    "timestamp": 1766337521.831273
+  },
+  "_bmad/bmm/workflows/3-solutioning/create-epics-and-stories/workflow.md": {
+    "hash": "073085c6f949d490b80609336e2cfd61",
+    "translated_file": "_bmad/bmm/workflows/3-solutioning/create-epics-and-stories/workflow_pt-br.md",
+    "timestamp": 1766337521.831273
+  },
+  "_bmad/bmm/workflows/4-implementation/code-review/checklist.md": {
+    "hash": "7601d6f24f6548dd94b5b4fb477589ba",
+    "translated_file": "_bmad/bmm/workflows/4-implementation/code-review/checklist_pt-br.md",
+    "timestamp": 1766337521.831273
+  },
+  "_bmad/bmm/workflows/4-implementation/correct-course/checklist.md": {
+    "hash": "c973bda75058f67a4fec50baa4449227",
+    "translated_file": "_bmad/bmm/workflows/4-implementation/correct-course/checklist_pt-br.md",
+    "timestamp": 1766337521.8342729
+  },
+  "_bmad/bmm/workflows/4-implementation/correct-course/instructions.md": {
+    "hash": "696710d162e4f93012ceb137efb7043d",
+    "translated_file": "_bmad/bmm/workflows/4-implementation/correct-course/instructions_pt-br.md",
+    "timestamp": 1766337521.8342729
+  },
+  "_bmad/bmm/workflows/4-implementation/create-story/checklist.md": {
+    "hash": "e9c528879aa6f1be41f4319d0b368fe8",
+    "translated_file": "_bmad/bmm/workflows/4-implementation/create-story/checklist_pt-br.md",
+    "timestamp": 1766337521.836273
+  },
+  "_bmad/bmm/workflows/4-implementation/create-story/template.md": {
+    "hash": "e777b0fcef99166478cf6b0607951fc5",
+    "translated_file": "_bmad/bmm/workflows/4-implementation/create-story/template_pt-br.md",
+    "timestamp": 1766337521.837273
+  },
+  "_bmad/bmm/workflows/4-implementation/dev-story/checklist.md": {
+    "hash": "ef3f9e4903452459f0cae4ea8034885e",
+    "translated_file": "_bmad/bmm/workflows/4-implementation/dev-story/checklist_pt-br.md",
+    "timestamp": 1766337521.839273
+  },
+  "_bmad/bmm/workflows/4-implementation/retrospective/instructions.md": {
+    "hash": "e3fca8e8c3fb213c71bc9b60bf66358c",
+    "translated_file": "_bmad/bmm/workflows/4-implementation/retrospective/instructions_pt-br.md",
+    "timestamp": 1766337521.840273
+  },
+  "_bmad/bmm/workflows/4-implementation/sprint-planning/checklist.md": {
+    "hash": "5b0a6ea4ec4ac4c6d6bd61f8b799b003",
+    "translated_file": "_bmad/bmm/workflows/4-implementation/sprint-planning/checklist_pt-br.md",
+    "timestamp": 1766337521.841273
+  },
+  "_bmad/bmm/workflows/4-implementation/sprint-planning/instructions.md": {
+    "hash": "dbc242cdc5e0e3c83360a4909ae028ed",
+    "translated_file": "_bmad/bmm/workflows/4-implementation/sprint-planning/instructions_pt-br.md",
+    "timestamp": 1766337521.841273
+  },
+  "_bmad/bmm/workflows/4-implementation/sprint-status/instructions.md": {
+    "hash": "29c6f83ebffd913e973d665a34a91675",
+    "translated_file": "_bmad/bmm/workflows/4-implementation/sprint-status/instructions_pt-br.md",
+    "timestamp": 1766337521.843273
+  },
+  "_bmad/bmm/workflows/bmad-quick-flow/create-tech-spec/instructions.md": {
+    "hash": "5195e3ee80161586e7fdd51ce450243e",
+    "translated_file": "_bmad/bmm/workflows/bmad-quick-flow/create-tech-spec/instructions_pt-br.md",
+    "timestamp": 1766337521.844273
+  },
+  "_bmad/bmm/workflows/bmad-quick-flow/quick-dev/checklist.md": {
+    "hash": "8c5650717776c67100b756d8d875b961",
+    "translated_file": "_bmad/bmm/workflows/bmad-quick-flow/quick-dev/checklist_pt-br.md",
+    "timestamp": 1766337521.846273
+  },
+  "_bmad/bmm/workflows/bmad-quick-flow/quick-dev/instructions.md": {
+    "hash": "160953477214b59f793a9432145d0ecf",
+    "translated_file": "_bmad/bmm/workflows/bmad-quick-flow/quick-dev/instructions_pt-br.md",
+    "timestamp": 1766337521.846273
+  },
+  "_bmad/bmm/workflows/document-project/templates/deep-dive-template.md": {
+    "hash": "704bc639480122d3ab863c8ee7e073c3",
+    "translated_file": "_bmad/bmm/workflows/document-project/templates/deep-dive-template_pt-br.md",
+    "timestamp": 1766337521.847273
+  },
+  "_bmad/bmm/workflows/document-project/templates/index-template.md": {
+    "hash": "84a8e2fd7d383d54a08d339ba98206dd",
+    "translated_file": "_bmad/bmm/workflows/document-project/templates/index-template_pt-br.md",
+    "timestamp": 1766337521.848273
+  },
+  "_bmad/bmm/workflows/document-project/templates/project-overview-template.md": {
+    "hash": "22abda8c1efab2069a465d3d8e63e3ef",
+    "translated_file": "_bmad/bmm/workflows/document-project/templates/project-overview-template_pt-br.md",
+    "timestamp": 1766337521.848273
+  },
+  "_bmad/bmm/workflows/document-project/templates/source-tree-template.md": {
+    "hash": "830f4f9f078343631a2ef6fe47ab81b9",
+    "translated_file": "_bmad/bmm/workflows/document-project/templates/source-tree-template_pt-br.md",
+    "timestamp": 1766337521.849273
+  },
+  "_bmad/bmm/workflows/document-project/workflows/deep-dive-instructions.md": {
+    "hash": "9082d71b41e82ecd5f50e7954a77eeb4",
+    "translated_file": "_bmad/bmm/workflows/document-project/workflows/deep-dive-instructions_pt-br.md",
+    "timestamp": 1766337521.849273
+  },
+  "_bmad/bmm/workflows/document-project/workflows/full-scan-instructions.md": {
+    "hash": "58138aadcc4dabf538b8dc7347090150",
+    "translated_file": "_bmad/bmm/workflows/document-project/workflows/full-scan-instructions_pt-br.md",
+    "timestamp": 1766337521.8502731
+  },
+  "_bmad/bmm/workflows/document-project/checklist.md": {
+    "hash": "1969c02b37701ede183fdbeb26917b1d",
+    "translated_file": "_bmad/bmm/workflows/document-project/checklist_pt-br.md",
+    "timestamp": 1766337521.847273
+  },
+  "_bmad/bmm/workflows/document-project/instructions.md": {
+    "hash": "0db4b71107595cae9bff1b0b74f1eb7b",
+    "translated_file": "_bmad/bmm/workflows/document-project/instructions_pt-br.md",
+    "timestamp": 1766337521.847273
+  },
+  "_bmad/bmm/workflows/excalidraw-diagrams/create-dataflow/checklist.md": {
+    "hash": "09d63dd1e92553bfef99447c9618a2e4",
+    "translated_file": "_bmad/bmm/workflows/excalidraw-diagrams/create-dataflow/checklist_pt-br.md",
+    "timestamp": 1766337521.851273
+  },
+  "_bmad/bmm/workflows/excalidraw-diagrams/create-dataflow/instructions.md": {
+    "hash": "4d51dcc4180ce14e4caf6635b2c5cbde",
+    "translated_file": "_bmad/bmm/workflows/excalidraw-diagrams/create-dataflow/instructions_pt-br.md",
+    "timestamp": 1766337521.851273
+  },
+  "_bmad/bmm/workflows/excalidraw-diagrams/create-diagram/checklist.md": {
+    "hash": "75648e97d3cad5055fc84cb6aef077ed",
+    "translated_file": "_bmad/bmm/workflows/excalidraw-diagrams/create-diagram/checklist_pt-br.md",
+    "timestamp": 1766337521.8532732
+  },
+  "_bmad/bmm/workflows/excalidraw-diagrams/create-diagram/instructions.md": {
+    "hash": "f289a2a4e60cba6b1c28f1954bc844c6",
+    "translated_file": "_bmad/bmm/workflows/excalidraw-diagrams/create-diagram/instructions_pt-br.md",
+    "timestamp": 1766337521.8532732
+  },
+  "_bmad/bmm/workflows/excalidraw-diagrams/create-flowchart/checklist.md": {
+    "hash": "7697c14a3e1563100f3e902d4f0e5fd0",
+    "translated_file": "_bmad/bmm/workflows/excalidraw-diagrams/create-flowchart/checklist_pt-br.md",
+    "timestamp": 1766337521.854273
+  },
+  "_bmad/bmm/workflows/excalidraw-diagrams/create-flowchart/instructions.md": {
+    "hash": "d570b2b14b628c3bd79f4c9d63db40f8",
+    "translated_file": "_bmad/bmm/workflows/excalidraw-diagrams/create-flowchart/instructions_pt-br.md",
+    "timestamp": 1766337521.855273
+  },
+  "_bmad/bmm/workflows/excalidraw-diagrams/create-wireframe/checklist.md": {
+    "hash": "eecc7a208ff5bf2185e29459d1127dcf",
+    "translated_file": "_bmad/bmm/workflows/excalidraw-diagrams/create-wireframe/checklist_pt-br.md",
+    "timestamp": 1766337521.855273
+  },
+  "_bmad/bmm/workflows/excalidraw-diagrams/create-wireframe/instructions.md": {
+    "hash": "ccbd82504d1ee187746f9c4310d55079",
+    "translated_file": "_bmad/bmm/workflows/excalidraw-diagrams/create-wireframe/instructions_pt-br.md",
+    "timestamp": 1766337521.8562732
+  },
+  "_bmad/bmm/workflows/generate-project-context/steps/step-01-discover.md": {
+    "hash": "7ccb7ad8b72379a2461c0cf85f1b65e7",
+    "translated_file": "_bmad/bmm/workflows/generate-project-context/steps/step-01-discover_pt-br.md",
+    "timestamp": 1766337521.857273
+  },
+  "_bmad/bmm/workflows/generate-project-context/steps/step-02-generate.md": {
+    "hash": "f1ac465379a289606e76291796a88ebc",
+    "translated_file": "_bmad/bmm/workflows/generate-project-context/steps/step-02-generate_pt-br.md",
+    "timestamp": 1766337521.857273
+  },
+  "_bmad/bmm/workflows/generate-project-context/steps/step-03-complete.md": {
+    "hash": "c85e12cc00aad59f6a29aec20a06b728",
+    "translated_file": "_bmad/bmm/workflows/generate-project-context/steps/step-03-complete_pt-br.md",
+    "timestamp": 1766337521.857273
+  },
+  "_bmad/bmm/workflows/generate-project-context/project-context-template.md": {
+    "hash": "d37ca2adc9201d7814129bda7784b116",
+    "translated_file": "_bmad/bmm/workflows/generate-project-context/project-context-template_pt-br.md",
+    "timestamp": 1766337521.8562732
+  },
+  "_bmad/bmm/workflows/generate-project-context/workflow.md": {
+    "hash": "f181f25c66021ad8f5fa03a93656ed14",
+    "translated_file": "_bmad/bmm/workflows/generate-project-context/workflow_pt-br.md",
+    "timestamp": 1766337521.857273
+  },
+  "_bmad/bmm/workflows/testarch/atdd/atdd-checklist-template.md": {
+    "hash": "db10c9f9b9317b83bcd07a74ebe22cbf",
+    "translated_file": "_bmad/bmm/workflows/testarch/atdd/atdd-checklist-template_pt-br.md",
+    "timestamp": 1766337521.858273
+  },
+  "_bmad/bmm/workflows/testarch/atdd/checklist.md": {
+    "hash": "5b7afd2039c895eda21a026a0843425a",
+    "translated_file": "_bmad/bmm/workflows/testarch/atdd/checklist_pt-br.md",
+    "timestamp": 1766337521.858273
+  },
+  "_bmad/bmm/workflows/testarch/atdd/instructions.md": {
+    "hash": "3efff246847d3448dd86a4834c3e50bd",
+    "translated_file": "_bmad/bmm/workflows/testarch/atdd/instructions_pt-br.md",
+    "timestamp": 1766337521.858273
+  },
+  "_bmad/bmm/workflows/testarch/automate/checklist.md": {
+    "hash": "69e6067b35eb6418dec94f9dbaa428db",
+    "translated_file": "_bmad/bmm/workflows/testarch/automate/checklist_pt-br.md",
+    "timestamp": 1766337521.8602731
+  },
+  "_bmad/bmm/workflows/testarch/automate/instructions.md": {
+    "hash": "3caf07d5f584f6bbb74760510e6f3c25",
+    "translated_file": "_bmad/bmm/workflows/testarch/automate/instructions_pt-br.md",
+    "timestamp": 1766337521.8602731
+  },
+  "_bmad/bmm/workflows/testarch/ci/checklist.md": {
+    "hash": "98d3e414cb71eaf143dd5c0ae0725b4c",
+    "translated_file": "_bmad/bmm/workflows/testarch/ci/checklist_pt-br.md",
+    "timestamp": 1766337521.862273
+  },
+  "_bmad/bmm/workflows/testarch/ci/instructions.md": {
+    "hash": "3420820680f953dec8d5ff71e7ccd7be",
+    "translated_file": "_bmad/bmm/workflows/testarch/ci/instructions_pt-br.md",
+    "timestamp": 1766337521.8632731
+  },
+  "_bmad/bmm/workflows/testarch/framework/checklist.md": {
+    "hash": "ac4f2c018000ae6f3b523158b172f87a",
+    "translated_file": "_bmad/bmm/workflows/testarch/framework/checklist_pt-br.md",
+    "timestamp": 1766337521.864273
+  },
+  "_bmad/bmm/workflows/testarch/framework/instructions.md": {
+    "hash": "eebcbc3b7f7103865dd3876dbbc25b39",
+    "translated_file": "_bmad/bmm/workflows/testarch/framework/instructions_pt-br.md",
+    "timestamp": 1766337521.865273
+  },
+  "_bmad/bmm/workflows/testarch/nfr-assess/checklist.md": {
+    "hash": "8da43522bb7bae4380bda62ba22a459a",
+    "translated_file": "_bmad/bmm/workflows/testarch/nfr-assess/checklist_pt-br.md",
+    "timestamp": 1766337521.8662732
+  },
+  "_bmad/bmm/workflows/testarch/nfr-assess/instructions.md": {
+    "hash": "1d42497720dc2ce3dad7a3be80142b31",
+    "translated_file": "_bmad/bmm/workflows/testarch/nfr-assess/instructions_pt-br.md",
+    "timestamp": 1766337521.8662732
+  },
+  "_bmad/bmm/workflows/testarch/nfr-assess/nfr-report-template.md": {
+    "hash": "d595aa73d6c3b7a47ed3cb7e2407be33",
+    "translated_file": "_bmad/bmm/workflows/testarch/nfr-assess/nfr-report-template_pt-br.md",
+    "timestamp": 1766337521.867273
+  },
+  "_bmad/bmm/workflows/testarch/test-design/checklist.md": {
+    "hash": "13a512e56ebe7303ea1ab61952565e75",
+    "translated_file": "_bmad/bmm/workflows/testarch/test-design/checklist_pt-br.md",
+    "timestamp": 1766337521.868273
+  },
+  "_bmad/bmm/workflows/testarch/test-design/instructions.md": {
+    "hash": "2b8e859f4d3f5536d48732dce32f7104",
+    "translated_file": "_bmad/bmm/workflows/testarch/test-design/instructions_pt-br.md",
+    "timestamp": 1766337521.8692732
+  },
+  "_bmad/bmm/workflows/testarch/test-design/test-design-template.md": {
+    "hash": "58bb770362f293f607e8a47dd27f3aa7",
+    "translated_file": "_bmad/bmm/workflows/testarch/test-design/test-design-template_pt-br.md",
+    "timestamp": 1766337521.8692732
+  },
+  "_bmad/bmm/workflows/testarch/test-review/checklist.md": {
+    "hash": "53b810e5c7ffb4ff74d228aa773bced1",
+    "translated_file": "_bmad/bmm/workflows/testarch/test-review/checklist_pt-br.md",
+    "timestamp": 1766337521.871273
+  },
+  "_bmad/bmm/workflows/testarch/test-review/instructions.md": {
+    "hash": "b48d973b902d6a74b60ec2bd63bbf5aa",
+    "translated_file": "_bmad/bmm/workflows/testarch/test-review/instructions_pt-br.md",
+    "timestamp": 1766337521.871273
+  },
+  "_bmad/bmm/workflows/testarch/test-review/test-review-template.md": {
+    "hash": "edaa35289613ca048f117e355ff9b14d",
+    "translated_file": "_bmad/bmm/workflows/testarch/test-review/test-review-template_pt-br.md",
+    "timestamp": 1766337521.8722732
+  },
+  "_bmad/bmm/workflows/testarch/trace/checklist.md": {
+    "hash": "3aa6bf31c0162c63b7555d7b64bc11c5",
+    "translated_file": "_bmad/bmm/workflows/testarch/trace/checklist_pt-br.md",
+    "timestamp": 1766337521.8732731
+  },
+  "_bmad/bmm/workflows/testarch/trace/instructions.md": {
+    "hash": "b1873be515098767f36121af0ac48c79",
+    "translated_file": "_bmad/bmm/workflows/testarch/trace/instructions_pt-br.md",
+    "timestamp": 1766337521.874273
+  },
+  "_bmad/bmm/workflows/testarch/trace/trace-template.md": {
+    "hash": "8491cf0dded7951e07e0283f0c92533e",
+    "translated_file": "_bmad/bmm/workflows/testarch/trace/trace-template_pt-br.md",
+    "timestamp": 1766337521.874273
+  },
+  "_bmad/bmm/workflows/workflow-status/init/instructions.md": {
+    "hash": "6e576828a5568f2477ec5db3ed06a60a",
+    "translated_file": "_bmad/bmm/workflows/workflow-status/init/instructions_pt-br.md",
+    "timestamp": 1766337521.8752732
+  },
+  "_bmad/bmm/workflows/workflow-status/instructions.md": {
+    "hash": "0f5b9b14d0a862fbedf45945ba440030",
+    "translated_file": "_bmad/bmm/workflows/workflow-status/instructions_pt-br.md",
+    "timestamp": 1766337521.8762732
+  },
+  "_bmad/bmm/agents/analyst.md": {
+    "hash": "858556f04c4234930a139381052fd1b7",
+    "translated_file": "_bmad/bmm/agents/analyst_pt-br.md",
+    "timestamp": 1766337521.8872733
+  },
+  "_bmad/bmm/agents/architect.md": {
+    "hash": "00c784979b93c7c9b891dfe61491efdd",
+    "translated_file": "_bmad/bmm/agents/architect_pt-br.md",
+    "timestamp": 1766337521.8912733
+  },
+  "_bmad/bmm/agents/dev.md": {
+    "hash": "c8122468136d5a0f5271ff869b9fd62d",
+    "translated_file": "_bmad/bmm/agents/dev_pt-br.md",
+    "timestamp": 1766337521.8962731
+  },
+  "_bmad/bmm/agents/pm.md": {
+    "hash": "d04e3500f3ddecc988080f22b7db40f3",
+    "translated_file": "_bmad/bmm/agents/pm_pt-br.md",
+    "timestamp": 1766337521.9012733
+  },
+  "_bmad/bmm/agents/quick-flow-solo-dev.md": {
+    "hash": "004c6e307b56fd32c1fa22eee6073002",
+    "translated_file": "_bmad/bmm/agents/quick-flow-solo-dev_pt-br.md",
+    "timestamp": 1766337521.9062734
+  },
+  "_bmad/bmm/agents/sm.md": {
+    "hash": "059d528d32a12c6c423c02ece30e5c95",
+    "translated_file": "_bmad/bmm/agents/sm_pt-br.md",
+    "timestamp": 1766337521.9102733
+  },
+  "_bmad/bmm/agents/tea.md": {
+    "hash": "fc3bda744b0238d8952ee0ee3163db1e",
+    "translated_file": "_bmad/bmm/agents/tea_pt-br.md",
+    "timestamp": 1766337521.9152734
+  },
+  "_bmad/bmm/agents/tech-writer.md": {
+    "hash": "769781486d6de56661c131402d6a341d",
+    "translated_file": "_bmad/bmm/agents/tech-writer_pt-br.md",
+    "timestamp": 1766337521.9202733
+  },
+  "_bmad/bmm/agents/ux-designer.md": {
+    "hash": "7679dda113323d52d56a9102b460f635",
+    "translated_file": "_bmad/bmm/agents/ux-designer_pt-br.md",
+    "timestamp": 1766337521.9242733
+  },
+  "_bmad/bmm/README.md": {
+    "hash": "2a54beeb89fe2be6fe809cb789d6490b",
+    "translated_file": "_bmad/bmm/README_pt-br.md",
+    "timestamp": 1766337521.7822728
+  },
+  "_bmad/core/agents/bmad-master.md": {
+    "hash": "3b499831773dcfb32cb1db35a3ff24a2",
+    "translated_file": "_bmad/core/agents/bmad-master_pt-br.md",
+    "timestamp": 1766337521.7492726
+  },
+  "_bmad/core/resources/excalidraw/README.md": {
+    "hash": "6c0017fdc642f61fb58500bd7e849c78",
+    "translated_file": "_bmad/core/resources/excalidraw/README_pt-br.md",
+    "timestamp": 1766337521.7312725
+  },
+  "_bmad/core/resources/excalidraw/excalidraw-helpers.md": {
+    "hash": "9738d1cefb091a388ebc900b97b04920",
+    "translated_file": "_bmad/core/resources/excalidraw/excalidraw-helpers_pt-br.md",
+    "timestamp": 1766337521.7312725
+  },
+  "_bmad/core/resources/excalidraw/library-loader.md": {
+    "hash": "30a62b4ae8c76138a81ca17828410929",
+    "translated_file": "_bmad/core/resources/excalidraw/library-loader_pt-br.md",
+    "timestamp": 1766337521.7312725
+  },
+  "_bmad/core/resources/excalidraw/validate-json-instructions.md": {
+    "hash": "924d795318606d570c7e745045abdc6b",
+    "translated_file": "_bmad/core/resources/excalidraw/validate-json-instructions_pt-br.md",
+    "timestamp": 1766337521.7322726
+  },
+  "_bmad/core/workflows/brainstorming/template.md": {
+    "hash": "42b8a275bd5f1ca932e9d4858fab60a3",
+    "translated_file": "_bmad/core/workflows/brainstorming/template_pt-br.md",
+    "timestamp": 1766337521.7362726
+  },
+  "_bmad/core/workflows/brainstorming/workflow.md": {
+    "hash": "f80f982570fa6917297f7ae40bdffb9a",
+    "translated_file": "_bmad/core/workflows/brainstorming/workflow_pt-br.md",
+    "timestamp": 1766337521.7362726
+  },
+  "_bmad/core/workflows/party-mode/workflow.md": {
+    "hash": "2a16ad1f95093d24ab786253a24e7ee5",
+    "translated_file": "_bmad/core/workflows/party-mode/workflow_pt-br.md",
+    "timestamp": 1766337521.7372725
+  },
+  "_bmad/core/workflows/brainstorming/steps/step-01-session-setup.md": {
+    "hash": "302f85f979aa10e05e128861d27ad6c3",
+    "translated_file": "_bmad/core/workflows/brainstorming/steps/step-01-session-setup_pt-br.md",
+    "timestamp": 1766337521.7342725
+  },
+  "_bmad/core/workflows/brainstorming/steps/step-01b-continue.md": {
+    "hash": "87e4f22bc3603e77ef0b02915d42c03b",
+    "translated_file": "_bmad/core/workflows/brainstorming/steps/step-01b-continue_pt-br.md",
+    "timestamp": 1766337521.7342725
+  },
+  "_bmad/core/workflows/brainstorming/steps/step-02a-user-selected.md": {
+    "hash": "6dca5f42c06b11d787c4ff24022d2113",
+    "translated_file": "_bmad/core/workflows/brainstorming/steps/step-02a-user-selected_pt-br.md",
+    "timestamp": 1766337521.7342725
+  },
+  "_bmad/core/workflows/brainstorming/steps/step-02b-ai-recommended.md": {
+    "hash": "291efcb21416c4651d0e02c5b0fb90f8",
+    "translated_file": "_bmad/core/workflows/brainstorming/steps/step-02b-ai-recommended_pt-br.md",
+    "timestamp": 1766337521.7342725
+  },
+  "_bmad/core/workflows/brainstorming/steps/step-02c-random-selection.md": {
+    "hash": "8a27c52d683cda6c30138ec6843d989c",
+    "translated_file": "_bmad/core/workflows/brainstorming/steps/step-02c-random-selection_pt-br.md",
+    "timestamp": 1766337521.7352726
+  },
+  "_bmad/core/workflows/brainstorming/steps/step-02d-progressive-flow.md": {
+    "hash": "6f74f5286c1a3fe0cbf44af24f451a7d",
+    "translated_file": "_bmad/core/workflows/brainstorming/steps/step-02d-progressive-flow_pt-br.md",
+    "timestamp": 1766337521.7352726
+  },
+  "_bmad/core/workflows/brainstorming/steps/step-03-technique-execution.md": {
+    "hash": "2e145f63e9fc1615260dbff720aa4659",
+    "translated_file": "_bmad/core/workflows/brainstorming/steps/step-03-technique-execution_pt-br.md",
+    "timestamp": 1766337521.7362726
+  },
+  "_bmad/core/workflows/brainstorming/steps/step-04-idea-organization.md": {
+    "hash": "b919b3ac3a05d5b92f0fa9391025ad59",
+    "translated_file": "_bmad/core/workflows/brainstorming/steps/step-04-idea-organization_pt-br.md",
+    "timestamp": 1766337521.7362726
+  },
+  "_bmad/core/workflows/party-mode/steps/step-01-agent-loading.md": {
+    "hash": "aa6e576b0e1dbfc6b1537f05e7c4efe3",
+    "translated_file": "_bmad/core/workflows/party-mode/steps/step-01-agent-loading_pt-br.md",
+    "timestamp": 1766337521.7372725
+  },
+  "_bmad/core/workflows/party-mode/steps/step-02-discussion-orchestration.md": {
+    "hash": "617d2492d604d54dddf0f1fde6a7515e",
+    "translated_file": "_bmad/core/workflows/party-mode/steps/step-02-discussion-orchestration_pt-br.md",
+    "timestamp": 1766337521.7372725
+  },
+  "_bmad/core/workflows/party-mode/steps/step-03-graceful-exit.md": {
+    "hash": "08b8d306a78864a123cd2c6fb36d04f8",
+    "translated_file": "_bmad/core/workflows/party-mode/steps/step-03-graceful-exit_pt-br.md",
+    "timestamp": 1766337521.7372725
+  },
+  "_bmad/bmm/docs/images/README.md": {
+    "hash": "2ecfeb1a7d2586dcb52b295103425386",
+    "translated_file": "_bmad/bmm/docs/images/README_pt-br.md",
+    "timestamp": 1766337521.7862728
+  },
+  "_bmad/bmm/testarch/knowledge/api-request.md": {
+    "hash": "527edc0421f5bd4e7eae06906ca2efc7",
+    "translated_file": "_bmad/bmm/testarch/knowledge/api-request_pt-br.md",
+    "timestamp": 1766337521.7912729
+  },
+  "_bmad/bmm/testarch/knowledge/auth-session.md": {
+    "hash": "88ba2f1e7b7387c71bae3ab049575d3b",
+    "translated_file": "_bmad/bmm/testarch/knowledge/auth-session_pt-br.md",
+    "timestamp": 1766337521.7912729
+  },
+  "_bmad/bmm/testarch/knowledge/burn-in.md": {
+    "hash": "d41674a8e823adc2d318556dbf53c5e9",
+    "translated_file": "_bmad/bmm/testarch/knowledge/burn-in_pt-br.md",
+    "timestamp": 1766337521.7922728
+  },
+  "_bmad/bmm/testarch/knowledge/ci-burn-in.md": {
+    "hash": "e6d2de36dc29ce9cbec181f34c1be63b",
+    "translated_file": "_bmad/bmm/testarch/knowledge/ci-burn-in_pt-br.md",
+    "timestamp": 1766337521.7922728
+  },
+  "_bmad/bmm/testarch/knowledge/component-tdd.md": {
+    "hash": "50e5d5b1fb100415564c52fed6cbfbf2",
+    "translated_file": "_bmad/bmm/testarch/knowledge/component-tdd_pt-br.md",
+    "timestamp": 1766337521.7922728
+  },
+  "_bmad/bmm/testarch/knowledge/contract-testing.md": {
+    "hash": "dea38b67178f51be0b90ed969bbdd410",
+    "translated_file": "_bmad/bmm/testarch/knowledge/contract-testing_pt-br.md",
+    "timestamp": 1766337521.7922728
+  },
+  "_bmad/bmm/testarch/knowledge/data-factories.md": {
+    "hash": "c99bda0a9e2b42d27336136bacc5eb7e",
+    "translated_file": "_bmad/bmm/testarch/knowledge/data-factories_pt-br.md",
+    "timestamp": 1766337521.7932727
+  },
+  "_bmad/bmm/testarch/knowledge/email-auth.md": {
+    "hash": "ad92fa748ce7221b0584d8d679e062e6",
+    "translated_file": "_bmad/bmm/testarch/knowledge/email-auth_pt-br.md",
+    "timestamp": 1766337521.794273
+  },
+  "_bmad/bmm/testarch/knowledge/error-handling.md": {
+    "hash": "1056850b2bcab1462aa10f9a064d91b1",
+    "translated_file": "_bmad/bmm/testarch/knowledge/error-handling_pt-br.md",
+    "timestamp": 1766337521.794273
+  },
+  "_bmad/bmm/testarch/knowledge/feature-flags.md": {
+    "hash": "9cb7220588a5d40bf2f8d05255d2b81d",
+    "translated_file": "_bmad/bmm/testarch/knowledge/feature-flags_pt-br.md",
+    "timestamp": 1766337521.7952728
+  },
+  "_bmad/bmm/testarch/knowledge/file-utils.md": {
+    "hash": "3ec57e49b8d13d5d00c1d258c98790e9",
+    "translated_file": "_bmad/bmm/testarch/knowledge/file-utils_pt-br.md",
+    "timestamp": 1766337521.7952728
+  },
+  "_bmad/bmm/testarch/knowledge/fixture-architecture.md": {
+    "hash": "7d6257593b5f5b8c7a9ee2a2ea34e479",
+    "translated_file": "_bmad/bmm/testarch/knowledge/fixture-architecture_pt-br.md",
+    "timestamp": 1766337521.7962728
+  },
+  "_bmad/bmm/testarch/knowledge/fixtures-composition.md": {
+    "hash": "b93364b73bfe8e6923dbc4e574cbcd8f",
+    "translated_file": "_bmad/bmm/testarch/knowledge/fixtures-composition_pt-br.md",
+    "timestamp": 1766337521.7962728
+  },
+  "_bmad/bmm/testarch/knowledge/intercept-network-call.md": {
+    "hash": "a52458e1b934540b2241d76a6c7877dc",
+    "translated_file": "_bmad/bmm/testarch/knowledge/intercept-network-call_pt-br.md",
+    "timestamp": 1766337521.7962728
+  },
+  "_bmad/bmm/testarch/knowledge/log.md": {
+    "hash": "d739f04dba2eca93c28c778f79a34677",
+    "translated_file": "_bmad/bmm/testarch/knowledge/log_pt-br.md",
+    "timestamp": 1766337521.7962728
+  },
+  "_bmad/bmm/testarch/knowledge/network-error-monitor.md": {
+    "hash": "c516c9853c96cb22442daa0f67a7cb72",
+    "translated_file": "_bmad/bmm/testarch/knowledge/network-error-monitor_pt-br.md",
+    "timestamp": 1766337521.797273
+  },
+  "_bmad/bmm/testarch/knowledge/network-first.md": {
+    "hash": "c7143dc42a4fb2f13b1b178076505dc2",
+    "translated_file": "_bmad/bmm/testarch/knowledge/network-first_pt-br.md",
+    "timestamp": 1766337521.797273
+  },
+  "_bmad/bmm/testarch/knowledge/network-recorder.md": {
+    "hash": "912ab80ee81b3f6cc1099f184e8f5c84",
+    "translated_file": "_bmad/bmm/testarch/knowledge/network-recorder_pt-br.md",
+    "timestamp": 1766337521.797273
+  },
+  "_bmad/bmm/testarch/knowledge/nfr-criteria.md": {
+    "hash": "b6267d0ce20014980546ecae62a6b88f",
+    "translated_file": "_bmad/bmm/testarch/knowledge/nfr-criteria_pt-br.md",
+    "timestamp": 1766337521.797273
+  },
+  "_bmad/bmm/testarch/knowledge/overview.md": {
+    "hash": "7f72efb1d00e55da7bf6ce3c97bb9da2",
+    "translated_file": "_bmad/bmm/testarch/knowledge/overview_pt-br.md",
+    "timestamp": 1766337521.7982728
+  },
+  "_bmad/bmm/testarch/knowledge/playwright-config.md": {
+    "hash": "3050d397a55d076e5adeeba6958bd2f6",
+    "translated_file": "_bmad/bmm/testarch/knowledge/playwright-config_pt-br.md",
+    "timestamp": 1766337521.7982728
+  },
+  "_bmad/bmm/testarch/knowledge/probability-impact.md": {
+    "hash": "49d7f1e927ac77249e7315d701165429",
+    "translated_file": "_bmad/bmm/testarch/knowledge/probability-impact_pt-br.md",
+    "timestamp": 1766337521.7982728
+  },
+  "_bmad/bmm/testarch/knowledge/recurse.md": {
+    "hash": "60457daa3eabb118b24a59277cbb24ab",
+    "translated_file": "_bmad/bmm/testarch/knowledge/recurse_pt-br.md",
+    "timestamp": 1766337521.7982728
+  },
+  "_bmad/bmm/testarch/knowledge/risk-governance.md": {
+    "hash": "12fc714847e771d9caedb754eb5b9438",
+    "translated_file": "_bmad/bmm/testarch/knowledge/risk-governance_pt-br.md",
+    "timestamp": 1766337521.7992728
+  },
+  "_bmad/bmm/testarch/knowledge/selective-testing.md": {
+    "hash": "1b07a713c088b3300689da7ba27e96d9",
+    "translated_file": "_bmad/bmm/testarch/knowledge/selective-testing_pt-br.md",
+    "timestamp": 1766337521.7992728
+  },
+  "_bmad/bmm/testarch/knowledge/selector-resilience.md": {
+    "hash": "2ed8c839c705a2af698c2558aeba5570",
+    "translated_file": "_bmad/bmm/testarch/knowledge/selector-resilience_pt-br.md",
+    "timestamp": 1766337521.7992728
+  },
+  "_bmad/bmm/testarch/knowledge/test-healing-patterns.md": {
+    "hash": "a72f388f17fe80ff407755baa25540f8",
+    "translated_file": "_bmad/bmm/testarch/knowledge/test-healing-patterns_pt-br.md",
+    "timestamp": 1766337521.7992728
+  },
+  "_bmad/bmm/testarch/knowledge/test-levels-framework.md": {
+    "hash": "6cf02a648477c4b83bd4f30fc7b293c4",
+    "translated_file": "_bmad/bmm/testarch/knowledge/test-levels-framework_pt-br.md",
+    "timestamp": 1766337521.800273
+  },
+  "_bmad/bmm/testarch/knowledge/test-priorities-matrix.md": {
+    "hash": "7b6d296ab8bd5d6c75b974c46b0de681",
+    "translated_file": "_bmad/bmm/testarch/knowledge/test-priorities-matrix_pt-br.md",
+    "timestamp": 1766337521.800273
+  },
+  "_bmad/bmm/testarch/knowledge/test-quality.md": {
+    "hash": "0fc3310f56bf5b10dbac8a3c8199fa82",
+    "translated_file": "_bmad/bmm/testarch/knowledge/test-quality_pt-br.md",
+    "timestamp": 1766337521.800273
+  },
+  "_bmad/bmm/testarch/knowledge/timing-debugging.md": {
+    "hash": "9dc4df12ae18a8163d816babc2e6e296",
+    "translated_file": "_bmad/bmm/testarch/knowledge/timing-debugging_pt-br.md",
+    "timestamp": 1766337521.800273
+  },
+  "_bmad/bmm/testarch/knowledge/visual-debugging.md": {
+    "hash": "d22018bda1775a5bf843d94f19c4773f",
+    "translated_file": "_bmad/bmm/testarch/knowledge/visual-debugging_pt-br.md",
+    "timestamp": 1766337521.8012729
+  }
+}

@@ -1,0 +1,135 @@
+# Padrões de proteção de conteúdo para o BMAD Translation System
+# Estes padrões definem o que NÃO deve ser traduzido
+
+protection_patterns:
+  # Proteção específica BMAD
+  bmad_config:
+    - pattern: '\b(todo|in_progress|done)\b'
+      description: "Estados de tarefas"
+    - pattern: '\[(MODIFY|NEW|DELETE)\]'
+      description: "Marcadores de mudança em planos"
+    - pattern: '(?i)\b(implementat(ion|ed)|plan(ning|ned))\b'
+      description: "Termos de modo de operação"
+
+  # Proteção de frontmatter completo
+  frontmatter:
+    - pattern: '(?s)^---\n.*?\n---'
+      description: "Bloco completo de frontmatter YAML"
+      
+  # Proteção de código e técnico
+  code_blocks:
+    - pattern: '```[\s\S]*?```'
+      description: "Blocos de código Markdown"
+    - pattern: '`[^`\n]+`'
+      description: "Código inline"
+    - pattern: '<[^>]+>'
+      description: "Tags XML/HTML"
+      
+  # Proteção de templates e metadados
+  templates:
+    - pattern: '\{%.*?%\}'
+      description: "Liquid Tags (Jekyll/Hugo/Django)"
+    - pattern: '&[a-zA-Z0-9#]+;'
+      description: "HTML Entities"
+    - pattern: '\b0x[a-fA-F0-9]+\b'
+      description: "Números hexadecimais"
+    - pattern: '\b[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}\b'
+      description: "Emails"
+      
+  # Proteção de caminhos e arquivos
+  paths:
+    - pattern: '@_[\w/.-]+'
+      description: "Caminhos BMAD (@_bmad/...)"
+    - pattern: '\b[\w/-]+\.(yaml|xml|md|json|js|py|java|cpp|h|c|ts|tsx|jsx)\b'
+      description: "Nomes de arquivos"
+      
+  # Proteção de links e URLs
+  links:
+    - pattern: 'https?://[^\s]+'
+      description: "URLs HTTP/HTTPS"
+    - pattern: '\]\(([^)]+)\)'
+      description: "URLs em links Markdown"
+    - pattern: 'www\.[^\s]+'
+      description: "URLs www"
+    - pattern: 'ftp://[^\s]+'
+      description: "URLs FTP"
+    - pattern: 'mailto:[^\s]+'
+      description: "Emails mailto"
+      
+  # Proteção de palavras reservadas
+  reserved_words:
+    - pattern: '\b(function|const|var|let|async|await|import|export|typeof|instanceof|void|implements|package|extends)\b'
+      description: "Palavras reservadas JavaScript"
+    - pattern: '\b(lambda|yield|raise|elif)\b'
+      description: "Palavras reservadas Python"
+      
+  # Proteção de chaves YAML específicas
+  yaml_keys:
+    - pattern: '^\s*name:.*$'
+      description: "Chave 'name' do YAML"
+    - pattern: '^\s*type:.*$'
+      description: "Chave 'type' do YAML"
+    - pattern: '^\s*version:.*$'
+      description: "Chave 'version' do YAML"
+    - pattern: '^\s*description:.*$'
+      description: "Chave 'description' do YAML"
+    - pattern: '^\s*author:.*$'
+      description: "Chave 'author' do YAML"
+    - pattern: '^\s*id:.*$'
+      description: "Chave 'id' do YAML"
+    - pattern: '^\s*title:.*$'
+      description: "Chave 'title' do YAML"
+    - pattern: '^\s*icon:.*$'
+      description: "Chave 'icon' do YAML"
+      
+  # Proteção de metadados técnicos
+  metadata:
+    - pattern: '^\s*-\s*critical:\s*true\b'
+      description: "Flags críticos YAML"
+    - pattern: '^\s*-\s*timeout:\s*\d+\b'
+      description: "Timeouts"
+    - pattern: '^\s*-\s*retry:\s*\d+\b'
+      description: "Retry counts"
+    - pattern: '\b[a-f0-9]{8,}\b'
+      description: "Hashes/IDs hexadecimais"
+    - pattern: '\b[a-f0-9]{32,}\b'
+      description: "Hashes MD5"
+    - pattern: '\b\d{4}-\d{2}-\d{2}\b'
+      description: "Datas ISO"
+    - pattern: '\b\d{2}:\d{2}:\d{2}\b'
+      description: "Horas"
+      
+  # Proteção de constantes
+  constants:
+    - pattern: '\b[A-Z]+_[A-Z0-9_]+\b'
+      description: "Constantes em CAPS_LOCK"
+      
+  # Proteção de referências
+  references:
+    - pattern: '\{[^}]+\}'
+      description: "Referências de template"
+    - pattern: '\{\{[^}]+\}\}'
+      description: "Referências duplas"
+      
+  # Proteção de estruturas YAML
+  yaml_structures:
+    - pattern: '^\s*-\s*\w+:\s*[\w/-]+\.(yaml|xml|md|json)'
+      description: "Propriedades YAML com caminhos"
+    - pattern: '^\s*-\s*\w+:\s*"[^"]*"'
+      description: "Propriedades YAML com strings"
+    - pattern: '^\s*-\s*\w+:\s*\{[^}]+\}'
+      description: "Propriedades YAML com objetos"
+    - pattern: '^\s*-\s*\w+:\s*\[.*\]'
+      description: "Propriedades YAML com arrays"
+    - pattern: '^\s*-\s*`[^`]+`'
+      description: "Listas Markdown com código"
+    - pattern: '^\s*-\s*\w+:'
+      description: "Propriedades YAML em listas"
+    - pattern: '\b(true|false|null)\b'
+      description: "Valores booleanos e null YAML"
+    - pattern: '^\s*[a-zA-Z_][a-zA-Z0-9_]*:\s*$'
+      description: "Chaves YAML simples"
+    - pattern: '^\s*[a-zA-Z_][a-zA-Z0-9_]*:\s*[\w/-]+'
+      description: "Chaves YAML com valores simples"
+      
+

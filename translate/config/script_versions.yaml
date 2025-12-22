@@ -1,0 +1,45 @@
+version: "1.0.0"
+
+scripts:
+  validation:
+    validate_installation: "1.0.0"
+    validate_translations: "2.1.0"
+    validate_structure: "1.0.0"
+  
+  analysis:
+    analyze_translations: "1.5.0"
+    detect_issues: "1.0.0"
+    generate_reports: "1.0.0"
+  
+  correction:
+    auto:
+      fix_artifacts: "1.2.0"
+      fix_formatting: "2.0.0"
+      fix_encoding: "1.0.0"
+    manual:
+      retranslate_priority: "1.0.0"
+    pipelines:
+      pipeline_full: "1.0.0"
+  
+  utils:
+    state_manager: "1.0.0"
+    lock_system: "1.0.0"
+    bmad_translate_status: "1.0.0"
+    model_management: "1.0.0"
+
+dependencies:
+  python: ">=3.8"
+  bash: ">=4.0"
+  system_packages:
+    - jq
+    - parallel
+  python_packages:
+    - pyyaml
+    - tqdm
+    - argostranslate
+
+compatibility:
+  state_format: "1.0.0"
+  cache_format: "1.0.0"
+
+last_updated: "2025-12-22T13:49:49-04:00"

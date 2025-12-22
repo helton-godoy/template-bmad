@@ -1,0 +1,86 @@
+# Configurações padrão do BMAD Translation System
+
+# Configurações de tradução
+translation:
+  # Idioma padrão de destino
+  target_language: "pt"
+  # Sufixo para arquivos traduzidos
+  output_suffix: "_pt-br"
+  # Tamanho máximo do texto por tradução
+  max_text_length: 5000
+  # Tamanho ideal do batch para o tradutor
+  safe_chunk_size: 3000
+
+# Extensões de arquivo suportadas
+supported_extensions:
+  - ".md"
+  - ".yaml"
+  - ".yml"
+  - ".json"
+  - ".jsonc"
+  - ".toml"
+
+# Diretórios a ignorar
+skip_directories:
+  - ".git"
+  - ".venv"
+  - "__pycache__"
+  - "node_modules"
+  - "site-packages"
+  - "dist"
+  - "build"
+  - ".tox"
+  - ".mypy_cache"
+  - ".pytest_cache"
+  - "venv"
+  - "env"
+
+# Chaves que podem ser traduzidas (whitelist)
+translatable_keys:
+  - "title"
+  - "description"
+  - "summary"
+  - "about"
+  - "note"
+  - "comment"
+  - "content"
+  - "text"
+  - "instruction"
+  - "steps"
+  - "rules"
+  - "label"
+  - "detail"
+  - "placeholder"
+
+# Configurações de segurança
+security:
+  # Diretório base permitido (padrão: diretório atual)
+  allowed_base_dir: null
+  # Habilitar validação de path traversal
+  enable_path_validation: true
+  # Habilitar sanitização de input
+  enable_input_sanitization: true
+
+# Configurações de logging
+logging:
+  # Nível de log (DEBUG, INFO, WARNING, ERROR, CRITICAL)
+  level: "INFO"
+  # Formato do log
+  format: "%(asctime)s - %(levelname)s - %(message)s"
+  # Arquivo de log principal
+  main_log_file: "data/logs/translation.log"
+  # Arquivo de log de erros
+  error_log_file: "data/logs/errors.log"
+  # Habilitar filtro de segurança
+  enable_secure_filter: true
+
+# Configurações de performance
+performance:
+  # Habilitar cache de traduções
+  enable_cache: true
+  # Tamanho máximo do cache (em MB)
+  cache_size_mb: 100
+  # Timeout para operações de tradução (segundos)
+  translation_timeout: 30
+  # Número máximo de tentativas
+  max_retries: 3

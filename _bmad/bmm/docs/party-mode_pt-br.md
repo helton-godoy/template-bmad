@@ -8,7 +8,7 @@
 
 Ever wanted to gather your entire AI team in one room and see what happens? That's party mode.
 
-Type `/bmad:core:workflows:party-mode` (or `*party-mode` from any agent), and suddenly you've got **all your AI agents** in one conversation. PM, Architect, DEV, UX Designer, the CIS creative agents - everyone shows up.
+Type `/_bmad:core:workflows:party-mode` (or `*party-mode` from any agent), and suddenly you've got **all your AI agents** in one conversation. PM, Architect, DEV, UX Designer, the CIS creative agents - everyone shows up.
 
 **Why it's useful:**
 
@@ -42,7 +42,7 @@ Type `/bmad:core:workflows:party-mode` (or `*party-mode` from any agent), and su
 ```bash
 
 # Trigger party mode
-/bmad:core:workflows:party-mode
+/_bmad:core:workflows:party-mode
 
 # OR from any agent context
 *party-mode

@@ -2,15 +2,15 @@
 
 ## Princípio
 
-A pontuação de risco utiliza uma matriz “probabilidade × impacto” (1-9 escala) para priorizar os esforços de teste. Escores mais elevados (6-9) exigem ação imediata; escores mais baixos (1-3) requerem apenas documentação. Esta abordagem sistemática garante que os recursos de teste se concentrem nos riscos de maior valor.
+A pontuação de risco usa um **probability × impacto** matriz (1-9 escala) para priorizar os esforços de teste. Escores mais elevados (6-9) exigem ação imediata; escores mais baixos (1-3) requerem apenas documentação. Esta abordagem sistemática garante que os recursos de teste se concentrem nos riscos de maior valor.
 
 ## Racional
 
-**O Problema**: Sem avaliação de risco quantificável, as equipes testam cenários de baixo valor sem riscos críticos. A sensação de gut leva a uma priorização inconsistente e casos de borda perdidos.
+**The Problema**: Sem avaliação de risco quantificável, as equipes testam cenários de baixo valor sem riscos críticos. O sentimento gut leva à priorização inconsistente e casos de borda perdidos.
 
-**A Solução**: Normalizar a avaliação de risco com uma matriz 3×3 (probabilidade: 1-3, impacto: 1-3). Multiplique para obter pontuação de risco (1-9). Classificação automática (DOCUMENTO, MONITOR, MITIGATE, BLOCK) com base em limiares. Esta abordagem enfrenta riscos ocultos precocemente e justifica decisões de teste para as partes interessadas.
+**The Solução**: Normalizar a avaliação de risco com uma matriz 3×3 (probabilidade: 1-3, impacto: 1-3). Multiplique para obter pontuação de risco (1-9). Classificação automática (DOCUMENTO, MONITOR, MITIGATE, BLOCK) com base em limiares. Esta abordagem apresenta riscos ocultos precocemente e justifica decisões de teste para as partes interessadas.
 
-**Por que isso importa**:
+**Why Esta questão**:
 
 - Linguagem de risco consistente entre produtos, engenharia e QA
 - Priorização objetiva de cenários de teste (não de política)
@@ -21,7 +21,7 @@ A pontuação de risco utiliza uma matriz “probabilidade × impacto” (1-9 es
 
 ### Exemplo 1: Matriz de probabilidade-impacto Implementation (Classificação automatizada)
 
-**Contexto**: Aplicar um sistema de pontuação de risco reutilizável com classificação automática de limiar
+**Context**: Aplicar um sistema de pontuação de risco reutilizável com classificação de limiar automática
 
 **Implementation**:
 
@@ -121,30 +121,487 @@ export function generateRiskMatrix(): string {
 
 ```
 
-**Pontos-chave**
+**Key Pontos**:
 
-- Probabilidade/impacto seguro de tipo (1-3 aplicado no momento da compilação)
+- Probabilidade/impacto seguro de tipo (1-3 no momento da compilação)
 - Classificação de ação automática (DOCUMENTO, MONITOR, MITIGATE, BLOCK)
-- Geração de matriz visual para documentação
-- Fórmula da pontuação de risco: `probability * impact` (máx = 9)
-- Regras de decisão baseadas em limiares (6-8 = MITIGATE, 9 = BLOCK)
+- Geração visual de matriz para documentação
+- Fórmula da pontuação de risco: `probability * impact` (máx. = 9)
+- Regras de decisão baseadas no limiar (6-8 = MITIGATE, 9 = BLOCK)
 
 ---
 
-### Exemplo 2: Fluxo de trabalho de avaliação de risco (integração do teste Planning)
+### Example 2: Risk Assessment Workflow (Test Planning Integration)
 
-**Contexto**: Aplicar matriz de risco durante o projeto do teste para priorizar cenários
+**Context**: Apply risk matrix during test design to prioritize scenarios
 
 **Implementation**:
 
-«``typescript
+```typescript
 // tests/e2e/test-planning/risk-assessment.ts
-import BMADPROTECT013End from '../../../../src/teste/matriz de risco «;
+import { assessRisk, generateRiskMatrix, type RiskAssessment } from '../../../src/testing/risk-matrix';
 
-export tipo TestScenario = {
+export type TestScenario = {
   id: string;
   title: string;
   feature: string;
   risk: RiskAssessment;
-TestLevel: 'E2E' □ 'API' □ 'Unit';
-Prioridade: 'P0'
+  testLevel: 'E2E' | 'API' | 'Unit';
+  priority: 'P0' | 'P1' | 'P2' | 'P3';
+  owner: string;
+};
+
+/**
+ * Assess test scenarios and auto-assign priority based on risk score
+ */
+export function assessTestScenarios(scenarios: Omit<TestScenario, 'risk' | 'priority'>[]): TestScenario[] {
+  return scenarios.map((scenario) => {
+    // Auto-assign priority based on risk score
+    const priority = mapRiskToPriority(scenario.risk.score);
+    return { ...scenario, priority };
+  });
+}
+
+/**
+ * Map risk score to test priority (P0-P3)
+ * P0: Critical (score 9) - blocks release
+ * P1: High (score 6-8) - must fix before release
+ * P2: Medium (score 4-5) - fix if time permits
+ * P3: Low (score 1-3) - document and defer
+ */
+function mapRiskToPriority(score: number): 'P0' | 'P1' | 'P2' | 'P3' {
+  if (score === 9) return 'P0';
+  if (score >= 6) return 'P1';
+  if (score >= 4) return 'P2';
+  return 'P3';
+}
+
+/**
+ * Example: Payment flow risk assessment
+ */
+export const paymentScenarios: Array<Omit<TestScenario, 'priority'>> = [
+  {
+    id: 'PAY-001',
+    title: 'Valid credit card payment completes successfully',
+    feature: 'Checkout',
+    risk: assessRisk({
+      probability: 2, // Possible (standard Stripe integration)
+      impact: 3, // Critical (revenue loss if broken)
+      reasoning: 'Core revenue flow, but Stripe is well-tested',
+    }),
+    testLevel: 'E2E',
+    owner: 'qa-team',
+  },
+  {
+    id: 'PAY-002',
+    title: 'Expired credit card shows user-friendly error',
+    feature: 'Checkout',
+    risk: assessRisk({
+      probability: 3, // Likely (edge case handling often buggy)
+      impact: 2, // Degraded (users see error, but can retry)
+      reasoning: 'Error handling logic is custom and complex',
+    }),
+    testLevel: 'E2E',
+    owner: 'qa-team',
+  },
+  {
+    id: 'PAY-003',
+    title: 'Payment confirmation email formatting is correct',
+    feature: 'Email',
+    risk: assessRisk({
+      probability: 2, // Possible (template changes occasionally break)
+      impact: 1, // Minor (cosmetic issue, email still sent)
+      reasoning: 'Non-blocking, users get email regardless',
+    }),
+    testLevel: 'Unit',
+    owner: 'dev-team',
+  },
+  {
+    id: 'PAY-004',
+    title: 'Payment fails gracefully when Stripe is down',
+    feature: 'Checkout',
+    risk: assessRisk({
+      probability: 1, // Unlikely (Stripe has 99.99% uptime)
+      impact: 3, // Critical (complete checkout failure)
+      reasoning: 'Rare but catastrophic, requires retry mechanism',
+    }),
+    testLevel: 'API',
+    owner: 'qa-team',
+  },
+];
+
+/**
+ * Generate risk assessment report with priority distribution
+ */
+export function generateRiskReport(scenarios: TestScenario[]): string {
+  const priorityCounts = scenarios.reduce(
+    (acc, s) => {
+      acc[s.priority] = (acc[s.priority] || 0) + 1;
+      return acc;
+    },
+    {} as Record<string, number>,
+  );
+
+  const actionCounts = scenarios.reduce(
+    (acc, s) => {
+      acc[s.risk.action] = (acc[s.risk.action] || 0) + 1;
+      return acc;
+    },
+    {} as Record<string, number>,
+  );
+
+  return `
+
+# Risk Assessment Report
+
+## Risk Matrix
+${generateRiskMatrix()}
+
+## Priority Distribution
+- **P0 (Blocker)**: ${priorityCounts.P0 || 0} scenarios
+- **P1 (High)**: ${priorityCounts.P1 || 0} scenarios
+- **P2 (Medium)**: ${priorityCounts.P2 || 0} scenarios
+- **P3 (Low)**: ${priorityCounts.P3 || 0} scenarios
+
+## Action Required
+- **BLOCK**: ${actionCounts.BLOCK || 0} scenarios (auto-fail gate)
+- **MITIGATE**: ${actionCounts.MITIGATE || 0} scenarios (concerns at gate)
+- **MONITOR**: ${actionCounts.MONITOR || 0} scenarios (watch closely)
+- **DOCUMENT**: ${actionCounts.DOCUMENT || 0} scenarios (awareness only)
+
+## Scenarios by Risk Score (Highest First)
+${scenarios
+  .sort((a, b) => b.risk.score - a.risk.score)
+  .map((s) => `- **[${s.priority}]** ${s.id}: ${s.title} (Score: ${s.risk.score} - ${s.risk.action})`)
+  .join('\n')}
+`.trim();
+}
+
+```
+
+**Key Points**:
+
+- Risk score → Priority mapping (P0-P3 automated)
+- Report generation with priority/action distribution
+- Scenarios sorted by risk score (highest first)
+- Visual matrix included in reports
+- Reusable across projects (extract to shared library)
+
+---
+
+### Exemplo 3: Reavaliação dinâmica do risco (avaliação contínua)
+
+**Context**: Recalcular as pontuações de risco à medida que o projecto evolui (alteração dos requisitos, mitigação implementada)
+
+**Implementation**:
+
+```typescript
+// src/testing/risk-tracking.ts
+import { type RiskAssessment, assessRisk, type Probability, type Impact } from './risk-matrix';
+
+export type RiskHistory = {
+  timestamp: Date;
+  assessment: RiskAssessment;
+  changedBy: string;
+  reason: string;
+};
+
+export type TrackedRisk = {
+  id: string;
+  title: string;
+  feature: string;
+  currentRisk: RiskAssessment;
+  history: RiskHistory[];
+  mitigations: string[];
+  status: 'OPEN' | 'MITIGATED' | 'WAIVED' | 'RESOLVED';
+};
+
+export class RiskTracker {
+  private risks: Map<string, TrackedRisk> = new Map();
+
+  /**
+   * Add new risk to tracker
+   */
+  addRisk(params: {
+    id: string;
+    title: string;
+    feature: string;
+    probability: Probability;
+    impact: Impact;
+    reasoning: string;
+    changedBy: string;
+  }): TrackedRisk {
+    const { id, title, feature, probability, impact, reasoning, changedBy } = params;
+
+    const assessment = assessRisk({ probability, impact, reasoning });
+
+    const risk: TrackedRisk = {
+      id,
+      title,
+      feature,
+      currentRisk: assessment,
+      history: [
+        {
+          timestamp: new Date(),
+          assessment,
+          changedBy,
+          reason: 'Initial assessment',
+        },
+      ],
+      mitigations: [],
+      status: 'OPEN',
+    };
+
+    this.risks.set(id, risk);
+    return risk;
+  }
+
+  /**
+   * Reassess risk (probability or impact changed)
+   */
+  reassessRisk(params: {
+    id: string;
+    probability?: Probability;
+    impact?: Impact;
+    reasoning: string;
+    changedBy: string;
+  }): TrackedRisk | null {
+    const { id, probability, impact, reasoning, changedBy } = params;
+    const risk = this.risks.get(id);
+    if (!risk) return null;
+
+    // Use existing values if not provided
+    const newProbability = probability ?? risk.currentRisk.probability;
+    const newImpact = impact ?? risk.currentRisk.impact;
+
+    const newAssessment = assessRisk({
+      probability: newProbability,
+      impact: newImpact,
+      reasoning,
+    });
+
+    risk.currentRisk = newAssessment;
+    risk.history.push({
+      timestamp: new Date(),
+      assessment: newAssessment,
+      changedBy,
+      reason: reasoning,
+    });
+
+    this.risks.set(id, risk);
+    return risk;
+  }
+
+  /**
+   * Mark risk as mitigated (probability reduced)
+   */
+  mitigateRisk(params: { id: string; newProbability: Probability; mitigation: string; changedBy: string }): TrackedRisk | null {
+    const { id, newProbability, mitigation, changedBy } = params;
+    const risk = this.reassessRisk({
+      id,
+      probability: newProbability,
+      reasoning: `Mitigation implemented: ${mitigation}`,
+      changedBy,
+    });
+
+    if (risk) {
+      risk.mitigations.push(mitigation);
+      if (risk.currentRisk.action === 'DOCUMENT' || risk.currentRisk.action === 'MONITOR') {
+        risk.status = 'MITIGATED';
+      }
+    }
+
+    return risk;
+  }
+
+  /**
+   * Get risks requiring action (MITIGATE or BLOCK)
+   */
+  getRisksRequiringAction(): TrackedRisk[] {
+    return Array.from(this.risks.values()).filter(
+      (r) => r.status === 'OPEN' && (r.currentRisk.action === 'MITIGATE' || r.currentRisk.action === 'BLOCK'),
+    );
+  }
+
+  /**
+   * Generate risk trend report (show changes over time)
+   */
+  generateTrendReport(riskId: string): string | null {
+    const risk = this.risks.get(riskId);
+    if (!risk) return null;
+
+    return `
+
+# Risk Trend Report: ${risk.id}
+
+**Title**: ${risk.title}
+**Feature**: ${risk.feature}
+**Status**: ${risk.status}
+
+## Current Assessment
+- **Probability**: ${risk.currentRisk.probability}
+- **Impact**: ${risk.currentRisk.impact}
+- **Score**: ${risk.currentRisk.score}
+- **Action**: ${risk.currentRisk.action}
+- **Reasoning**: ${risk.currentRisk.reasoning}
+
+## Mitigations Applied
+${risk.mitigations.length > 0 ? risk.mitigations.map((m) => `- ${m}`).join('\n') : '- None'}
+
+## History (${risk.history.length} changes)
+${risk.history
+  .reverse()
+  .map((h) => `- **${h.timestamp.toISOString()}** by ${h.changedBy}: Score ${h.assessment.score} (${h.assessment.action}) - ${h.reason}`)
+  .join('\n')}
+`.trim();
+  }
+}
+
+```
+
+**Key Pontos**:
+
+- Monitoramento histórico (via de auditoria para mudanças de risco)
+- Rastreamento de impacto de atenuação (redução da probabilidade)
+- Ciclo de vida do estado (OPEN → MITIGADO → RESOLVIDO)
+- Relatórios de tendências (mostrar a evolução dos riscos ao longo do tempo)
+- Desencadeios de reavaliação (alteração dos requisitos, nova informação)
+
+---
+
+### Example 4: Risk Matrix in Gate Decision (Integration with Trace Workflow)
+
+**Context**: Use probability-impact scores to drive gate decisions (PASS/CONCERNS/FAIL/WAIVED)
+
+**Implementation**:
+
+```typescript
+// src/testing/gate-decision.ts
+import { type RiskScore, classifyRiskAction, type RiskAction } from './risk-matrix';
+import { type TrackedRisk } from './risk-tracking';
+
+export type GateDecision = 'PASS' | 'CONCERNS' | 'FAIL' | 'WAIVED';
+
+export type GateResult = {
+  decision: GateDecision;
+  blockers: TrackedRisk[]; // Score=9, action=BLOCK
+  concerns: TrackedRisk[]; // Score 6-8, action=MITIGATE
+  monitored: TrackedRisk[]; // Score 4-5, action=MONITOR
+  documented: TrackedRisk[]; // Score 1-3, action=DOCUMENT
+  summary: string;
+};
+
+/**
+ * Evaluate gate based on risk assessments
+ */
+export function evaluateGateFromRisks(risks: TrackedRisk[]): GateResult {
+  const blockers = risks.filter((r) => r.currentRisk.action === 'BLOCK' && r.status === 'OPEN');
+  const concerns = risks.filter((r) => r.currentRisk.action === 'MITIGATE' && r.status === 'OPEN');
+  const monitored = risks.filter((r) => r.currentRisk.action === 'MONITOR');
+  const documented = risks.filter((r) => r.currentRisk.action === 'DOCUMENT');
+
+  let decision: GateDecision;
+
+  if (blockers.length > 0) {
+    decision = 'FAIL';
+  } else if (concerns.length > 0) {
+    decision = 'CONCERNS';
+  } else {
+    decision = 'PASS';
+  }
+
+  const summary = generateGateSummary({ decision, blockers, concerns, monitored, documented });
+
+  return { decision, blockers, concerns, monitored, documented, summary };
+}
+
+/**
+ * Generate gate decision summary
+ */
+function generateGateSummary(result: Omit<GateResult, 'summary'>): string {
+  const { decision, blockers, concerns, monitored, documented } = result;
+
+  const lines: string[] = [`## Gate Decision: ${decision}`];
+
+  if (decision === 'FAIL') {
+    lines.push(`\n**Blockers** (${blockers.length}): Automatic FAIL until resolved or waived`);
+    blockers.forEach((r) => {
+      lines.push(`- **${r.id}**: ${r.title} (Score: ${r.currentRisk.score})`);
+      lines.push(`  - Probability: ${r.currentRisk.probability}, Impact: ${r.currentRisk.impact}`);
+      lines.push(`  - Reasoning: ${r.currentRisk.reasoning}`);
+    });
+  }
+
+  if (concerns.length > 0) {
+    lines.push(`\n**Concerns** (${concerns.length}): Address before release`);
+    concerns.forEach((r) => {
+      lines.push(`- **${r.id}**: ${r.title} (Score: ${r.currentRisk.score})`);
+      lines.push(`  - Mitigations: ${r.mitigations.join(', ') || 'None'}`);
+    });
+  }
+
+  if (monitored.length > 0) {
+    lines.push(`\n**Monitored** (${monitored.length}): Watch closely`);
+    monitored.forEach((r) => lines.push(`- **${r.id}**: ${r.title} (Score: ${r.currentRisk.score})`));
+  }
+
+  if (documented.length > 0) {
+    lines.push(`\n**Documented** (${documented.length}): Awareness only`);
+  }
+
+  lines.push(`\n---\n`);
+  lines.push(`**Next Steps**:`);
+  if (decision === 'FAIL') {
+    lines.push(`- Resolve blockers or request formal waiver`);
+  } else if (decision === 'CONCERNS') {
+    lines.push(`- Implement mitigations for high-risk scenarios (score 6-8)`);
+    lines.push(`- Re-run gate after mitigations`);
+  } else {
+    lines.push(`- Proceed with release`);
+  }
+
+  return lines.join('\n');
+}
+
+```
+
+**Key Points**:
+
+- Gate decision driven by risk scores (not gut feeling)
+- Automatic FAIL for score=9 (blockers)
+- CONCERNS for score 6-8 (requires mitigation)
+- PASS only when no blockers/concerns
+- Actionable summary with next steps
+- Integration with trace workflow (Phase 2)
+
+---
+
+## Resumo do Limiar Probabilidade-Impacto
+
+| Score | Action   | Gate Impact          | Typical Use Case                       |
+| ----- | -------- | -------------------- | -------------------------------------- |
+| 1-3   | DOCUMENT | None                 | Cosmetic issues, low-priority bugs     |
+| 4-5   | MONITOR  | None (watch closely) | Edge cases, partial unknowns           |
+| 6-8   | MITIGATE | CONCERNS at gate     | High-impact scenarios needing coverage |
+| 9     | BLOCK    | Automatic FAIL       | Critical blockers, must resolve        |
+
+## Lista de Verificação de Risco
+
+Antes da implantação da matriz de risco:
+
+- [ ] **Probability escala definida**: 1 (improvável), 2 (possível), 3 (provável) com exemplos claros
+- [ ] **Impact escala definida**: 1 (menor), 2 (degradado), 3 (crítico) com critérios concretos
+- [ ] **Threshold regras documentadas**: Pontuação → Mapeamento de ação (1-3 = DOCUMENTO, 4-5 = MONITOR, 6-8 = MITIGATE, 9 = BLOCK)
+- [ ] **Gate integração**: Decisões sobre os pontos de risco que impulsionam as portas (PASS/CONCERS/FAIL/WAIVED)
+- [ ] **Re-assessment process**: Riscos reavaliados à medida que o projecto evolui (alteração dos requisitos, mitigação aplicada)
+- [ ] **Audit trail**: Historical tracking for risk changes (who, when, why)
+- [ ] **Mitigation tracking**: mitigação da ligação à redução de probabilidade (quantificar impacto)
+- [ ] **Reporting**: Visualização da matriz de risco, relatórios de tendências, resumos de portas
+
+## Pontos de Integração
+
+- **Used em fluxos de trabalho**: `*test-design` (avaliação inicial do risco), `*trace` (decisão-quadro Fase 2), `*nfr-assess` (riscos de segurança/desempenho)
+- **Related fragmentos**: `risk-governance.md` (matriz de pontuação de risco, motor de decisão de porta), `test-priorities-matrix.md` (mapeamento P0-P3), `nfr-criteria.md` (avaliação de impacto para NFRs)
+- **Tools**: TypeScript para segurança do tipo, marcação para relatórios, controle de versão para pista de auditoria
+
+_Source: Murat risk model summary, gate decision patterns from production systems, probability-impact matrix from risk governance practices

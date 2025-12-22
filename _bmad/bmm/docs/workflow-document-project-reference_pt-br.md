@@ -38,7 +38,7 @@ workflow document-project
 Or from BMAD CLI:
 
 ```bash
-/bmad:bmm:workflows:document-project
+/_bmad:bmm:workflows:document-project
 
 ```
 

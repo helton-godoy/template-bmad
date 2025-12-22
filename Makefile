@@ -125,7 +125,7 @@ docs-view: ## Abre documentação principal
 
 test: ## Executa testes de validação
 	@echo "$(GREEN)🧪 Executando testes...$(NC)"
-	@$(PYTHON) -m pytest tests/ -v
+	@$(PYTHON) -m pytest translate/tests/ -v
 
 test-state: ## Testa sistema de estado
 	@echo "$(GREEN)🧪 Testando sistema de estado...$(NC)"

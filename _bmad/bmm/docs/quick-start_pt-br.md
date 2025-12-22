@@ -45,9 +45,9 @@ The interactive installer will guide you through setup and create a `_bmad/` fol
 
 ### Passo 1: Inicializar seu fluxo de trabalho
 
-1. **Carregue o agente analista** no seu IDE - Veja as instruções específicas do seu IDE em [docs/ide-info](https://github.com/bmad-code-org/BMAD-METHOD/tree/main/docs/ide-info) for how to activate agents:
-   - [Claude Code](https://github.com/bmad-code-org/BMAD-METHOD/blob/main/docs/ide-info/claude-code.md)
-   - [VS Code/Cursor/Windsurf](https://github.com/bmad-code-org/BMAD-METHOD/tree/main/docs/ide-info) - Check your IDE folder
+1. **Carregue o agente analista** no seu IDE - Veja as instruções específicas do seu IDE em [docs/ide-info](https://github.com/_bmad-code-org/BMAD-METHOD/tree/main/docs/ide-info) for how to activate agents:
+   - [Claude Code](https://github.com/_bmad-code-org/BMAD-METHOD/blob/main/docs/ide-info/claude-code.md)
+   - [VS Code/Cursor/Windsurf](https://github.com/_bmad-code-org/BMAD-METHOD/tree/main/docs/ide-info) - Check your IDE folder
    - Other IDEs also supported
 2. **Wait for the agent's menu** to appear
 3. **Tell the agent**: "Run workflow-init" or type "\*workflow-init" or select the menu item number

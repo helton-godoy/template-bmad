@@ -35,19 +35,19 @@ bmm/
 
 ### Agente Roster
 
-**Core Development:** PM, Analista, Arquiteto, SM, DEV, TEA, UX Designer, Escritor Técnico
-**Game Development:** Designer de jogos, desenvolvedor de jogos, arquiteto de jogos
-**Orchestration:** BMad Master (do núcleo)
+**Core Desenvolvimento:** PM, Analista, Arquiteto, SM, DEV, TEA, UX Designer, Escritor Técnico
+**Game Desenvolvimento:** Designer de jogos, desenvolvedor de jogos, arquiteto de jogos
+**Orchestration:**BMad Master (do núcleo)
 
 👉 **[Guia de Agentes Completos](./docs/agents-guide.md)** - Funções, fluxos de trabalho e quando usar cada agente
 
 ### Fases de fluxo de trabalho
 
-**Fase 0:** Documentação (apenas campo marrom)
-**Fase 1:** Análise (opcional) - 5 fluxos de trabalho
-**Fase 2:** Planning (obrigatório) - 6 fluxos de trabalho
-**Fase 3:** Solução (Nível 3-4) - 2 fluxos de trabalho
-**Fase 4:** Implementation (iterativa) - 10 fluxos de trabalho
+**Phase 0:** Documentação (apenas campo marrom)
+**Phase 1:** Análise (opcional) - 5 fluxos de trabalho
+**Phase 2:** Planning (obrigatório) - 6 fluxos de trabalho
+**Phase 3:** Solução (Nível 3-4) - 2 fluxos de trabalho
+* *Phase 4:** Implementation (iterativo) - 10 fluxos de trabalho
 **Testing:** Garantia de qualidade (paralela) - 9 fluxos de trabalho
 
 👉 **[Guias de fluxo de trabalho](./docs/README.md#-workflow-guides)** - Documentação detalhada para cada fase
@@ -86,13 +86,13 @@ npx bmad-method@alpha install
 
 ## 🎯 Conceitos-chave
 
-### Desenho Adaptativo à Escala
+### Desenho adaptado à escala
 
 BMM se ajusta automaticamente à complexidade do projeto (Níveis 0-4):
 
-- **Nível 0-1:** Fluxo de especificações rápidas para correções de erros e pequenas características
-- **Nível 2:** PRD com arquitectura opcional
-- **Nível 3-4:** PRD completo + arquitetura abrangente
+- **Level 0-1:** Fluxo de Especificações Rápidas para correções de bugs e pequenas características
+- **Level 2:** PRD com arquitetura opcional
+- * *Level 3-4:** PRD + arquitetura abrangente
 
 👉 **[Scale Adaptive System](./docs/scale-adaptive-system.md)** - Discriminação completa do nível
 
@@ -106,9 +106,9 @@ Just-in-time contexto épico e contexto de história fornecer experiência exata
 
 ### Colaboração Multi-Agente
 
-Use o modo de festa para envolver todos os 19+ agentes (de BMM, CIS, BMB, módulos personalizados) em discussões de grupo para decisões estratégicas, brainstorming criativo e resolução de problemas complexos.
+Use o modo de partido para envolver todos os 19+ agentes (de BMM, CIS, BMB, módulos personalizados) em discussões de grupo para decisões estratégicas, brainstorming criativo e resolução de problemas complexos.
 
-👉 **[Guia do modo de festa](./docs/party-mode.md)** - Como orquestrar a colaboração multiagente
+👉 **[Guia de Modo de Partida](./docs/party-mode.md)** - Como orquestrar a colaboração multiagentes
 
 ---
 
@@ -125,7 +125,7 @@ Use o modo de festa para envolver todos os 19+ agentes (de BMM, CIS, BMB, módul
 ## 🤝 Comunidade
 
 - **[Discord](https://discord.gg/gk8jAdXWmj)** - Get help, share feedback (#general-dev, #bugs-issues)
-- **[Questões do GitHub](https://github.com/bmad-code-org/BMAD-METHOD/issues)** - Report bugs or request features
+- **[Questões do GitHub](https://github.com/_bmad-code-org/BMAD-METHOD/issues)** - Report bugs or request features
 - **[YouTube](https://www.youtube.com/@BMadCode)** - Video tutorials and walkthroughs
 
 ---

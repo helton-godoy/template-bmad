@@ -112,7 +112,7 @@ def check_languagetool() -> Tuple[bool, str]:
 
 def check_file_structure() -> List[Tuple[bool, str]]:
     """Verifica a estrutura de arquivos do projeto."""
-    base_path = Path(__file__).parent.parent
+    base_path = Path(__file__).parent.parent.parent
     checks = []
     
     # Diretórios essenciais
@@ -165,7 +165,7 @@ def check_file_structure() -> List[Tuple[bool, str]]:
 
 def check_permissions() -> List[Tuple[bool, str]]:
     """Verifica permissões de escrita em diretórios importantes."""
-    base_path = Path(__file__).parent.parent
+    base_path = Path(__file__).parent.parent.parent
     checks = []
     
     # Verifica permissão de escrita

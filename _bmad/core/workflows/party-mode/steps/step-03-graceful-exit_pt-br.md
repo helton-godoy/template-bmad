@@ -54,7 +54,7 @@ Para cada agente selecionado:
 
 "[Icon Emoji] **[Nome do Agente]**: [Adeus característicos que refletem sua personalidade, estilo de comunicação e papel. Que a sessão de referência destaques, expressar gratidão, ou oferecer insights finais relacionados ao seu domínio de especialização.]
 
-[Bash: .claude/hooks/bmad-speak.sh \"[Nome do agente]\" \"[Sua mensagem de despedida]\"]"
+[Bash: .claude/hooks/_bmad-speak.sh \"[Nome do agente]\" \"[Sua mensagem de despedida]\"]"
 
 **Exemplo Adeus:**
 

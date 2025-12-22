@@ -75,7 +75,7 @@ Gerar respostas autênticas para cada agente selecionado:
 
 "[Icon Emoji] **[Nome do agente]**: [Resposta de carácter autêntico]
 
-[Bash: .claude/hooks/bmad-speak.sh \"[Nome do agente]\" \"[Resposta deles]\"]"
+[Bash: .claude/hooks/_bmad-speak.sh \"[Nome do agente]\" \"[Resposta deles]\"]"
 
 ### 4. Integração Natural de Conversas Cruzadas
 

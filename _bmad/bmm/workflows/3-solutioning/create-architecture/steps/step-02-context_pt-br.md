@@ -30,8 +30,8 @@ Esta etapa irá gerar conteúdo e opções presentes:
 
 ## INTEGRAÇÃO PROTOCOLO:
 
-- Quando 'A' seleccionado: Executar {project-root}/\_bmad/core/tasks/advanced-elicitation.xml
-- Quando 'P' seleccionado: Executar {project-root}/\_bmad/core/workflows/party-mode/workflow.md
+- Quando 'A' seleccionado: Executar {project-root}/_bmad/core/tasks/advanced-elicitation.xml
+- Quando 'P' seleccionado: Executar {project-root}/_bmad/core/workflows/party-mode/workflow.md
 - PROTOCOLOS retornam sempre para exibir o menu A/P/C deste passo após o A ou P terem completado
 - O usuário aceita/rejeita alterações de protocolo antes de prosseguir
 

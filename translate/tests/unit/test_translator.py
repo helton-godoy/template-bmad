@@ -226,7 +226,7 @@ class TestBMADTranslator:
             data = [
                 {"title": "Title 1"},
                 {"title": "Title 2"},
-                "not_translatable": "preserve"
+                {"not_translatable": "preserve"}
             ]
             
             result = translator._recursive_translate_data(data)
@@ -234,7 +234,7 @@ class TestBMADTranslator:
             # Itens com campos traduzíveis devem ser traduzidos
             assert result[0]["title"] == "Traduzido"
             assert result[1]["title"] == "Traduzido"
-            assert result[2]["title"] == "Traduzido"
+            assert result[2]["not_translatable"] == "preserve"
     
     def test_get_file_type(self):
         """Testa detecção de tipo de arquivo."""

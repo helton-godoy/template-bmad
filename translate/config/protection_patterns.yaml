@@ -10,6 +10,14 @@ protection_patterns:
       description: "Marcadores de mudança em planos"
     - pattern: '(?i)\b(implementat(ion|ed)|plan(ning|ned))\b'
       description: "Termos de modo de operação"
+    - pattern: '\*[a-zA-Z0-9_-]+'
+      description: "Comandos BMAD iniciados com *"
+    - pattern: '\bAgentic\b'
+      description: "Termo Agentic (manter em inglês)"
+    - pattern: '\bPRD\b'
+      description: "Sigla PRD"
+    - pattern: '\bLLM\b'
+      description: "Sigla LLM"
 
   # Proteção de frontmatter completo
   frontmatter:

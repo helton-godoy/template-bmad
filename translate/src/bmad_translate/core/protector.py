@@ -123,7 +123,7 @@ class ContentProtector:
         for _ in range(10): # Limite de recursão para evitar loops infinitos
             # Regex para pegar o novo formato, tolerando espaços que o tradutor possa adicionar
             # Ex: BMADPROTECT 000 END
-            new_text = re.sub(r'BMADPROTECT\s*(\d+)\s*END', replace_match, current_text)
+            new_text = re.sub(r'BMADPROTECT\s*(\d+)\s*(?:END|End|end)', replace_match, current_text)
             
             if new_text == current_text:
                 return current_text

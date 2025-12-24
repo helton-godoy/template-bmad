@@ -32,7 +32,7 @@ Compreendendo como o BMM se adapta às suas necessidades:
   - Requisitos de documentação por faixa
   - Roteamento de fluxo de trabalho de planejamento
 
-- **[Fluxo Rápido BMAD](./_bmad-quick-flow.md)** - Fluxo de trabalho de desenvolvimento rápido (32 min de leitura)
+- **[Fluxo Rápido BMAD](./bmad-quick-flow.md)** - Fluxo de trabalho de desenvolvimento rápido (32 min de leitura)
   - Processo de 3 etapas: especificação → desenvolvimento → revisão opcional
   - Perfeito para correções de bugs e pequenos recursos
   - Prototipagem rápida com qualidade de produção
@@ -99,7 +99,7 @@ Materiais de referência essenciais:
 → Então revise [Sistema Adaptativo de Escala](./scale-adaptive-system.md) para entender faixas
 
 **Corrigir um bug ou adicionar pequeno recurso**
-→ Vá para [Fluxo Rápido BMAD](./_bmad-quick-flow.md) para desenvolvimento rápido
+→ Vá para [Fluxo Rápido BMAD](./bmad-quick-flow.md) para desenvolvimento rápido
 → Ou use [Desenvolvedor Solo de Fluxo Rápido](./quick-flow-solo-dev.md) diretamente
 
 **Trabalhar com base de código existente (brownfield)**
@@ -191,7 +191,7 @@ Compreendendo componentes BMM:
 ### Comunidade e Suporte
 
 - **[Comunidade Discord](https://discord.gg/gk8jAdXWmj)** - Obtenha ajuda da comunidade (#general-dev, #bugs-issues)
-- **[Issues do GitHub](https://github.com/_bmad-code-org/BMAD-METHOD/issues)** - Reporte bugs ou solicite recursos
+- **[Issues do GitHub](https://github.com/bmad-code-org/BMAD-METHOD/issues)** - Reporte bugs ou solicite recursos
 - **[Canal YouTube](https://www.youtube.com/@BMadCode)** - Tutoriais em vídeo e walkthroughs
 
 ### Documentação Adicional

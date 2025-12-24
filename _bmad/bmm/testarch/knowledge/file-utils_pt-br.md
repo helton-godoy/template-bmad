@@ -1,34 +1,34 @@
-# Utilitários de Ficheiros
+# Utilitários de Arquivo
 
 ## Princípio
 
-Leia e valide arquivos (CSV, XLSX, PDF, ZIP) com análise automática, resultados seguros de tipo e manuseio de download. Simplifique as operações de arquivos em testes Playwright com suporte de formato embutido e ajudantes de validação.
+Leia e valide arquivos (CSV, XLSX, PDF, ZIP) com parsing automático, resultados type-safe e manipulação de download. Simplifique operações de arquivo em testes Playwright com suporte a formato integrado e helpers de validação.
 
-## Racional
+## Motivação
 
-Teste de operações de arquivos em Playwright requer caldeira:
+Testar operações de arquivo no Playwright requer boilerplate:
 
-- Manipulação manual de download
-- Bibliotecas de análise externa para cada formato
-- Nenhum ajudante de validação
-- Resultados não seguros
-- Tratamento do caminho repetitivo
+- Manipulação de download manual
+- Bibliotecas de parsing externas para cada formato
+- Sem helpers de validação
+- Resultados type-unsafe
+- Manipulação de caminho repetitiva
 
 O módulo `file-utils` fornece:
 
-- **Auto-parsing**: CSV, XLSX, PDF, ZIP automaticamente analisado
-- **Download handling**: function único para downloads com interface ou API
-- **Type-safe**: Interfaces TypeScript para resultados analisados
-- **Validation helpers**: Contagem de linhas, verificação de cabeçalhos, validação de conteúdo
-- **Suporte ao formato**: Suporte a múltiplas folhas (XLSX), extração de texto (PDF), extração de arquivos (ZIP)
+- **Auto-parsing**: CSV, XLSX, PDF, ZIP automaticamente parseados
+- **Manipulação de download**: Função única para downloads disparados por UI ou API
+- **Type-safe**: Interfaces TypeScript para resultados parseados
+- **Helpers de validação**: Contagem de linha, verificações de cabeçalho, validação de conteúdo
+- **Suporte a formato**: Suporte a múltiplas planilhas (XLSX), extração de texto (PDF), extração de arquivo (ZIP)
 
-## Exemplos de padrões
+## Exemplos de Padrões
 
-### Exemplo 1: Transferência de CSV por IU
+### Exemplo 1: Download de CSV Disparado por UI
 
-**Contexto**: Botão de cliques do usuário, downloads CSV, validar conteúdo.
+**Contexto**: Usuário clica botão, CSV baixa, valida conteúdo.
 
-**Implementation**:
+**Implementação**:
 
 ```typescript
 import { handleDownload, readCSV } from '@seontechnologies/playwright-utils/file-utils';
@@ -36,7 +36,7 @@ import path from 'node:path';
 
 const DOWNLOAD_DIR = path.join(__dirname, '../downloads');
 
-test('should download and validate CSV', async ({ page }) => {
+test('deve baixar e validar CSV', async ({ page }) => {
   const downloadPath = await handleDownload({
     page,
     downloadDir: DOWNLOAD_DIR,
@@ -45,37 +45,36 @@ test('should download and validate CSV', async ({ page }) => {
 
   const { content } = await readCSV({ filePath: downloadPath });
 
-  // Validate headers
-  expect(content.headers).toEqual(['ID', 'Name', 'Email', 'Role']);
+  // Validar cabeçalhos
+  expect(content.headers).toEqual(['ID', 'Nome', 'Email', 'Cargo']);
 
-  // Validate data
+  // Validar dados
   expect(content.data).toHaveLength(10);
   expect(content.data[0]).toMatchObject({
     ID: expect.any(String),
-    Name: expect.any(String),
+    Nome: expect.any(String),
     Email: expect.stringMatching(/@/),
   });
 });
-
 ```
 
-**Pontos-chave**
+**Pontos Chave**:
 
-- `handleDownload` espera para download, retorna o caminho do arquivo
-- `readCSV` auto- análise para `{ headers, data }`
-- Acesso seguro ao conteúdo analisado
-- Limpar downloads no `afterEach`
+- `handleDownload` aguarda download, retorna caminho do arquivo
+- `readCSV` auto-parseia para `{ headers, data }`
+- Acesso type-safe ao conteúdo parseado
+- Limpe downloads no `afterEach`
 
-### Exemplo 2: XLSX com múltiplas folhas
+### Exemplo 2: XLSX com Múltiplas Planilhas
 
-**Contexto**: ficheiro Excel com várias folhas (por exemplo, Resumo, Detalhes, Erros).
+**Contexto**: Arquivo Excel com múltiplas planilhas (ex: Resumo, Detalhes, Erros).
 
-**Implementation**:
+**Implementação**:
 
 ```typescript
 import { readXLSX } from '@seontechnologies/playwright-utils/file-utils';
 
-test('should read multi-sheet XLSX', async () => {
+test('deve ler XLSX multi-planilha', async () => {
   const downloadPath = await handleDownload({
     page,
     downloadDir: DOWNLOAD_DIR,
@@ -84,38 +83,37 @@ test('should read multi-sheet XLSX', async () => {
 
   const { content } = await readXLSX({ filePath: downloadPath });
 
-  // Access specific sheets
-  const summarySheet = content.sheets.find((s) => s.name === 'Summary');
-  const detailsSheet = content.sheets.find((s) => s.name === 'Details');
+  // Acessar planilhas específicas
+  const summarySheet = content.sheets.find((s) => s.name === 'Resumo');
+  const detailsSheet = content.sheets.find((s) => s.name === 'Detalhes');
 
-  // Validate summary
+  // Validar resumo
   expect(summarySheet.data).toHaveLength(1);
   expect(summarySheet.data[0].TotalRecords).toBe('150');
 
-  // Validate details
+  // Validar detalhes
   expect(detailsSheet.data).toHaveLength(150);
   expect(detailsSheet.headers).toContain('TransactionID');
 });
-
 ```
 
-**Pontos-chave**
+**Pontos Chave**:
 
-- `sheets` array com propriedades `name` e `data`
-- Folhas de acesso pelo nome
-- Cada folha tem seus próprios cabeçalhos e dados
-- Iteração à folha de segurança
+- Array `sheets` com propriedades `name` e `data`
+- Acesse planilhas por nome
+- Cada planilha tem seus próprios cabeçalhos e dados
+- Iteração de planilha type-safe
 
-### Exemplo 3: Extração de Texto PDF
+### Exemplo 3: Extração de Texto de PDF
 
-**Contexto**: Validar relatório PDF contém conteúdo esperado.
+**Contexto**: Validar se relatório PDF contém conteúdo esperado.
 
-**Implementation**:
+**Implementação**:
 
 ```typescript
 import { readPDF } from '@seontechnologies/playwright-utils/file-utils';
 
-test('should validate PDF report', async () => {
+test('deve validar relatório PDF', async () => {
   const downloadPath = await handleDownload({
     page,
     downloadDir: DOWNLOAD_DIR,
@@ -124,33 +122,32 @@ test('should validate PDF report', async () => {
 
   const { content } = await readPDF({ filePath: downloadPath });
 
-  // content.text is extracted text from all pages
-  expect(content.text).toContain('Financial Report Q4 2024');
-  expect(content.text).toContain('Total Revenue:');
+  // content.text é o texto extraído de todas as páginas
+  expect(content.text).toContain('Relatório Financeiro Q4 2024');
+  expect(content.text).toContain('Receita Total:');
 
-  // Validate page count
+  // Validar contagem de páginas
   expect(content.numpages).toBeGreaterThan(10);
 });
-
 ```
 
-**Pontos-chave**
+**Pontos Chave**:
 
-- `content.text` contém todo o texto extraído
+- `content.text` contém todo texto extraído
 - `content.numpages` para contagem de páginas
-- PDF analisa documentos de várias páginas
-- Procure frases específicas
+- Parsing de PDF lida com documentos multi-página
+- Busca por frases específicas
 
-### Exemplo 4: Validação do arquivo ZIP
+### Exemplo 4: Validação de Arquivo ZIP
 
-**Contexto**: Validar ZIP contém arquivos esperados e extrair arquivo específico.
+**Contexto**: Validar se ZIP contém arquivos esperados e extrair arquivo específico.
 
-**Implementation**:
+**Implementação**:
 
 ```typescript
 import { readZIP } from '@seontechnologies/playwright-utils/file-utils';
 
-test('should validate ZIP archive', async () => {
+test('deve validar arquivo ZIP', async () => {
   const downloadPath = await handleDownload({
     page,
     downloadDir: DOWNLOAD_DIR,
@@ -159,22 +156,105 @@ test('should validate ZIP archive', async () => {
 
   const { content } = await readZIP({ filePath: downloadPath });
 
-  // Check file list
+  // Verificar lista de arquivos
   expect(content.files).toContain('data.csv');
   expect(content.files).toContain('config.json');
   expect(content.files).toContain('readme.txt');
 
-  // Read specific file from archive
+  // Ler arquivo específico do arquivo
   const configContent = content.zip.readAsText('config.json');
   const config = JSON.parse(configContent);
 
   expect(config.version).toBe('2.0');
 });
-
 ```
 
-**Pontos-chave**
+**Pontos Chave**:
 
-- `content.files` lista todos os arquivos no arquivo
+- `content.files` lista todos arquivos no arquivo
 - `content.zip.readAsText()` extrai arquivos específicos
-- Validar arquivo s
+- Valide estrutura do arquivo
+- Leia e parseie arquivos individuais do ZIP
+
+### Exemplo 5: Download Disparado por API
+
+**Contexto**: Endpoint de API retorna download de arquivo (não clique de UI).
+
+**Implementação**:
+
+```typescript
+test('deve baixar via API', async ({ page, request }) => {
+  const downloadPath = await handleDownload({
+    page,
+    downloadDir: DOWNLOAD_DIR,
+    trigger: async () => {
+      const response = await request.get('/api/export/csv', {
+        headers: { Authorization: 'Bearer token' },
+      });
+
+      if (!response.ok()) {
+        throw new Error(`Exportação falhou: ${response.status()}`);
+      }
+    },
+  });
+
+  const { content } = await readCSV({ filePath: downloadPath });
+
+  expect(content.data).toHaveLength(100);
+});
+```
+
+**Pontos Chave**:
+
+- `trigger` pode ser chamada de API async
+- API deve retornar cabeçalho `Content-Disposition`
+- Ainda precisa de `page` para eventos de download
+- Funciona com endpoints autenticados
+
+## Helpers de Validação
+
+```typescript
+// Validação CSV
+const { isValid, errors } = await validateCSV({
+  filePath: downloadPath,
+  expectedRowCount: 10,
+  requiredHeaders: ['ID', 'Nome', 'Email'],
+});
+
+expect(isValid).toBe(true);
+expect(errors).toHaveLength(0);
+```
+
+## Padrão de Limpeza de Download
+
+```typescript
+test.afterEach(async () => {
+  // Limpar arquivos baixados
+  await fs.remove(DOWNLOAD_DIR);
+});
+```
+
+## Fragmentos Relacionados
+
+- `overview.md` - Instalação e importações
+- `api-request.md` - Downloads disparados por API
+- `recurse.md` - Poll para conclusão de geração de arquivo
+
+## Anti-Padrões
+
+**❌ Não limpar downloads:**
+
+```typescript
+test('cria arquivo', async () => {
+  await handleDownload({ ... })
+  // Arquivo deixado na pasta de downloads
+})
+```
+
+**✅ Limpar após testes:**
+
+```typescript
+test.afterEach(async () => {
+  await fs.remove(DOWNLOAD_DIR);
+});
+```

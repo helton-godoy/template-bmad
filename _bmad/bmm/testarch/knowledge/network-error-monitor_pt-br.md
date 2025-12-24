@@ -1,103 +1,101 @@
-# Monitor de Erros de Rede
+# Monitor de Erro de Rede
 
 ## Princípio
 
-Detecte automaticamente e falhe testes quando erros HTTP 4xx/5xx ocorrem durante a execução. Aja como Sentry para testes - capture falhas silenciosas da infra-estrutura mesmo quando a UI passa as afirmações.
+Automaticamente detecte e falhe testes quando erros HTTP 4xx/5xx ocorrerem durante a execução. Atue como um Sentry para testes - capture falhas silenciosas de backend mesmo quando a UI passa nas asserções.
 
-## Racional
+## Motivação
 
-Testes tradicionais de dramaturgo focam na UI:
+Testes Playwright tradicionais focam na UI:
 
-- Infraestrutura 500 erros ignorados se UI parece correto
-- Falhas silenciosas passam
-- Sem visibilidade na saúde API de fundo
-- Os testes passam enquanto os recursos são quebrados
+- Erros 500 de backend ignorados se a UI parecer correta
+- Falhas silenciosas passam despercebidas
+- Sem visibilidade da saúde da API de fundo
+- Testes passam enquanto funcionalidades estão quebradas
 
 O `network-error-monitor` fornece:
 
-- **Detecção automática**: Todas as respostas HTTP 4xx/5xx
-- **Falhas de teste**: Falha nos testes com erros de infra-estrutura (mesmo que a UI passe)
-- **Artefatos estruturados**: JSON relata com detalhes de erro
-- **Smart opt-out**: Desactivação para testes de validação à espera de erros
-- **Deduplication**: Grupo de erros repetidos por padrão
-- **Prevenção do efeito dominó**: Falhas de teste limite por padrão de erro
+- **Detecção automática**: Todas as respostas HTTP 4xx/5xx rastreadas
+- **Falhas de teste**: Falha testes com erros de backend (mesmo se UI passar)
+- **Artefatos estruturados**: Relatórios JSON com detalhes de erro
+- **Opt-out inteligente**: Desative para testes de validação esperando erros
+- **Deduplicação**: Agrupe erros repetidos por padrão
+- **Prevenção de efeito dominó**: Limite falhas de teste por padrão de erro
 
-## Exemplos de padrões
+## Exemplos de Padrões
 
-### Exemplo 1: Monitoramento Automático Básico
+### Exemplo 1: Auto-Monitoramento Básico
 
-**Contexto**: Falha automaticamente nos testes quando ocorrem erros na infra-estrutura.
+**Contexto**: Automaticamente falhe testes quando erros de backend ocorrerem.
 
-**Implementation**:
+**Implementação**:
 
 ```typescript
 import { test } from '@seontechnologies/playwright-utils/network-error-monitor/fixtures';
 
-// Monitoring automatically enabled
-test('should load dashboard', async ({ page }) => {
+// Monitoramento automaticamente ativado
+test('deve carregar dashboard', async ({ page }) => {
   await page.goto('/dashboard');
   await expect(page.locator('h1')).toContainText('Dashboard');
 
-  // ✅ Passes if no HTTP errors
-  // ❌ Fails if any 4xx/5xx errors detected with clear message:
+  // ✅ Passa se nenhum erro HTTP
+  // ❌ Falha se quaisquer erros 4xx/5xx detectados com mensagem clara:
   //    "Network errors detected: 2 request(s) failed"
   //    Failed requests:
   //      GET 500 https://api.example.com/users
   //      POST 503 https://api.example.com/metrics
 });
-
 ```
 
-**Pontos-chave**
+**Pontos Chave**:
 
-- Configuração zero - habilitado automaticamente para todos os testes
-- Falha em qualquer resposta de 4xx/5xx
+- Zero setup - auto-ativado para todos os testes
+- Falha em qualquer resposta 4xx/5xx
 - Mensagem de erro estruturada com URLs e códigos de status
-- Artefacto JSON ligado ao relatório de teste
+- Artefato JSON anexado ao relatório de teste
 
-### Exemplo 2: Opt-Out for Validation Tests
+### Exemplo 2: Opt-Out para Testes de Validação
 
-**Contexto**: Alguns testes esperam erros (validação, manipulação de erros, casos de borda).
+**Contexto**: Alguns testes esperam erros (validação, tratamento de erro, casos de borda).
 
-**Implementation**:
+**Implementação**:
 
 ```typescript
 import { test } from '@seontechnologies/playwright-utils/network-error-monitor/fixtures';
 
-// Opt-out with annotation
-test('should show error on invalid input', { annotation: [{ type: 'skipNetworkMonitoring' }] }, async ({ page }) => {
+// Opt-out com anotação
+test('deve mostrar erro em entrada inválida', { annotation: [{ type: 'skipNetworkMonitoring' }] }, async ({ page }) => {
   await page.goto('/form');
-  await page.click('#submit'); // Triggers 400 error
+  await page.click('#submit'); // Dispara erro 400
 
-  // Monitoring disabled - test won't fail on 400
-  await expect(page.getByText('Invalid input')).toBeVisible();
+  // Monitoramento desativado - teste não falhará no 400
+  await expect(page.getByText('Entrada inválida')).toBeVisible();
 });
 
-// Or opt-out entire describe block
-test.describe('error handling', { annotation: [{ type: 'skipNetworkMonitoring' }] }, () => {
-  test('handles 404', async ({ page }) => {
-    // All tests in this block skip monitoring
+// Ou opt-out bloco describe inteiro
+test.describe('tratamento de erro', { annotation: [{ type: 'skipNetworkMonitoring' }] }, () => {
+  test('trata 404', async ({ page }) => {
+    // Todos testes neste bloco pulam monitoramento
   });
 
-  test('handles 500', async ({ page }) => {
-    // Monitoring disabled
+  test('trata 500', async ({ page }) => {
+    // Monitoramento desativado
   });
 });
-
 ```
 
-**Pontos-chave**
+**Pontos Chave**:
 
-- Utilizar anotação `{ type: 'skipNetworkMonitoring' }`
-- Pode opt-out único teste ou bloco de descrição inteiro
+- Use anotação `{ type: 'skipNetworkMonitoring' }`
+- Pode fazer opt-out de teste único ou bloco describe inteiro
 - Monitoramento ainda ativo para outros testes
-- Perfeito para cenários de erro intencional
+- Perfeito para cenários de erro intencionais
 
-### Exemplo 3: Integração com acessórios fundidos
+### Exemplo 3: Integração com Fixtures Fundidas
 
-**Contexto**: Combine rede-erro-monitor com outros utilitários.
+**Contexto**: Combine network-error-monitor com outros utilitários.
 
-**Implementation**:
+**Implementação**:
 
 ```typescript
 // playwright/support/merged-fixtures.ts
@@ -108,69 +106,167 @@ import { test as networkErrorMonitorFixture } from '@seontechnologies/playwright
 export const test = mergeTests(
   authFixture,
   networkErrorMonitorFixture,
-  // Add other fixtures
+  // Adicione outras fixtures
 );
 
-// In tests
+// Em testes
 import { test, expect } from '../support/merged-fixtures';
 
-test('authenticated with monitoring', async ({ page, authToken }) => {
-  // Both auth and network monitoring active
+test('autenticado com monitoramento', async ({ page, authToken }) => {
+  // Tanto auth quanto monitoramento de rede ativos
   await page.goto('/protected');
 
-  // Fails if backend returns errors during auth flow
+  // Falha se backend retornar erros durante fluxo auth
 });
-
 ```
 
-**Pontos-chave**
+**Pontos Chave**:
 
 - Combine com `mergeTests`
-- Funciona ao lado de todos os outros utilitários
+- Funciona junto com todos os outros utilitários
 - Monitoramento ativo automaticamente
-- Não há necessidade de instalação extra
+- Nenhum setup extra necessário
 
-### Exemplo 4: Prevenção de Efeito Domino
+### Exemplo 4: Prevenção de Efeito Dominó
 
-**Contexto**: Um endpoint falhante não deve falhar todos os testes.
+**Contexto**: Um endpoint falhando não deve falhar todos os testes.
 
-**Implementation**:
+**Implementação**:
 
 ```typescript
-// Configuration (internal to utility)
+// Configuração (interna ao utilitário)
 const config = {
-  maxTestsPerError: 3, // Max 3 tests fail per unique error pattern
+  maxTestsPerError: 3, // Máx 3 testes falham por padrão de erro único
 };
 
-// Scenario:
-// Test 1: GET /api/broken → 500 error → Test fails ❌
-// Test 2: GET /api/broken → 500 error → Test fails ❌
-// Test 3: GET /api/broken → 500 error → Test fails ❌
-// Test 4: GET /api/broken → 500 error → Test passes ⚠️ (limit reached, warning logged)
-// Test 5: Different error pattern → Test fails ❌ (new pattern, counter resets)
-
+// Cenário:
+// Teste 1: GET /api/broken → erro 500 → Teste falha ❌
+// Teste 2: GET /api/broken → erro 500 → Teste falha ❌
+// Teste 3: GET /api/broken → erro 500 → Teste falha ❌
+// Teste 4: GET /api/broken → erro 500 → Teste passa ⚠️ (limite atingido, aviso logado)
+// Teste 5: Padrão de erro diferente → Teste falha ❌ (novo padrão, contador reseta)
 ```
 
-**Pontos-chave**
+**Pontos Chave**:
 
 - Limita falhas em cascata
-- Grupos de erros por URL + padrão de código de estado
-- Avisa quando o limite for atingido
-- Evita que a infra- estrutura flácida falhe em toda a suite
+- Agrupa erros por padrão URL + código de status
+- Avisa quando limite atingido
+- Previne backend instável de falhar suíte inteira
 
-### Exemplo 5: Estrutura do artefato
+### Exemplo 5: Estrutura de Artefato
 
-**Contexto**: Testes de depuração falhou com artefatos de erro de rede.
+**Contexto**: Debugging de testes falhos com artefatos de erro de rede.
 
-**Implementation**:
+**Implementação**:
 
-Quando o teste falha devido a erros de rede, o artefato anexado:
+Quando teste falha devido a erros de rede, artefato anexado:
 
 ```json
 // test-results/my-test/network-errors.json
 {
-"erros": [
-{
-"url": "https://api.example.com/users",
-"método": "GET",
-"Estatuto": 500,
+  "errors": [
+    {
+      "url": "https://api.example.com/users",
+      "method": "GET",
+      "status": 500,
+      "statusText": "Internal Server Error",
+      "timestamp": "2024-08-13T10:30:45.123Z"
+    },
+    {
+      "url": "https://api.example.com/metrics",
+      "method": "POST",
+      "status": 503,
+      "statusText": "Service Unavailable",
+      "timestamp": "2024-08-13T10:30:46.456Z"
+    }
+  ],
+  "summary": {
+    "totalErrors": 2,
+    "uniquePatterns": 2
+  }
+}
+```
+
+**Pontos Chave**:
+
+- Artefato JSON por teste falho
+- Detalhes completos do erro (URL, método, status, timestamp)
+- Estatísticas de sumário
+- Debugging fácil com dados estruturados
+
+## Comparação com Verificações de Erro Manuais
+
+| Abordagem Manual                                       | network-error-monitor      |
+| ------------------------------------------------------ | -------------------------- |
+| `page.on('response', resp => { if (!resp.ok()) ... })` | Auto-ativado, zero setup   |
+| Checar cada resposta manualmente                       | Automático para todas requisições |
+| Lógica de rastreamento de erro customizada             | Deduplicação integrada     |
+| Sem artefatos estruturados                             | Artefatos JSON anexados    |
+| Fácil de esquecer                                      | Nunca perca um erro de backend |
+
+## Quando Usar
+
+**Auto-ativado para:**
+
+- ✅ Todos testes E2E
+- ✅ Testes de integração
+- ✅ Qualquer teste acessando APIs reais
+
+**Opt-out para:**
+
+- ❌ Testes de validação (esperando 4xx)
+- ❌ Testes de tratamento de erro (esperando 5xx)
+- ❌ Testes offline (playback network-recorder)
+
+## Integração com Setup de Framework
+
+No workflow `*framework`, mencione network-error-monitor:
+
+```typescript
+// Adicionar ao merged-fixtures.ts
+import { test as networkErrorMonitorFixture } from '@seontechnologies/playwright-utils/network-error-monitor/fixtures';
+
+export const test = mergeTests(
+  // ... outras fixtures
+  networkErrorMonitorFixture,
+);
+```
+
+## Fragmentos Relacionados
+
+- `overview.md` - Instalação e fixtures
+- `fixtures-composition.md` - Fusão com outros utilitários
+- `error-handling.md` - Padrões tradicionais de tratamento de erro
+
+## Anti-Padrões
+
+**❌ Fazer opt-out de monitoramento globalmente:**
+
+```typescript
+// Todo teste pula monitoramento
+test.use({ annotation: [{ type: 'skipNetworkMonitoring' }] });
+```
+
+**✅ Opt-out apenas para testes de erro específicos:**
+
+```typescript
+test.describe('cenários de erro', { annotation: [{ type: 'skipNetworkMonitoring' }] }, () => {
+  // Apenas estes testes pulam monitoramento
+});
+```
+
+**❌ Ignorar artefatos de erro de rede:**
+
+```typescript
+// Teste falha, artefato mostra erros 500
+// Desenvolvedor: "Funciona na minha máquina" ¯\_(ツ)_/¯
+```
+
+**✅ Checar artefatos para causa raiz:**
+
+```typescript
+// Ler artefato network-errors.json
+// Identificar endpoint falho: GET /api/users → 500
+// Consertar problema de backend antes de mergear
+```

@@ -1,73 +1,72 @@
-# Utilitário de Intercepção de Chamadas de Rede
+# Utilitário Intercept Network Call
 
 ## Princípio
 
-Interceptar pedidos de rede com uma única chamada declarativa que retorna uma promessa. Analisar automaticamente respostas JSON, suportar ambos os padrões espião (observe) e stub (mock), e usar poderoso padrão glob correspondência para filtragem de URL.
+Intercepte requisições de rede com uma única chamada declarativa que retorna uma Promessa. Parseie automaticamente respostas JSON, suporte tanto padrões de espião (observar) quanto stub (mock), e use correspondência de padrão glob poderosa para filtragem de URL.
 
-## Racional
+## Motivação
 
-A intercepção de rede da Vanilla Playwright requer vários passos:
+A interceptação de rede do Playwright puro requer múltiplos passos:
 
-- `page.route()` para instalação, `page.waitForResponse()` para captura
-- Análise manual do JSON
-- sintaxe verbose para tratamento condicional
-- Predicados filtrantes complexos
+- `page.route()` para configurar, `page.waitForResponse()` para capturar
+- Parsing manual de JSON
+- Sintaxe verbosa para tratamento condicional
+- Predicados de filtro complexos
 
 O utilitário `interceptNetworkCall` fornece:
 
-- **Chamada declarativa única**: Configuração e espera numa declaração
-- **Automatic JSON análise**: resposta pré-parsed, fortemente tipado
-- **Padrões de URL flexíveis**: Combinação de glob com picomatch
-- **Modos de spy ou stub**: Observar o tráfego real ou respostas simuladas
-- **API concisa**: reduz a caldeira em 60-70%
+- **Chamada declarativa única**: Setup e espera em uma declaração
+- **Parsing automático de JSON**: Resposta pré-parseada, fortemente tipada
+- **Padrões de URL flexíveis**: Correspondência glob com picomatch
+- **Modos de espião ou stub**: Observe tráfego real ou mock respostas
+- **API concisa**: Reduz boilerplate em 60-70%
 
-## Exemplos de padrões
+## Exemplos de Padrões
 
-### Exemplo 1: Espionar na rede (Observar tráfego real)
+### Exemplo 1: Espionar na Rede (Observar Tráfego Real)
 
-**Contexto**: Capture e inspecione respostas reais da API para validação.
+**Contexto**: Capturar e inspecionar respostas de API reais para validação.
 
-**Implementation**:
+**Implementação**:
 
 ```typescript
 import { test } from '@seontechnologies/playwright-utils/intercept-network-call/fixtures';
 
-test('should spy on users API', async ({ page, interceptNetworkCall }) => {
-  // Setup interception BEFORE navigation
+test('deve espionar API de usuários', async ({ page, interceptNetworkCall }) => {
+  // Setup de interceptação ANTES da navegação
   const usersCall = interceptNetworkCall({
-    url: '**/api/users', // Glob pattern
+    url: '**/api/users', // Padrão glob
   });
 
   await page.goto('/dashboard');
 
-  // Wait for response and access parsed data
+  // Aguardar resposta e acessar dados parseados
   const { responseJson, status } = await usersCall;
 
   expect(status).toBe(200);
   expect(responseJson).toHaveLength(10);
   expect(responseJson[0]).toHaveProperty('name');
 });
-
 ```
 
-**Pontos-chave**
+**Pontos Chave**:
 
-- Intercepção antes da navegação (crítico para testes livres de corrida)
+- Intercepte antes da navegação (crítico para testes livres de condição de corrida)
 - Retorna Promessa com `{ responseJson, status, requestBody }`
-- Glob patterns (`**` corresponde a qualquer segmento de caminho)
-- JSON automaticamente analisado
+- Padrões glob (`**` corresponde a qualquer segmento de caminho)
+- JSON automaticamente parseado
 
-### Exemplo 2: Rede de Stub (Resposta a Mock)
+### Exemplo 2: Stub de Rede (Mock de Resposta)
 
-**Context**: Mock API respostas para testar o comportamento de UI sem backend.
+**Contexto**: Mock de respostas de API para testar comportamento de UI sem backend.
 
-**Implementation**:
+**Implementação**:
 
 ```typescript
-test('should stub users API', async ({ page, interceptNetworkCall }) => {
+test('deve fazer stub da API de usuários', async ({ page, interceptNetworkCall }) => {
   const mockUsers = [
-    { id: 1, name: 'Test User 1' },
-    { id: 2, name: 'Test User 2' },
+    { id: 1, name: 'Usuário Teste 1' },
+    { id: 2, name: 'Usuário Teste 2' },
   ];
 
   const usersCall = interceptNetworkCall({
@@ -81,45 +80,44 @@ test('should stub users API', async ({ page, interceptNetworkCall }) => {
   await page.goto('/dashboard');
   await usersCall;
 
-  // UI shows mocked data
-  await expect(page.getByText('Test User 1')).toBeVisible();
-  await expect(page.getByText('Test User 2')).toBeVisible();
+  // UI mostra dados mockados
+  await expect(page.getByText('Usuário Teste 1')).toBeVisible();
+  await expect(page.getByText('Usuário Teste 2')).toBeVisible();
 });
-
 ```
 
-**Pontos-chave**
+**Pontos Chave**:
 
-- `fulfillResponse` zomba da API
-- Nenhuma infra-estrutura necessária.
-- Teste a lógica da IU isoladamente
-- Código do estado e corpo totalmente controlável
+- `fulfillResponse` mocka a API
+- Sem backend necessário
+- Teste lógica de UI isoladamente
+- Código de status e corpo totalmente controláveis
 
-### Exemplo 3: Tratamento de resposta condicional
+### Exemplo 3: Tratamento de Resposta Condicional
 
-**Contexto**: Respostas diferentes baseadas no método ou parâmetros de solicitação.
+**Contexto**: Respostas diferentes baseadas em método de requisição ou parâmetros.
 
-**Implementation**:
+**Implementação**:
 
 ```typescript
-test('conditional mocking', async ({ page, interceptNetworkCall }) => {
+test('mock condicional', async ({ page, interceptNetworkCall }) => {
   await interceptNetworkCall({
     url: '**/api/data',
     handler: async (route, request) => {
       if (request.method() === 'POST') {
-        // Mock POST success
+        // Mock sucesso de POST
         await route.fulfill({
           status: 201,
           body: JSON.stringify({ id: 'new-id', success: true }),
         });
       } else if (request.method() === 'GET') {
-        // Mock GET with data
+        // Mock GET com dados
         await route.fulfill({
           status: 200,
           body: JSON.stringify([{ id: 1, name: 'Item' }]),
         });
       } else {
-        // Let other methods through
+        // Deixar outros métodos passarem
         await route.continue();
       }
     },
@@ -127,66 +125,156 @@ test('conditional mocking', async ({ page, interceptNetworkCall }) => {
 
   await page.goto('/data-page');
 });
-
 ```
 
-**Pontos-chave**
+**Pontos Chave**:
 
-- `handler` function para lógica complexa
-- Acesse objetos `route` e `request`
-- Pode zombar, continuar, ou abortar
+- Função `handler` para lógica complexa
+- Acesso a objetos `route` e `request` completos
+- Pode mockar, continuar ou abortar
 - Flexível para cenários avançados
 
 ### Exemplo 4: Simulação de Erro
 
-**Contexto**: Tratamento de erros de teste na UI quando a API falha.
+**Contexto**: Testar tratamento de erro na UI quando API falha.
 
-**Implementation**:
+**Implementação**:
 
 ```typescript
-test('should handle API errors gracefully', async ({ page, interceptNetworkCall }) => {
-  // Simulate 500 error
+test('deve tratar erros de API graciosamente', async ({ page, interceptNetworkCall }) => {
+  // Simular erro 500
   const errorCall = interceptNetworkCall({
     url: '**/api/users',
     fulfillResponse: {
       status: 500,
-      body: { error: 'Internal Server Error' },
+      body: { error: 'Erro Interno do Servidor' },
     },
   });
 
   await page.goto('/dashboard');
   await errorCall;
 
-  // Verify UI shows error state
-  await expect(page.getByText('Failed to load users')).toBeVisible();
+  // Verificar UI mostra estado de erro
+  await expect(page.getByText('Falha ao carregar usuários')).toBeVisible();
   await expect(page.getByTestId('retry-button')).toBeVisible();
 });
 
-// Simulate network timeout
-test('should handle timeout', async ({ page, interceptNetworkCall }) => {
+// Simular timeout de rede
+test('deve tratar timeout', async ({ page, interceptNetworkCall }) => {
   await interceptNetworkCall({
     url: '**/api/slow',
     handler: async (route) => {
-      // Never respond - simulates timeout
+      // Nunca responder - simula timeout
       await new Promise(() => {});
     },
   });
 
   await page.goto('/slow-page');
 
-  // UI should show timeout error
-  await expect(page.getByText('Request timed out')).toBeVisible({ timeout: 10000 });
+  // UI deve mostrar erro de timeout
+  await expect(page.getByText('Requisição excedeu tempo limite')).toBeVisible({ timeout: 10000 });
 });
-
 ```
 
-**Pontos-chave**
+**Pontos Chave**:
 
-- Status de erro do Mock (4xx, 5xx)
-- Cenários de tempo limite de teste
-- Validar estados de erro UI
-- Não são necessárias falhas reais.
+- Mock de status de erro (4xx, 5xx)
+- Testar cenários de timeout
+- Validar estados de UI de erro
+- Sem falhas reais necessárias
 
-### Exemplo 5: Intercepções Múltiplas (Ordem de Matérias!)
+### Exemplo 5: Múltiplas Interceptações (Ordem Importa!)
 
-**Contexto**: Interceptando diferentes objetivos no sam
+**Contexto**: Interceptar diferentes endpoints no mesmo teste - ordem de setup é crítica.
+
+**Implementação**:
+
+```typescript
+test('múltiplas interceptações', async ({ page, interceptNetworkCall }) => {
+  // ✅ CORRETO: Configurar todas interceptações ANTES da navegação
+  const usersCall = interceptNetworkCall({ url: '**/api/users' });
+  const productsCall = interceptNetworkCall({ url: '**/api/products' });
+  const ordersCall = interceptNetworkCall({ url: '**/api/orders' });
+
+  // ENTÃO navegar
+  await page.goto('/dashboard');
+
+  // Aguardar por todos (ou específicos)
+  const [users, products] = await Promise.all([usersCall, productsCall]);
+
+  expect(users.responseJson).toHaveLength(10);
+  expect(products.responseJson).toHaveLength(50);
+});
+```
+
+**Pontos Chave**:
+
+- Configure todas interceptações antes de disparar ações
+- Use `Promise.all()` para aguardar múltiplas chamadas
+- Ordem: interceptar → navegar → aguardar
+- Previne condições de corrida
+
+## Correspondência de Padrão URL
+
+**Padrões glob suportados:**
+
+```typescript
+'**/api/users'; // Qualquer caminho terminando com /api/users
+'/api/users'; // Correspondência exata
+'**/users/*'; // Qualquer sub-caminho de users
+'**/api/{users,products}'; // Ou users ou products
+'**/api/users?id=*'; // Com query params
+```
+
+**Usa biblioteca picomatch** - mesma sintaxe de padrão do `page.route()` do Playwright mas com API mais limpa.
+
+## Comparação com Playwright Puro
+
+| Playwright Puro                                             | intercept-network-call                                       |
+| ----------------------------------------------------------- | ------------------------------------------------------------ |
+| `await page.route('/api/users', route => route.continue())` | `const call = interceptNetworkCall({ url: '**/api/users' })` |
+| `const resp = await page.waitForResponse('/api/users')`     | (Combinado em declaração única)                              |
+| `const json = await resp.json()`                            | `const { responseJson } = await call`                        |
+| `const status = resp.status()`                              | `const { status } = await call`                              |
+| Predicados de filtro complexos                              | Padrões glob simples                                         |
+
+**Redução:** ~5-7 linhas → ~2-3 linhas por interceptação
+
+## Fragmentos Relacionados
+
+- `network-first.md` - Padrão core: interceptar antes de navegar
+- `network-recorder.md` - Teste offline baseado em HAR
+- `overview.md` - Básico de composição de fixture
+
+## Anti-Padrões
+
+**❌ Interceptar depois da navegação:**
+
+```typescript
+await page.goto('/dashboard'); // Navegação começa
+const usersCall = interceptNetworkCall({ url: '**/api/users' }); // Tarde demais!
+```
+
+**✅ Interceptar antes de navegar:**
+
+```typescript
+const usersCall = interceptNetworkCall({ url: '**/api/users' }); // Primeiro
+await page.goto('/dashboard'); // Então navegar
+const { responseJson } = await usersCall; // Então aguardar
+```
+
+**❌ Ignorar a Promessa retornada:**
+
+```typescript
+interceptNetworkCall({ url: '**/api/users' }); // Não aguardado!
+await page.goto('/dashboard');
+// Sem espera determinística - condição de corrida
+```
+
+**✅ Sempre aguarde a interceptação:**
+
+```typescript
+const usersCall = interceptNetworkCall({ url: '**/api/users' });
+await page.goto('/dashboard');
+await usersCall; // Espera determinística
+```

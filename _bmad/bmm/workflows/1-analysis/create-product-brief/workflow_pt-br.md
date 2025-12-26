@@ -49,10 +49,10 @@ Isso usa **arquitetura de arquivo de passo** para execução disciplinada:
 
 ### 1. Carregamento de Configuração
 
-Carregue e leia a configuração completa de {project-root}/\_bmad/bmm/config.yaml e resolva:
+Carregue e leia a configuração completa de {project-root}/_bmad/bmm/config.yaml e resolva:
 
 - `project_name`, `output_folder`, `user_name`, `communication_language`, `document_output_language`, `user_skill_level`
 
 ### 2. EXECUÇÃO do Primeiro Passo
 
-Carregue, leia o arquivo completo e então execute `{project-root}/_bmad/bmm/workflows/1-analysis/product-brief/steps/step-01-init.md` para iniciar o fluxo de trabalho.
+Carregue, leia o arquivo completo e então execute `{project-root}/_bmad/bmm/workflows/1-analysis/create-product-brief/steps/step-01-init_pt-br.md` para iniciar o fluxo de trabalho.

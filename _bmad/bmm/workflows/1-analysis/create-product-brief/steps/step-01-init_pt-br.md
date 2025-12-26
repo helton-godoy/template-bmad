@@ -2,17 +2,17 @@
 name: 'step-01-init'
 description: 'Inicializar o fluxo de trabalho de resumo de produto detectando o estado de continuação e configurando o documento'
 
-# Definições de Caminho
-workflow_path: '{project-root}/_bmad/bmm/workflows/1-analysis/product-brief'
+# Path Definitions
+workflow_path: '{project-root}/_bmad/bmm/workflows/1-analysis/create-product-brief'
 
-# Referências de Arquivo
-thisStepFile: '{workflow_path}/steps/step-01-init.md'
-nextStepFile: '{workflow_path}/steps/step-02-vision.md'
-workflowFile: '{workflow_path}/workflow.md'
+# File References
+thisStepFile: '{workflow_path}/steps/step-01-init_pt-br.md'
+nextStepFile: '{workflow_path}/steps/step-02-vision_pt-br.md'
+workflowFile: '{workflow_path}/workflow_pt-br.md'
 outputFile: '{output_folder}/analysis/product-brief-{{project_name}}-{{date}}.md'
 
-# Referências de Modelo
-productBriefTemplate: '{workflow_path}/product-brief.template.md'
+# Template References
+productBriefTemplate: '{workflow_path}/product-brief.template_pt-br.md'
 ---
 
 # Passo 1: Inicialização do Resumo de Produto
@@ -77,7 +77,7 @@ Se o documento existe e tem frontmatter com `stepsCompleted`:
 
 **Protocolo de Continuação:**
 
-- **PARE imediatamente** e carregue `{workflow_path}/steps/step-01b-continue.md`
+- **PARE imediatamente** e carregue `{workflow_path}/steps/step-01b-continue_pt-br.md`
 - Não prossiga com nenhuma tarefa de inicialização
 - Deixe o step-01b lidar com toda a lógica de continuação
 - Esta é uma situação de auto-prosseguimento - nenhuma escolha do usuário necessária

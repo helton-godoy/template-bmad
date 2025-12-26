@@ -1,90 +1,89 @@
-# Pesquisa de Domínio Etapa 1: Confirmação de Âmbito de Pesquisa de Domínio
+# Passo 1 de Pesquisa de Domínio: Confirmação de Escopo da Pesquisa de Domínio
 
-## REGRAS DE EXECUÇÃO DE MANDATÓRIA (REAL primeiro):
+## REGRAS DE EXECUÇÃO OBRIGATÓRIAS (LEIA PRIMEIRO):
 
-- 🛑 NUNCA gerar conteúdo sem confirmação do usuário
+- 🛑 NUNCA gere conteúdo sem confirmação do usuário
 
-- 📖 CRITICAL: SEMPRE leia o arquivo de passo completo antes de tomar qualquer ação - compreensão parcial leva a decisões incompletas
-- 🔄 CRITICAL: Ao carregar o próximo passo com 'C', certifique-se de que todo o arquivo seja lido e compreendido antes de prosseguir
-- ✅ FOCUS EXCLUSIVAMENTE na confirmação do escopo e abordagem da pesquisa de domínio
-Você é um planejador de pesquisa do DOMAIN, não um gerador de conteúdo.
-- 💬 ACKNOWLEDGE e CONFIRM compreensão dos objetivos de pesquisa de domínio
-- 🔍 Esta é APENAS CONFIRMAÇÃO DE ÂMBITO DE ÂMBITO - nenhuma pesquisa web ainda
+- 📖 CRÍTICO: SEMPRE leia o arquivo de passo completo antes de tomar qualquer ação - compreensão parcial leva a decisões incompletas
+- 🔄 CRÍTICO: Ao carregar o próximo passo com 'C', garanta que o arquivo inteiro seja lido e compreendido antes de prosseguir
+- ✅ FOQUE EXCLUSIVAMENTE em confirmar o escopo e abordagem da pesquisa de domínio
+- 📋 VOCÊ É UM PLANEJADOR DE PESQUISA DE DOMÍNIO, não um gerador de conteúdo
+- 💬 RECONHEÇA e CONFIRME a compreensão dos objetivos de pesquisa de domínio
+- 🔍 Esta é APENAS CONFIRMAÇÃO DE ESCOPO - sem pesquisa na web ainda
 
 ## PROTOCOLOS DE EXECUÇÃO:
 
 - 🎯 Mostre sua análise antes de tomar qualquer ação
-- ⚠ o presente [C] continuar opção após confirmação de escopo
-- 💾 APENAS prossiga quando o utilizador escolher C (Continuar)
-- 📖 Actualizar a matéria frontal `stepsCompleted: [1]` antes de carregar o próximo passo
-- 🚫 PROIBIDA a carregar o próximo passo até que o C seja seleccionado
+- ⚠️ Apresente a opção [C] continuar após a confirmação do escopo
+- 💾 APENAS prossiga quando o usuário escolher C (Continuar)
+- 📖 Atualize o frontmatter `stepsCompleted: [1]` antes de carregar o próximo passo
+- 🚫 PROIBIDO carregar o próximo passo até que C seja selecionado
 
-## CONTEXTO MONTANTES:
+## LIMITES DE CONTEXTO:
 
-- Tipo de pesquisa = "domínio" já está definido
-- «Tépico de investigação = "{{research_topic}}" - descoberto na discussão inicial
-- **Objectivos de pesquisa = "{{research_goals}}"** - capturados da discussão inicial
-- Foco na análise indústria/domínio com pesquisa web
-- A pesquisa na Web é necessária para verificar e complementar seu conhecimento com fatos atuais
+- Tipo de pesquisa = "domain" já está definido
+- **Tópico de pesquisa = "{{research_topic}}"** - descoberto na discussão inicial
+- **Objetivos de pesquisa = "{{research_goals}}"** - capturados da discussão inicial
+- Foco na análise de indústria/domínio com pesquisa na web
+- Pesquisa na web é necessária para verificar e complementar seu conhecimento com fatos atuais
 
-A sua tarefa:
+## SUA TAREFA:
 
-Confirme o escopo e a abordagem da pesquisa de domínio para **{{research_topic}}** com os objetivos do usuário em mente.
+Confirme o escopo e abordagem da pesquisa de domínio para **{{research_topic}}** com os objetivos do usuário em mente.
 
-## DOMAIN ÂMBITO DE CONFIRMAÇÃO:
+## CONFIRMAÇÃO DE ESCOPO DE DOMÍNIO:
 
-### 1. Iniciar confirmação de escopo
+### 1. Iniciar Confirmação de Escopo
 
-Comece com o entendimento de escopo de domínio:
-"Eu entendo que você quer realizar **pesquisa de domínio**para**{{research_topic}}** com estes objetivos: {{research_goals}}
+Comece com a compreensão do escopo de domínio:
+"Eu entendo que você quer realizar **pesquisa de domínio** para **{{research_topic}}** com estes objetivos: {{research_goals}}
 
-**Campo de Investigação Principal:**
+**Escopo da Pesquisa de Domínio:**
 
-- **Análise da Indústria**: estrutura industrial, dinâmica do mercado e paisagem competitiva
-- **Ambiente Regulatório**: requisitos, regulamentos e normas de conformidade
-- **Padrões de Tecnologia**: tendências de inovação, adoção de tecnologia e transformação digital
-- **Factores económicos**: dimensão do mercado, tendências de crescimento e impacto económico
-- **Chain Supply**: análise da cadeia de valor e relações ecossistêmicas
+- **Análise da Indústria**: Estrutura da indústria, dinâmica de mercado e cenário competitivo
+- **Ambiente Regulatório**: Requisitos de conformidade, regulamentos e normas
+- **Padrões de Tecnologia**: Tendências de inovação, adoção de tecnologia e transformação digital
+- **Fatores Econômicos**: Tamanho do mercado, tendências de crescimento e impacto econômico
+- **Cadeia de Suprimentos**: Análise da cadeia de valor e relacionamentos do ecossistema
 
-**Abordagem de investigação:**
+**Abordagem de Pesquisa:**
 
-- Todas as reclamações verificadas contra fontes públicas atuais
-- Validação multi-fonte para reivindicações de domínio crítico
-- Níveis de confiança para informações de domínio incertas
-- Cobertura abrangente de domínios com insights específicos do setor
+- Todas as afirmações verificadas contra fontes públicas atuais
+- Validação multi-fonte para afirmações críticas de domínio
+- Níveis de confiança para informações incertas de domínio
+- Cobertura abrangente de domínio com insights específicos da indústria
 
-### 2. Confirmação do âmbito de aplicação
+### 2. Confirmação de Escopo
 
-Apresentar confirmação clara do alcance:
-**«Campo de Investigação Principal Confirmação:**
+Apresente confirmação clara do escopo:
+"**Confirmação de Escopo da Pesquisa de Domínio:**
 
-Para **{{research_topic}}**, vou pesquisar:
+Para **{{research_topic}}**, eu pesquisarei:
 
-✅ **Análise da Indústria** - estrutura do mercado, actores-chave, dinâmica competitiva
-✅ **Requisitos regulamentares** - normas de conformidade, quadros jurídicos
-✅ **Tendências tecnológicas** - padrões de inovação, transformação digital
-✅ **Factores económicos** - dimensão do mercado, projecções de crescimento, impacto económico
+✅ **Análise da Indústria** - estrutura de mercado, principais players, dinâmica competitiva
+✅ **Requisitos Regulatórios** - normas de conformidade, quadros legais
+✅ **Tendências Tecnológicas** - padrões de inovação, transformação digital
+✅ **Fatores Econômicos** - tamanho do mercado, projeções de crescimento, impacto econômico
 ✅ **Análise da Cadeia de Suprimentos** - cadeia de valor, ecossistema, parcerias
 
-**Todas as reivindicações verificadas contra as atuais fontes públicas.**
+**Todas as afirmações verificadas contra fontes públicas atuais.**
 
-**Esse escopo e abordagem de pesquisa de domínio está alinhado com seus objetivos?**
+**Este escopo e abordagem de pesquisa de domínio se alinham com seus objetivos?**
 [C] Continuar - Iniciar pesquisa de domínio com este escopo
 
-### 3. Manipulação Continuar a Selecção
+### 3. Lidar com Seleção Continuar
 
-#### Se 'C' (Continua):
+#### Se 'C' (Continuar):
 
-- Confirmação do escopo do documento no arquivo de pesquisa
-- Update frontmatter: `stepsCompleted: [1]`
-- Load: `./step-02-domain-analysis.md`
+- Documente a confirmação do escopo no arquivo de pesquisa
+- Atualize frontmatter: `stepsCompleted: [1]`
+- Carregue: `./step-02-domain-analysis_pt-br.md`
 
-## APÊNDICE DO DOCUMENTO:
+## ANEXAR AO DOCUMENTO:
 
-Quando o usuário seleciona 'C', adicione confirmação de escopo:
+Quando o usuário selecionar 'C', anexe a confirmação do escopo:
 
 ```markdown
-
 ## Domain Research Scope Confirmation
 
 **Research Topic:** {{research_topic}}
@@ -106,31 +105,32 @@ Quando o usuário seleciona 'C', adicione confirmação de escopo:
 - Comprehensive domain coverage with industry-specific insights
 
 **Scope Confirmed:** {{date}}
-
 ```
 
-## SUCESSO METRICOS:
+## MÉTRICAS DE SUCESSO:
 
-✅ Âmbito de pesquisa de domínio claramente confirmado com o usuário
+✅ Escopo de pesquisa de domínio claramente confirmado com o usuário
 ✅ Todas as áreas de análise de domínio identificadas e explicadas
 ✅ Metodologia de pesquisa enfatizada
-✅ [C] continuar a opção apresentada e manuseada corretamente
-✅ Confirmação de âmbito documentada quando o usuário procede
+✅ Opção [C] continuar apresentada e tratada corretamente
+✅ Confirmação de escopo documentada quando o usuário prossegue
 ✅ Roteamento adequado para o próximo passo de pesquisa de domínio
 
-## MODELOS DE FALHA:
+## MODOS DE FALHA:
 
-❌ Não confirmando claramente o escopo da pesquisa de domínio com o usuário
-❌ Faltam áreas críticas de análise de domínio
-❌ Não explicando que busca na web é necessária para fatos atuais
-❌ Não apresentar [C] continuar opção
-❌ Prosseguindo sem confirmação do escopo do usuário
-❌ Não encaminhar para o próximo passo de pesquisa de domínio
+❌ Não confirmar claramente o escopo de pesquisa de domínio com o usuário
+❌ Faltar áreas críticas de análise de domínio
+❌ Não explicar que a pesquisa na web é necessária para fatos atuais
+❌ Não apresentar a opção [C] continuar
+❌ Prosseguir sem confirmação de escopo do usuário
+❌ Não rotear para o próximo passo de pesquisa de domínio
 
-❌ **CRITICAL**: A leitura de apenas um arquivo de passo parcial leva a uma compreensão incompleta e a más decisões
-❌ **CRITICAL**: Prosseguindo com **C** sem ler e compreender completamente o próximo arquivo passo
-❌ **CRITICAL**: Tomar decisões sem compreensão completa dos requisitos e protocolos de etapas
+❌ **CRÍTICO**: Ler apenas parte do arquivo de passo - leva a compreensão incompleta e más decisões
+❌ **CRÍTICO**: Prosseguir com 'C' sem ler e compreender totalmente o próximo arquivo de passo
+❌ **CRÍTICO**: Tomar decisões sem compreensão completa dos requisitos e protocolos do passo
 
-## Próximo passo:
+## PRÓXIMO PASSO:
 
-Após u
+Após o usuário selecionar 'C', carregue `./step-02-domain-analysis_pt-br.md` para iniciar a análise da indústria.
+
+Lembre-se: Esta é APENAS A CONFIRMAÇÃO DE ESCOPO - nenhuma pesquisa de domínio real ainda, apenas confirmando a abordagem e escopo de pesquisa!

@@ -1,14 +1,14 @@
 ---
 name: 'step-03-users'
-description: 'Define target users with rich personas and map their key interactions with the product'
+description: 'Definir usuários-alvo com personas ricas e mapear suas interações-chave com o produto'
 
 # Path Definitions
-workflow_path: '{project-root}/_bmad/bmm/workflows/1-analysis/product-brief'
+workflow_path: '{project-root}/_bmad/bmm/workflows/1-analysis/create-product-brief'
 
 # File References
-thisStepFile: '{workflow_path}/steps/step-03-users.md'
-nextStepFile: '{workflow_path}/steps/step-04-metrics.md'
-workflowFile: '{workflow_path}/workflow.md'
+thisStepFile: '{workflow_path}/steps/step-03-users_pt-br.md'
+nextStepFile: '{workflow_path}/steps/step-04-metrics_pt-br.md'
+workflowFile: '{workflow_path}/workflow_pt-br.md'
 outputFile: '{output_folder}/analysis/product-brief-{{project_name}}-{{date}}.md'
 
 # Task References
@@ -16,129 +16,191 @@ advancedElicitationTask: '{project-root}/_bmad/core/tasks/advanced-elicitation.x
 partyModeWorkflow: '{project-root}/_bmad/core/workflows/party-mode/workflow.md'
 ---
 
-# Passo 3: Usuários alvo Discovery
+# Passo 3: Descoberta de Usuários-Alvo
 
-## PASSO:
+## OBJETIVO DO PASSO:
 
-Defina usuários-alvo com personas ricos e mapeie suas interações-chave com o produto através de pesquisa colaborativa do usuário e mapeamento de jornada.
+Definir usuários-alvo com personas ricas e mapear suas interações-chave com o produto através de pesquisa colaborativa de usuários e mapeamento de jornada.
 
-## REGRAS DE EXECUÇÃO DE MANDATÓRIA (REAL primeiro):
+## REGRAS DE EXECUÇÃO OBRIGATÓRIAS (LEIA PRIMEIRO):
 
-### Regras universais:
+### Regras Universais:
 
-- 🛑 NUNCA gerar conteúdo sem entrada do usuário
-- 📖 CRITICAL: Leia o arquivo passo completo antes de tomar qualquer ação
-- 🔄 CRITICAL: Ao carregar o próximo passo com 'C', certifique-se de que todo o arquivo seja lido
-És um facilitador, não um gerador de conteúdo.
+- 🛑 NUNCA gere conteúdo sem entrada do usuário
+- 📖 CRÍTICO: Leia o arquivo de passo completo antes de tomar qualquer ação
+- 🔄 CRÍTICO: Ao carregar o próximo passo com 'C', garanta que o arquivo inteiro seja lido
+- 📋 VOCÊ É UM FACILITADOR, não um gerador de conteúdo
 
-### Reforço do papel:
+### Reforço de Papel:
 
-- ✅ Você é um facilitador de análise de negócios focado no produto
-- ✅ Se você já recebeu um nome, communication style e persona, continue usando-os enquanto desempenha este novo papel
-- ✅ Nós nos engajamos em diálogo colaborativo, não em resposta a comandos
-- ✅ Você traz habilidades de pensamento estruturado e facilitação, enquanto o usuário traz conhecimento de domínio e visão de produto
-- ✅ Mantenha o tom de descoberta colaborativo ao longo
+- ✅ Você é um facilitador Analista de Negócios focado no produto
+- ✅ Se você já recebeu um nome, estilo de comunicação e persona, continue a usá-los enquanto desempenha este novo papel
+- ✅ Engajamos em diálogo colaborativo, não comando-resposta
+- ✅ Você traz pensamento estruturado e habilidades de facilitação, enquanto o usuário traz expertise de domínio e visão de produto
+- ✅ Mantenha tom de descoberta colaborativa por todo o processo
 
-### Regras específicas dos passos:
+### Regras Específicas do Passo:
 
-- 🎯 Concentre-se apenas em definir quem este produto serve e como eles interagem com ele
-- 🚫 PROIBIDA para criar perfis genéricos de usuários sem detalhes específicos
-- 💬 Abordagem: Desenvolvimento sistemático de persona com mapeamento de viagens
-- 📋 Desenvolvimento de personalidades COLABORATIVAs, não criação de usuários baseados em pressupostos
+- 🎯 Foque apenas em definir quem este produto serve e como eles interagem com ele
+- 🚫 PROIBIDO criar perfis genéricos de usuários sem detalhes específicos
+- 💬 Abordagem: Desenvolvimento sistemático de personas com mapeamento de jornada
+- 📋 Desenvolvimento COLABORATIVO de personas, não criação de usuários baseada em suposições
 
 ## PROTOCOLOS DE EXECUÇÃO:
 
 - 🎯 Mostre sua análise antes de tomar qualquer ação
-- 💾 Gerar personas de usuário e viagens colaborativamente com o usuário
-- 📖 Actualizar a matéria frontal `stepsCompleted: [1, 2, 3]` antes de carregar o próximo passo
-- 🚫 PROIBIDO proceder sem confirmação do utilizador através do menu
+- 💾 Gere personas de usuário e jornadas colaborativamente com o usuário
+- 📖 Atualize o frontmatter `stepsCompleted: [1, 2, 3]` antes de carregar o próximo passo
+- 🚫 PROIBIDO prosseguir sem confirmação do usuário através do menu
 
-## CONTEXTO MONTANTES:
+## LIMITES DE CONTEXTO:
 
-- Contexto disponível: Documento atual e matéria frontal das etapas anteriores, visão do produto e problema já definido
-- Focus: Criando personas de usuário vívidas e acionáveis que se alinham à visão do produto
-- Limits: Concentre-se nos usuários que experimentam diretamente o problema ou se beneficiam da solução
-- Dependencies: Visão do produto e indicação do problema do passo-02 deve ser completa
+- Contexto disponível: Documento atual e frontmatter de passos anteriores, visão do produto e problema já definidos
+- Foco: Criar personas de usuário vívidas e acionáveis que se alinham com a visão do produto
+- Limites: Foque em usuários que experimentam diretamente o problema ou se beneficiam da solução
+- Dependências: Visão do produto e declaração do problema do passo-02 devem estar completas
 
-## Sequência de Instruções (Não desvie, salte ou optimize)
+## Sequência de Instruções (Não desvie, pule ou otimize)
 
-### 1. Comece a descoberta do usuário
+### 1. Iniciar Descoberta de Usuários
 
-**Exploração de Abertura:**
-"Agora que entendemos o que {{project_name}} faz, let define para quem é.
+**Exploração Inicial:**
+"Agora que entendemos o que {{project_name}} faz, vamos definir para quem é.
 
-**User Discovery:**
+**Descoberta de Usuários:**
 
-- Quem vive o problema que estamos a resolver?
+- Quem experimenta o problema que estamos resolvendo?
 - Existem diferentes tipos de usuários com necessidades diferentes?
-- Quem ganha mais valor com esta solução?
-- Há usuários primários e usuários secundários que devemos considerar?
+- Quem obtém mais valor desta solução?
+- Existem usuários primários e usuários secundários que devemos considerar?
 
 Vamos começar identificando os principais grupos de usuários."
 
-### 2. Desenvolvimento primário do segmento do usuário
+### 2. Desenvolvimento do Segmento de Usuário Primário
 
 **Processo de Desenvolvimento de Persona:**
 Para cada segmento de usuário primário, crie personas ricas:
 
 **Nome & Contexto:**
 
-- Dar-lhes um nome realista e breve história
-- Definir o seu papel, ambiente e contexto
+- Dê a eles um nome realista e uma breve história de fundo
+- Defina seu papel, ambiente e contexto
 - O que os motiva? Quais são seus objetivos?
 
-**Experiência de Problemas:**
+**Experiência do Problema:**
 
-- Como é que eles vivem o problema?
-- Que soluções estão a usar?
+- Como eles vivenciam o problema atualmente?
+- Quais soluções alternativas eles estão usando?
 - Quais são os impactos emocionais e práticos?
 
-**Visão de sucesso:**
+**Visão de Sucesso:**
 
 - Como seria o sucesso para eles?
-- O que os faria dizer "isso é exactamente o que eu precisava"?
+- O que os faria dizer "isso é exatamente o que eu precisava"?
 
-**Perguntas Primárias do Usuário:**
+**Perguntas sobre Usuário Primário:**
 
-- "Fale-me de uma pessoa típica que usaria {{project_name}}"
-- Como é o dia deles? Onde nosso produto se encaixa?"
-- "O que estão a tentar fazer agora é difícil?"
+- "Fale-me sobre uma pessoa típica que usaria {{project_name}}"
+- "Como é o dia deles? Onde nosso produto se encaixa?"
+- "O que eles estão tentando realizar que é difícil agora?"
 
-### 3. Exploração Segmentar do Usuário
+### 3. Exploração do Segmento de Usuário Secundário
 
-**Considerações de usuário secundários:**
+**Considerações sobre Usuário Secundário:**
 
-- "Quem mais se beneficia desta solução, mesmo que não seja o utilizador principal?"
-- "Há funções de administrador, apoio ou supervisão que devemos considerar?"
+- "Quem mais se beneficia desta solução, mesmo que não seja o usuário principal?"
+- "Existem papéis administrativos, de suporte ou supervisão que devemos considerar?"
 - "Quem influencia a decisão de adotar ou comprar este produto?"
-- "Existem usuários parceiros ou interessados que importam?"
+- "Existem usuários parceiros ou stakeholders que importam?"
 
-### 4. Mapeamento de Viagem de Usuário
+### 4. Mapeamento da Jornada do Usuário
 
-**Elementos de viagem:**
-Mapear interações chave para cada segmento de usuário:
+**Elementos da Jornada:**
+Mapeie as interações-chave para cada segmento de usuário:
 
-- **Discovery:** Como eles descobrem sobre a solução?
-- **A bordo:** Como é a primeira experiência deles?
-- **Uso da coroa:** Como eles usam o produto no dia-a-dia?
-- **Momento de sucesso:** Quando é que eles percebem o valor?
-- **A longo prazo:** Como isso se torna parte de sua rotina?
+- **Descoberta:** Como eles descobrem a solução?
+- **Onboarding:** Como é a primeira experiência deles?
+- **Uso Principal:** Como eles usam o produto no dia a dia?
+- **Momento de Sucesso:** Quando eles percebem o valor?
+- **Longo Prazo:** Como isso se torna parte de sua rotina?
 
-**Perguntas de viagem:**
+**Perguntas sobre a Jornada:**
 
-- "Andar através de como [Nome Persona] iria descobrir e começar a usar {{project_name}}"
+- "Descreva como [Nome da Persona] descobriria e começaria a usar {{project_name}}"
 - "Qual é o momento 'aha!' deles?"
-- "Como é que este produto muda como eles funcionam ou vivem?"
+- "Como este produto muda a maneira como eles trabalham ou vivem?"
 
-### 5. Gerar Conteúdo de Usuários-alvo
+### 5. Gerar Conteúdo de Usuários-Alvo
 
-**Content to Append:**
-Preparar a seguinte estrutura para o anexo do documento:
+**Conteúdo para Anexar:**
+Prepare a seguinte estrutura para anexar ao documento:
 
-Marcação para baixo
+```markdown
+## Target Users
 
-## Utilizadores-alvo
+### Primary Users
 
-### Utilizadores primários
+[Primary user segment content based on conversation]
 
-[Segmento primário do utilizador
+### Secondary Users
+
+[Secondary user segment content based on conversation, or N/A if not discussed]
+
+### User Journey
+
+[User journey content based on conversation, or N/A if not discussed]
+```
+
+### 6. Apresentar OPÇÕES DE MENU
+
+**Apresentação de Conteúdo:**
+"Mapeei quem {{project_name}} serve e como eles interagirão com ele. Isso nos ajuda a garantir que estamos construindo algo que pessoas reais amarão usar.
+
+**Aqui está o que vou adicionar ao documento:**
+[Mostre o conteúdo markdown completo do passo 5]
+
+**Selecione uma Opção:** [A] Elicitação Avançada [P] Modo Festa [C] Continuar"
+
+#### Lógica de Tratamento de Menu:
+
+- SE A: Execute {advancedElicitationTask} com o conteúdo atual de usuário para aprofundar em personas e jornadas
+- SE P: Execute {partyModeWorkflow} para trazer diferentes perspectivas para validar o entendimento do usuário
+- SE C: Salve o conteúdo em {outputFile}, atualize o frontmatter com stepsCompleted: [1, 2, 3], então e apenas então carregue, leia o arquivo inteiro e execute {nextStepFile}
+- SE Quaisquer outros comentários ou dúvidas: ajude o usuário a responder e então [Exiba Novamente as Opções de Menu](#6-apresentar-opcoes-de-menu)
+
+#### REGRAS DE EXECUÇÃO:
+
+- SEMPRE pare e aguarde a entrada do usuário após apresentar o menu
+- APENAS prossiga para o próximo passo quando o usuário selecionar 'C'
+- Após a execução de outros itens de menu, retorne a este menu com conteúdo atualizado
+- O usuário pode conversar ou fazer perguntas - sempre responda e termine exibindo novamente as opções de menu
+
+## NOTA CRÍTICA DE CONCLUSÃO DO PASSO
+
+APENAS QUANDO [opção C continuar] for selecionada e [personas de usuário finalizadas e salvas no documento com frontmatter atualizado], você então carregará e lerá completamente `{nextStepFile}` para executar e iniciar a definição de métricas de sucesso.
+
+---
+
+## 🚨 MÉTRICAS DE SUCESSO/FALHA DO SISTEMA
+
+### ✅ SUCESSO:
+
+- Personas de usuário ricas e críveis com motivações claras
+- Distinção clara entre usuários primários e secundários
+- Jornadas de usuário que mostram pontos de interação-chave e criação de valor
+- Segmentos de usuário que se alinham com a visão do produto e declaração do problema
+- Menu A/P/C apresentado e tratado corretamente com execução adequada da tarefa
+- Conteúdo devidamente anexado ao documento quando C selecionado
+- Frontmatter atualizado com stepsCompleted: [1, 2, 3]
+
+### ❌ FALHA DO SISTEMA:
+
+- Criar perfis genéricos de usuários sem detalhes específicos
+- Faltar segmentos de usuários-chave que são importantes para o sucesso
+- Jornadas de usuário que não mostram como o produto cria valor
+- Não conectar as necessidades do usuário de volta à declaração do problema
+- Não apresentar o menu padrão A/P/C após a geração de conteúdo
+- Anexar conteúdo sem o usuário selecionar 'C'
+- Não atualizar o frontmatter corretamente
+
+**Regra Mestra:** Pular passos, otimizar sequências ou não seguir instruções exatas é PROIBIDO e constitui FALHA DO SISTEMA.

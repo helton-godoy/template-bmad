@@ -1,119 +1,237 @@
-# Etapa 3: Paisagem competitiva
+# Passo 3 de Pesquisa de Domínio: Cenário Competitivo
 
-## REGRAS DE EXECUÇÃO DE MANDATÓRIA (REAL primeiro):
+## REGRAS DE EXECUÇÃO OBRIGATÓRIAS (LEIA PRIMEIRO):
 
-- 🛑 NUNCA gerar conteúdo sem verificação de pesquisa na web
+- 🛑 NUNCA gere conteúdo sem verificação de pesquisa na web
 
-- 📖 CRITICAL: SEMPRE leia o arquivo de passo completo antes de tomar qualquer ação - compreensão parcial leva a decisões incompletas
-- 🔄 CRITICAL: Ao carregar o próximo passo com 'C', certifique-se de que todo o arquivo seja lido e compreendido antes de prosseguir
-- ✅ Pesquise na web para verificar e complementar seus conhecimentos com fatos atuais
-És um analista competitivo, não um gerador de conteúdo.
-- 💬 FOCUS em atores-chave, market share e dinâmica competitiva
-- 🔍 WEB PROCURAÇÃO EXIGIDA - verificar os factos actuais contra fontes vivas
-- 📝 ESCREVE O CONTEÚDO IMPEDIATAMENTE AO DOCUMENTO
+- 📖 CRÍTICO: SEMPRE leia o arquivo de passo completo antes de tomar qualquer ação - compreensão parcial leva a decisões incompletas
+- 🔄 CRÍTICO: Ao carregar o próximo passo com 'C', garanta que o arquivo inteiro seja lido e compreendido antes de prosseguir
+- ✅ Pesquise na web para verificar e complementar seu conhecimento com fatos atuais
+- 📋 VOCÊ É UM ANALISTA COMPETITIVO, não um gerador de conteúdo
+- 💬 FOQUE em principais players, participação de mercado e dinâmica competitiva
+- 🔍 PESQUISA NA WEB NECESSÁRIA - verifique fatos atuais contra fontes ao vivo
+- 📝 ESCREVA O CONTEÚDO IMEDIATAMENTE NO DOCUMENTO
 
 ## PROTOCOLOS DE EXECUÇÃO:
 
-- 🎯 Mostrar a análise de pesquisa na Web antes de apresentar os resultados
-- ⚠ o presente [C] continuar opção após análise competitiva geração de conteúdo
-- 📝 ESCREVE ANÁLISE COMPETITTIVA AO DOCUMENTO
-- 💾 APENAS proceda quando o usuário escolher C (Continue)
-- 📖 Actualizar a matéria frontal `stepsCompleted: [1, 2, 3]` antes de carregar o próximo passo
-- 🚫 PROIBIDA a carregar o próximo passo até que o C seja seleccionado
+- 🎯 Mostre análise de pesquisa na web antes de apresentar descobertas
+- ⚠️ Apresente a opção [C] continuar após a geração de conteúdo de análise competitiva
+- 📝 ESCREVA A ANÁLISE COMPETITIVA NO DOCUMENTO IMEDIATAMENTE
+- 💾 APENAS prossiga quando o usuário escolher C (Continuar)
+- 📖 Atualize o frontmatter `stepsCompleted: [1, 2, 3]` antes de carregar o próximo passo
+- 🚫 PROIBIDO carregar o próximo passo até que C seja selecionado
 
-## CONTEXTO MONTANTES:
+## LIMITES DE CONTEXTO:
 
-- Documento atual e matéria frontal das etapas anteriores estão disponíveis
-- «Técnica de pesquisa = "{{research_topic}}" - estabelecida a partir da discussão inicial
-- «Objectivos de investigação = "{{research_goals}}" - estabelecidos a partir da discussão inicial
-- Concentre-se em atores-chave, market share e dinâmica competitiva
-- Capacidades de pesquisa na Web com verificação de origem estão habilitadas
+- Documento atual e frontmatter de passos anteriores estão disponíveis
+- **Tópico de pesquisa = "{{research_topic}}"** - estabelecido da discussão inicial
+- **Objetivos de pesquisa = "{{research_goals}}"** - estabelecidos da discussão inicial
+- Foco em principais players, participação de mercado e dinâmica competitiva
+- Capacidades de pesquisa na web com verificação de fonte estão habilitadas
 
-A sua tarefa:
+## SUA TAREFA:
 
-Realize análises de paisagem competitivas com foco em atores-chave, market share e dinâmica competitiva. Pesquise na web para verificar e complementar os fatos atuais.
+Conduza a análise do cenário competitivo focando em principais players, participação de mercado e dinâmica competitiva. Pesquise na web para verificar e complementar fatos atuais.
 
-## ANÁLISE COMPETITIVA DA PAISCAPE SEQUÊNCIA DE ANÁLISE:
+## SEQUÊNCIA DE ANÁLISE DO CENÁRIO COMPETITIVO:
 
-### 1. Comece a análise paisagística competitiva
+### 1. Iniciar Análise do Cenário Competitivo
 
-**SUBPROCESSAS E SUBAGENTES DE UTILIZAÇÃO**: Utilizar subagentes de investigação, subprocessos ou processamento paralelo, se disponíveis para analisar exaustivamente diferentes áreas competitivas simultaneamente e cuidadosamente.
+**UTILIZE SUBPROCESSOS E SUBAGENTES**: Use subagentes de pesquisa, subprocessos ou processamento paralelo se disponível para analisar completamente diferentes áreas competitivas simultaneamente e minuciosamente.
 
-Comece com uma abordagem de investigação competitiva:
-"Agora vou conduzir **análise de paisagem competitiva**para**{{research_topic}}** para compreender o ecossistema competitivo.
+Comece com a abordagem de pesquisa competitiva:
+"Agora vou conduzir a **análise do cenário competitivo** para **{{research_topic}}** para entender o ecossistema competitivo.
 
-**Foco paisagístico competitivo:**
+**Foco do Cenário Competitivo:**
 
-- Principais jogadores e líderes de mercado
-- Parte de mercado e posicionamento competitivo
+- Principais players e líderes de mercado
+- Participação de mercado e posicionamento competitivo
 - Estratégias competitivas e diferenciação
-- Modelos de negócio e proposições de valor
+- Modelos de negócios e propostas de valor
 - Barreiras de entrada e dinâmica competitiva
 
-**Deixe-me procurar informações competitivas atuais.**
+**Deixe-me pesquisar por insights competitivos atuais.**"
 
-### 2. Execução de pesquisa concorrente paralela
+### 2. Execução de Pesquisa Competitiva Paralela
 
-**Execute várias pesquisas na web simultaneamente:**
+**Execute múltiplas pesquisas na web simultaneamente:**
 
-Pesquisa na web: "{{research_topic}} Principais jogadores líderes de mercado"
-Pesquise na web: "{{research_topic}} paisagem competitiva de market share"
-Pesquisa na web: "{{research_topic}} diferenciação de estratégias competitivas"
-Pesquisar na web: "{{research_topic}} barreiras de entrada dinâmica competitiva"
+Pesquise na web: "{{research_topic}} key players market leaders"
+Pesquise na web: "{{research_topic}} market share competitive landscape"
+Pesquise na web: "{{research_topic}} competitive strategies differentiation"
+Pesquise na web: "{{research_topic}} entry barriers competitive dynamics"
 
 **Abordagem de análise:**
 
-- Procure por recentes relatórios de inteligência competitiva e análises de mercado
-- Pesquisa de sites da empresa, relatórios anuais e apresentações de investidores
-- Dados de market share de pesquisa e posicionamento competitivo
-- Analisar estratégias competitivas e abordagens de diferenciação
+- Procure relatórios recentes de inteligência competitiva e análises de mercado
+- Pesquise sites de empresas, relatórios anuais e apresentações para investidores
+- Pesquise dados de participação de mercado e posicionamento competitivo
+- Analise estratégias competitivas e abordagens de diferenciação
 - Estude barreiras de entrada e dinâmica competitiva
 
 ### 3. Analisar e Agregar Resultados
 
-**Coletar e analisar resultados de todas as pesquisas paralelas:**
+**Colete e analise descobertas de todas as pesquisas paralelas:**
 
-"Após a execução de buscas web paralelas abrangentes, let me analisar e agregar resultados competitivos:
+"Após executar pesquisas paralelas abrangentes na web, deixe-me analisar e agregar as descobertas competitivas:
 
-**Cobertura da investigação:**
+**Cobertura de Pesquisa:**
 
-- Análise dos principais jogadores e líderes de mercado
-- Parte de mercado e avaliação do posicionamento competitivo
-- Estratégias competitivas e mapeamento de diferenciação
-- Barreiras de entrada e avaliação da dinâmica competitiva
+- Análise de principais players e líderes de mercado
+- Avaliação de participação de mercado e posicionamento competitivo
+- Mapeamento de estratégias competitivas e diferenciação
+- Avaliação de barreiras de entrada e dinâmica competitiva
 
 **Análise Cruz-Competitiva:**
-[Identifique padrões conectando jogadores, estratégias e dinâmica do mercado]
+[Identifique padrões conectando players, estratégias e dinâmica de mercado]
 
-**Avaliação da qualidade:**
-[Níveis globais de confiança e lacunas de investigação identificadas]"
+**Avaliação de Qualidade:**
+[Níveis gerais de confiança e lacunas de pesquisa identificadas]"
 
-### 4. Gerar conteúdo paisagístico competitivo
+### 4. Gerar Conteúdo do Cenário Competitivo
 
-**ESCREVER IMPEDIATAMENTE O DOCUMENTO**
+**ESCREVA IMEDIATAMENTE NO DOCUMENTO**
 
-Preparar análise de paisagem competitiva com citações de busca na web:
+Prepare a análise do cenário competitivo com citações de pesquisa na web:
 
-#### Estrutura do conteúdo:
+#### Estrutura de Conteúdo:
 
-Ao salvar no documento, adicione estas seções Nível 2 e Nível 3:
+Ao salvar no documento, anexe estas seções de Nível 2 e Nível 3:
 
-Marcação para baixo
+```markdown
+## Competitive Landscape
 
-## Paisagem competitiva
+### Key Players and Market Leaders
 
-### Principais jogadores e líderes de mercado
+[Key players analysis with source citations]
+_Market Leaders: [Dominant players and their market positions]_
+_Major Competitors: [Significant competitors and their specialties]_
+_Emerging Players: [New entrants and innovative companies]_
+_Global vs Regional: [Geographic distribution of key players]_
+_Source: [URL]_
 
-[Análise de jogadores chave com citações de origem]
-*Market Leaders: [Jogadores dominantes e suas posições de mercado]**Major Competidores: [Competidores significativos e suas especialidades]**Jogadores Emergentes: [Novos participantes e empresas inovadoras]**Global vs Regional: [Distribuição geográfica dos principais jogadores]**Fonte: [URL]*
+### Market Share and Competitive Positioning
 
-### Parte de mercado e posicionamento competitivo
+[Market share analysis with source citations]
+_Market Share Distribution: [Current market share breakdown]_
+_Competitive Positioning: [How players position themselves in the market]_
+_Value Proposition Mapping: [Different value propositions across players]_
+_Customer Segments Served: [Different customer bases by competitor]_
+_Source: [URL]_
 
-[Market share analysis with source cites]
-*Market Share Distribuição: [Discriminação atual da quota de mercado]**Posicionamento competitivo: [Como os jogadores se posicionam no mercado]**Value Proposition Mapping: [Propostas de valor diferentes entre os jogadores]**Segmentos de clientes servidos: [Diferentes bases de clientes por concorrente]**Fonte: [URL]*
+### Competitive Strategies and Differentiation
 
-### Estratégias competitivas e diferenciação
+[Competitive strategies analysis with source citations]
+_Cost Leadership Strategies: [Players competing on price and efficiency]_
+_Differentiation Strategies: [Players competing on unique value]_
+_Focus/Niche Strategies: [Players targeting specific segments]_
+_Innovation Approaches: [How different players innovate]_
+_Source: [URL]_
 
-[Análise de estratégias competitivas com citações de origem]
-*Estratégias de Liderança Cóstica: [Jogadores competindo sobre preço e eficiência]*
-Estratégias de  Diferenciação: [Jogadores competindo em uniqu
+### Business Models and Value Propositions
+
+[Business models analysis with source citations]
+_Primary Business Models: [How competitors make money]_
+_Revenue Streams: [Different approaches to monetization]_
+_Value Chain Integration: [Vertical integration vs partnership models]_
+_Customer Relationship Models: [How competitors build customer loyalty]_
+_Source: [URL]_
+
+### Competitive Dynamics and Entry Barriers
+
+[Competitive dynamics analysis with source citations]
+_Barriers to Entry: [Obstacles facing new market entrants]_
+_Competitive Intensity: [Level of rivalry and competitive pressure]_
+_Market Consolidation Trends: [M&A activity and market concentration]_
+_Switching Costs: [Costs for customers to switch between providers]_
+_Source: [URL]_
+
+### Ecosystem and Partnership Analysis
+
+[Ecosystem analysis with source citations]
+_Supplier Relationships: [Key supplier partnerships and dependencies]_
+_Distribution Channels: [How competitors reach customers]_
+_Technology Partnerships: [Strategic technology alliances]_
+_Ecosystem Control: [Who controls key parts of the value chain]_
+_Source: [URL]_
+```
+
+### 5. Apresentar Análise e Opção Continuar
+
+**Mostre a análise e apresente a opção continuar:**
+
+"Concluí a **análise do cenário competitivo** para {{research_topic}}.
+
+**Principais Descobertas Competitivas:**
+
+- Principais players e líderes de mercado identificados minuciosamente
+- Participação de mercado e posicionamento competitivo claramente mapeados
+- Estratégias competitivas e diferenciação analisadas
+- Modelos de negócios e propostas de valor documentados
+- Dinâmica competitiva e barreiras de entrada avaliadas
+
+**Pronto para prosseguir para a análise de foco regulatório?**
+[C] Continuar - Salvar isso no documento e prosseguir para foco regulatório
+
+### 6. Lidar com Seleção Continuar
+
+#### Se 'C' (Continuar):
+
+- **CONTEÚDO JÁ ESCRITO NO DOCUMENTO**
+- Atualize frontmatter: `stepsCompleted: [1, 2, 3]`
+- Carregue: `./step-04-regulatory-focus_pt-br.md`
+
+## ANEXAR AO DOCUMENTO:
+
+O conteúdo já está escrito no documento quando gerado no passo 4. Nenhum anexo adicional necessário.
+
+## MÉTRICAS DE SUCESSO:
+
+✅ Principais players e líderes de mercado identificados minuciosamente
+✅ Participação de mercado e posicionamento competitivo claramente mapeados
+✅ Estratégias competitivas e diferenciação analisadas
+✅ Modelos de negócios e propostas de valor documentados
+✅ Dinâmica competitiva e barreiras de entrada avaliadas
+✅ Conteúdo escrito imediatamente no documento
+✅ Opção [C] continuar apresentada e tratada corretamente
+✅ Roteamento adequado para o próximo passo (foco regulatório)
+✅ Alinhamento com objetivos de pesquisa mantido
+
+## MODOS DE FALHA:
+
+❌ Confiar em dados de treinamento em vez de pesquisa na web para fatos atuais
+❌ Faltar principais players ou líderes de mercado críticos
+❌ Análise incompleta de participação de mercado ou posicionamento
+❌ Não identificar estratégias competitivas
+❌ Não escrever conteúdo imediatamente no documento
+❌ Não apresentar a opção [C] continuar após a geração de conteúdo
+❌ Não rotear para o passo de foco regulatório
+
+❌ **CRÍTICO**: Ler apenas parte do arquivo de passo - leva a compreensão incompleta e más decisões
+❌ **CRÍTICO**: Prosseguir com 'C' sem ler e compreender totalmente o próximo arquivo de passo
+❌ **CRÍTICO**: Tomar decisões sem compreensão completa dos requisitos e protocolos do passo
+
+## PROTOCOLOS DE PESQUISA COMPETITIVA:
+
+- Pesquise relatórios de inteligência competitiva e análises de mercado
+- Use sites de empresas, relatórios anuais e apresentações para investidores
+- Analise dados de participação de mercado e posicionamento competitivo
+- Estude estratégias competitivas e abordagens de diferenciação
+- Pesquise na web para verificar fatos
+- Apresente informações conflitantes quando as fontes discordarem
+- Aplique níveis de confiança adequadamente
+
+## PADRÕES DE ANÁLISE COMPETITIVA:
+
+- Sempre cite URLs para resultados de pesquisa na web
+- Use fontes autoritárias de inteligência competitiva
+- Observe a atualidade dos dados e limitações potenciais
+- Apresente múltiplas perspectivas quando as fontes conflitarem
+- Aplique níveis de confiança a dados incertos
+- Foque em insights competitivos acionáveis
+
+## PRÓXIMO PASSO:
+
+Após o usuário selecionar 'C', carregue `./step-04-regulatory-focus_pt-br.md` para analisar requisitos regulatórios, estruturas de conformidade e considerações legais para {{research_topic}}.
+
+Lembre-se: Sempre escreva o conteúdo de pesquisa no documento imediatamente e pesquise na web para verificar fatos!

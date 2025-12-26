@@ -1,125 +1,228 @@
-# Pesquisa de Domínio Etapa 2: Análise da Indústria
+# Passo 2 de Pesquisa de Domínio: Análise da Indústria
 
-## REGRAS DE EXECUÇÃO DE MANDATÓRIA (REAL primeiro):
+## REGRAS DE EXECUÇÃO OBRIGATÓRIAS (LEIA PRIMEIRO):
 
-- 🛑 NUNCA gerar conteúdo sem verificação de pesquisa na web
+- 🛑 NUNCA gere conteúdo sem verificação de pesquisa na web
 
-- 📖 CRITICAL: SEMPRE leia o arquivo de passo completo antes de tomar qualquer ação - compreensão parcial leva a decisões incompletas
-- 🔄 CRITICAL: Ao carregar o próximo passo com 'C', certifique-se de que todo o arquivo seja lido e compreendido antes de prosseguir
-- ✅ Pesquise na web para verificar e complementar seus conhecimentos com fatos atuais
-És um Analisador da Indústria, não um gerador de conteúdo.
-- 💬 FOCUS sobre a dimensão do mercado, o crescimento e a dinâmica da indústria
-- 🔍 WEB PROCURAÇÃO EXIGIDA - verificar os factos actuais contra fontes vivas
-- 📝 ESCREVE O CONTEÚDO IMPEDIATAMENTE AO DOCUMENTO
+- 📖 CRÍTICO: SEMPRE leia o arquivo de passo completo antes de tomar qualquer ação - compreensão parcial leva a decisões incompletas
+- 🔄 CRÍTICO: Ao carregar o próximo passo com 'C', garanta que o arquivo inteiro seja lido e compreendido antes de prosseguir
+- ✅ Pesquise na web para verificar e complementar seu conhecimento com fatos atuais
+- 📋 VOCÊ É UM ANALISTA DE INDÚSTRIA, não um gerador de conteúdo
+- 💬 FOQUE no tamanho do mercado, crescimento e dinâmica da indústria
+- 🔍 PESQUISA NA WEB NECESSÁRIA - verifique fatos atuais contra fontes ao vivo
+- 📝 ESCREVA O CONTEÚDO IMEDIATAMENTE NO DOCUMENTO
 
 ## PROTOCOLOS DE EXECUÇÃO:
 
-- 🎯 Mostrar a análise de pesquisa na Web antes de apresentar os resultados
-- ⚠ o presente [C] continuar opção após a análise da indústria geração de conteúdo
-- 📝 ANÁLISE ESCRITA DA INDÚSTRIA AO DOCUMENTO
-- 💾 APENAS proceda quando o usuário escolher C (Continue)
-- 📖 Actualizar a matéria frontal `stepsCompleted: [1, 2]` antes de carregar o próximo passo
-- 🚫 PROIBIDA a carregar o próximo passo até que o C seja seleccionado
+- 🎯 Mostre análise de pesquisa na web antes de apresentar descobertas
+- ⚠️ Apresente a opção [C] continuar após a geração de conteúdo de análise da indústria
+- 📝 ESCREVA A ANÁLISE DA INDÚSTRIA NO DOCUMENTO IMEDIATAMENTE
+- 💾 APENAS prossiga quando o usuário escolher C (Continuar)
+- 📖 Atualize o frontmatter `stepsCompleted: [1, 2]` antes de carregar o próximo passo
+- 🚫 PROIBIDO carregar o próximo passo até que C seja selecionado
 
-## CONTEXTO MONTANTES:
+## LIMITES DE CONTEXTO:
 
-- Documento atual e matéria frontal da etapa-01 estão disponíveis
-- «Técnica de pesquisa = "{{research_topic}}" - estabelecida a partir da discussão inicial
-- «Objectivos de investigação = "{{research_goals}}" - estabelecidos a partir da discussão inicial
-- Foco na dimensão do mercado, crescimento e dinâmica da indústria
-- Capacidades de pesquisa na Web com verificação de origem estão habilitadas
+- Documento atual e frontmatter do passo-01 estão disponíveis
+- **Tópico de pesquisa = "{{research_topic}}"** - estabelecido da discussão inicial
+- **Objetivos de pesquisa = "{{research_goals}}"** - estabelecidos da discussão inicial
+- Foco no tamanho do mercado, crescimento e dinâmica da indústria
+- Capacidades de pesquisa na web com verificação de fonte estão habilitadas
 
-A sua tarefa:
+## SUA TAREFA:
 
-Conduzir análise da indústria com foco no tamanho do mercado, crescimento e dinâmica da indústria. Pesquise na web para verificar e complementar os fatos atuais.
+Conduza a análise da indústria focando no tamanho do mercado, crescimento e dinâmica da indústria. Pesquise na web para verificar e complementar fatos atuais.
 
-SEQUÊNCIA DE ANÁLISE DA INDÚSTRIA:
+## SEQUÊNCIA DE ANÁLISE DA INDÚSTRIA:
 
-### 1. Iniciar análise da indústria
+### 1. Iniciar Análise da Indústria
 
-**SUBPROCESSAS E SUBAGENTES DE AUTORIZAÇÃO**: Utilizar subagentes de investigação, subprocessos ou processamento paralelo, se disponíveis para analisar cuidadosamente diferentes áreas da indústria, simultaneamente e cuidadosamente.
+**UTILIZE SUBPROCESSOS E SUBAGENTES**: Use subagentes de pesquisa, subprocessos ou processamento paralelo se disponível para analisar completamente diferentes áreas da indústria simultaneamente e minuciosamente.
 
 Comece com a abordagem de pesquisa da indústria:
-"Agora vou conduzir **análise industrial**para**{{research_topic}}** para compreender a dinâmica do mercado.
+"Agora vou conduzir a **análise da indústria** para **{{research_topic}}** para entender a dinâmica do mercado.
 
-**Foco na Análise da Indústria:**
+**Foco da Análise da Indústria:**
 
 - Tamanho do mercado e métricas de avaliação
-- Taxas de crescimento e dinâmica do mercado
-- Segmentação e estrutura do mercado
+- Taxas de crescimento e dinâmica de mercado
+- Segmentação e estrutura de mercado
 - Tendências da indústria e padrões de evolução
-- Impacto económico e criação de valor
+- Impacto econômico e criação de valor
 
-**Deixe-me procurar por insights atuais da indústria.**
+**Deixe-me pesquisar por insights atuais da indústria.**"
 
-### 2. Execução de Investigação da Indústria Paralela
+### 2. Execução de Pesquisa de Indústria Paralela
 
-**Execute várias pesquisas na web simultaneamente:**
+**Execute múltiplas pesquisas na web simultaneamente:**
 
-Pesquisar na web: "{{research_topic}} valor de tamanho de mercado"
-Pesquisar na web: "{{research_topic}} dinâmica da taxa de crescimento do mercado"
-Pesquisa na web: "{{research_topic}} estrutura de segmentação de mercado"
-Pesquisa na web: "{{research_topic}} evolução das tendências da indústria"
+Pesquise na web: "{{research_topic}} market size value"
+Pesquise na web: "{{research_topic}} market growth rate dynamics"
+Pesquise na web: "{{research_topic}} market segmentation structure"
+Pesquise na web: "{{research_topic}} industry trends evolution"
 
 **Abordagem de análise:**
 
-- Procure por recentes relatórios de pesquisa de mercado e análises da indústria
-- Busca de fontes autoritárias (empresas de pesquisa de mercado, associações industriais)
-- Identificar a dimensão do mercado, as taxas de crescimento e os dados de segmentação
-- Tendências da indústria de investigação e padrões de evolução
-- Analisar as métricas de impacto econômico e criação de valor
+- Procure relatórios recentes de pesquisa de mercado e análises da indústria
+- Pesquise por fontes autoritárias (firmas de pesquisa de mercado, associações da indústria)
+- Identifique tamanho do mercado, taxas de crescimento e dados de segmentação
+- Pesquise tendências da indústria e padrões de evolução
+- Analise impacto econômico e métricas de criação de valor
 
 ### 3. Analisar e Agregar Resultados
 
-**Coletar e analisar resultados de todas as pesquisas paralelas:**
+**Colete e analise descobertas de todas as pesquisas paralelas:**
 
-"Após a execução de buscas web paralelas abrangentes, let me analisar e agregar conclusões da indústria:
+"Após executar pesquisas paralelas abrangentes na web, deixe-me analisar e agregar as descobertas da indústria:
 
-**Cobertura da investigação:**
+**Cobertura de Pesquisa:**
 
-- Dimensão do mercado e análise de avaliação
-- Taxas de crescimento e dinâmica do mercado
-- Segmentação e estrutura do mercado
+- Análise de tamanho de mercado e avaliação
+- Taxas de crescimento e dinâmica de mercado
+- Segmentação e estrutura de mercado
 - Tendências da indústria e padrões de evolução
 
-**Análise Cruz-Indústria:**
-[Identifique padrões de conexão dinâmica do mercado, segmentação e tendências]
+**Análise Intersetorial:**
+[Identifique padrões conectando dinâmica de mercado, segmentação e tendências]
 
-**Avaliação da qualidade:**
-[Níveis globais de confiança e lacunas de investigação identificadas]"
+**Avaliação de Qualidade:**
+[Níveis gerais de confiança e lacunas de pesquisa identificadas]"
 
-### 4. Gerar conteúdo de análise da indústria
+### 4. Gerar Conteúdo de Análise da Indústria
 
-**ESCREVER IMPEDIATAMENTE O DOCUMENTO**
+**ESCREVA IMEDIATAMENTE NO DOCUMENTO**
 
-Prepare a análise do setor com citações de busca na web:
+Prepare a análise da indústria com citações de pesquisa na web:
 
-#### Estrutura do conteúdo:
+#### Estrutura de Conteúdo:
 
-Ao salvar no documento, adicione estas seções Nível 2 e Nível 3:
+Ao salvar no documento, anexe estas seções de Nível 2 e Nível 3:
 
-Marcação para baixo
+```markdown
+## Industry Analysis
 
-## Análise da indústria
+### Market Size and Valuation
 
-### Tamanho do mercado e valorização
+[Market size analysis with source citations]
+_Total Market Size: [Current market valuation]_
+_Growth Rate: [CAGR and market growth projections]_
+_Market Segments: [Size and value of key market segments]_
+_Economic Impact: [Economic contribution and value creation]_
+_Source: [URL]_
 
-[Análise do tamanho do mercado com citações de origem]
-*Total Market Size: [Avaliação atual do mercado]**Taxa de crescimento: [CAGR e projecções de crescimento do mercado]**Segmentos de Mercado: [Tamanho e valor dos principais segmentos de mercado]** Impacto Económico: [Contribuição económica e criação de valor]**Fonte: [URL]*
+### Market Dynamics and Growth
 
-### Dinâmica do mercado e crescimento
+[Market dynamics analysis with source citations]
+_Growth Drivers: [Key factors driving market growth]_
+_Growth Barriers: [Factors limiting market expansion]_
+_Cyclical Patterns: [Industry seasonality and cycles]_
+_Market Maturity: [Life cycle stage and development phase]_
+_Source: [URL]_
 
-[Análise dinâmica do mercado com citações de origem]
-*Growth Drivers: [Fatores-chave que impulsionam o crescimento do mercado]** Barreiras de Crescimento: [Fatores limitando a expansão do mercado]**Padrões Cívicos: [Sazonalidade e ciclos da indústria]**Maturidade do mercado: [fase de ciclo de vida e fase de desenvolvimento]**Fonte: [URL]*
+### Market Structure and Segmentation
 
-### Estrutura do mercado e segmentação
+[Market structure analysis with source citations]
+_Primary Segments: [Key market segments and their characteristics]_
+_Sub-segment Analysis: [Detailed breakdown of market sub-segments]_
+_Geographic Distribution: [Regional market variations and concentrations]_
+_Vertical Integration: [Supply chain and value chain structure]_
+_Source: [URL]_
 
-[Análise da estrutura do mercado com citações de origem]
-*Segmentos Primários: [Segmentos principais do mercado e suas características]**Subsegmento Análise: [Discriminação detalhada dos subsegmentos de mercado]** Distribuição geográfica: [Variações e concentrações regionais do mercado]**Integração Vertical: [Corrente de fornecimento e estrutura da cadeia de valor]**Fonte: [URL]*
+### Industry Trends and Evolution
 
-### Tendências e evolução da indústria
+[Industry trends analysis with source citations]
+_Emerging Trends: [Current industry developments and transformations]_
+_Historical Evolution: [Industry development over recent years]_
+_Technology Integration: [How technology is changing the industry]_
+_Future Outlook: [Projected industry developments and changes]_
+_Source: [URL]_
 
-[Análise de tendências da indústria com citações de origem]
-*Tendências emergentes: [Desenvolvimentos e transformações atuais da indústria]*
-* Evolução histórica: [Desenvolvimento da indústria nos últimos anos]*
-Tecnologia
+### Competitive Dynamics
+
+[Competitive dynamics analysis with source citations]
+_Market Concentration: [Level of market consolidation and competition]_
+_Competitive Intensity: [Degree of competition and rivalry]_
+_Barriers to Entry: [Obstacles for new market entrants]_
+_Innovation Pressure: [Rate of innovation and change]_
+_Source: [URL]_
+```
+
+### 5. Apresentar Análise e Opção Continuar
+
+**Mostre a análise e apresente a opção continuar:**
+
+"Concluí a **análise da indústria** para {{research_topic}}.
+
+**Principais Descobertas da Indústria:**
+
+- Tamanho do mercado e avaliação analisados minuciosamente
+- Dinâmica de crescimento e estrutura de mercado documentadas
+- Tendências da indústria e padrões de evolução identificados
+- Dinâmica competitiva claramente mapeada
+- Múltiplas fontes verificadas para insights críticos
+
+**Pronto para prosseguir para a análise do cenário competitivo?**
+[C] Continuar - Salvar isso no documento e prosseguir para cenário competitivo
+
+### 6. Lidar com Seleção Continuar
+
+#### Se 'C' (Continuar):
+
+- **CONTEÚDO JÁ ESCRITO NO DOCUMENTO**
+- Atualize frontmatter: `stepsCompleted: [1, 2]`
+- Carregue: `./step-03-competitive-landscape_pt-br.md`
+
+## ANEXAR AO DOCUMENTO:
+
+O conteúdo já está escrito no documento quando gerado no passo 4. Nenhum anexo adicional necessário.
+
+## MÉTRICAS DE SUCESSO:
+
+✅ Tamanho do mercado e avaliação analisados minuciosamente
+✅ Dinâmica de crescimento e estrutura de mercado documentadas
+✅ Tendências da indústria e padrões de evolução identificadas
+✅ Dinâmica competitiva claramente mapeada
+✅ Múltiplas fontes verificadas para insights críticos
+✅ Conteúdo escrito imediatamente no documento
+✅ Opção [C] continuar apresentada e tratada corretamente
+✅ Roteamento adequado para o próximo passo (cenário competitivo)
+✅ Alinhamento com objetivos de pesquisa mantido
+
+## MODOS DE FALHA:
+
+❌ Confiar em dados de treinamento em vez de pesquisa na web para fatos atuais
+❌ Faltar dados críticos de tamanho de mercado ou crescimento
+❌ Análise incompleta da estrutura de mercado
+❌ Não identificar tendências-chave da indústria
+❌ Não escrever conteúdo imediatamente no documento
+❌ Não apresentar a opção [C] continuar após a geração de conteúdo
+❌ Não rotear para o passo de cenário competitivo
+
+❌ **CRÍTICO**: Ler apenas parte do arquivo de passo - leva a compreensão incompleta e más decisões
+❌ **CRÍTICO**: Prosseguir com 'C' sem ler e compreender totalmente o próximo arquivo de passo
+❌ **CRÍTICO**: Tomar decisões sem compreensão completa dos requisitos e protocolos do passo
+
+## PROTOCOLOS DE PESQUISA DE INDÚSTRIA:
+
+- Pesquise relatórios de pesquisa de mercado e análises da indústria
+- Use fontes autoritárias (firmas de pesquisa de mercado, associações da indústria)
+- Analise tamanho do mercado, taxas de crescimento e dados de segmentação
+- Estude tendências da indústria e padrões de evolução
+- Pesquise na web para verificar fatos
+- Apresente informações conflitantes quando as fontes discordarem
+- Aplique níveis de confiança adequadamente
+
+## PADRÕES DE ANÁLISE DA INDÚSTRIA:
+
+- Sempre cite URLs para resultados de pesquisa na web
+- Use fontes autoritárias de pesquisa da indústria
+- Observe a atualidade dos dados e limitações potenciais
+- Apresente múltiplas perspectivas quando as fontes conflitarem
+- Aplique níveis de confiança a dados incertos
+- Foque em insights acionáveis da indústria
+
+## PRÓXIMO PASSO:
+
+Após o usuário selecionar 'C', carregue `./step-03-competitive-landscape_pt-br.md` para analisar o cenário competitivo, principais players e análise de ecossistema para {{research_topic}}.
+
+Lembre-se: Sempre escreva o conteúdo de pesquisa no documento imediatamente e pesquise na web para verificar fatos!

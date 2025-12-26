@@ -52,7 +52,7 @@ Carregar config de `{project-root}/_bmad/bmm/config.yaml` e resolver:
 ### Caminhos
 
 - `installed_path` = `{project-root}/_bmad/bmm/workflows/1-analysis/research`
-- `template_path` = `{installed_path}/research.template.md`
+- `template_path` = `{installed_path}/research.template_pt-br.md`
 - `default_output_file` = `{output_folder}/analysis/research/{{research_type}}-{{topic}}-research-{{date}}.md` (dinâmico baseado no tipo de pesquisa)
 
 ---
@@ -163,21 +163,21 @@ Baseado na seleção do usuário, roteie para o sub-fluxo de trabalho apropriado
 - Defina `research_type = "market"`
 - Defina `research_topic = [tópico descoberto da discussão]`
 - Defina arquivo de saída: `{output_folder}/analysis/research/market-{{research_topic}}-research-{{date}}.md`
-- Carregue: `./market-steps/step-01-init.md` com contexto do tópico
+- Carregue: `./market-steps/step-01-init_pt-br.md` com contexto do tópico
 
 #### Se Pesquisa de Domínio:
 
 - Defina `research_type = "domain"`
 - Defina `research_topic = [tópico descoberto da discussão]`
 - Defina arquivo de saída: `{output_folder}/analysis/research/domain-{{research_topic}}-research-{{date}}.md`
-- Carregue: `./domain-steps/step-01-init.md` com contexto do tópico
+- Carregue: `./domain-steps/step-01-init_pt-br.md` com contexto do tópico
 
 #### Se Pesquisa Técnica:
 
 - Defina `research_type = "technical"`
 - Defina `research_topic = [tópico descoberto da discussão]`
 - Defina arquivo de saída: `{output_folder}/analysis/research/technical-{{research_topic}}-research-{{date}}.md`
-- Carregue: `./technical-steps/step-01-init.md` com contexto do tópico
+- Carregue: `./technical-steps/step-01-init_pt-br.md` com contexto do tópico
 
 **Importante**: O tópico descoberto da discussão colaborativa deve ser passado para os passos de inicialização da pesquisa, para que eles não precisem perguntar "O que você quer pesquisar?" novamente - eles podem focar em refinar o escopo para seu tipo de pesquisa específico.
 

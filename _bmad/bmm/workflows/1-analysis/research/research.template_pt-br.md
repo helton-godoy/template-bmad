@@ -6,10 +6,10 @@
 
 ---
 
-## Research Overview
+## Visão Geral da Pesquisa
 
-[Research overview and methodology will be appended here]
+[A visão geral e metodologia da pesquisa serão anexadas aqui]
 
 ---
 
-<!-- Content will be appended sequentially through research workflow steps -->
+<!-- O conteúdo será anexado sequencialmente através de passos de fluxo de trabalho de pesquisa -->

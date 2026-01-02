@@ -5,12 +5,16 @@ date: '{{date}}'
 sections_completed: []
 ---
 
-# Contexto do projeto para agentes de IA
+# Contexto do Projeto para Agentes de IA
 
-*Este arquivo contém regras e padrões críticos que os agentes de IA devem seguir ao implementar o código neste projeto. Foco em detalhes não óbvios que os agentes podem perder.*
+_Este arquivo contém regras críticas e padrões que agentes de IA devem seguir ao implementar código neste projeto. Foque em detalhes não óbvios que agentes poderiam perder de outra forma._
 
 ---
 
-## Stack & Versões de Tecnologia
+## Pilha de Tecnologia e Versões
 
-*Documentada após fase de descoberta*## Implementation crítico Regras*Documentada após fase de descoberta*
+_Documentado após fase de descoberta_
+
+## Regras de Implementação Críticas
+
+_Documentado após fase de descoberta_

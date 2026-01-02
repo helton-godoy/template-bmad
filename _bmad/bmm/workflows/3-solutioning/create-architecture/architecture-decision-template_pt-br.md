@@ -8,6 +8,6 @@ user_name: '{{user_name}}'
 date: '{{date}}'
 ---
 
-# Documento de decisão de arquitectura
+# Documento de Decisão de Arquitetura
 
-*Este documento constrói colaborativamente através da descoberta passo a passo. As secções são anexadas enquanto trabalhamos juntos através de cada decisão arquitectónica.*
+_Este documento é construído colaborativamente através de descoberta passo a passo. As seções são anexadas conforme trabalhamos em cada decisão arquitetônica juntos._

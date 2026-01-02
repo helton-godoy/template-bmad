@@ -1,43 +1,55 @@
-# Criar Diagrama - Lista de Verificação de Validação
+# Lista de Verificação de Criação de Diagrama
 
-## Estrutura do elemento
+<critical>Esta lista de verificação é executada como parte de: {project-root}/_bmad/bmm/workflows/excalidraw-diagrams/create-diagram/workflow.yaml</critical>
 
-- [ ] Todos os componentes com etiquetas têm `groupIds`
-- [ ] Todos os elementos de texto têm `containerId` apontando para o componente pai
-- [ ] Largura do texto calculada corretamente (sem corte)
-- [ ] Alinhamento de texto apropriado para o tipo de diagrama
+<checklist>
 
-## Disposição e alinhamento
+<section n="1" title="Definição do Diagrama">
 
-- [ ] Todos os elementos ligados à grelha 20px
-- [ ] Espaçamento de componentes consistente (40px/60px)
-- [ ] Alinhamento hierárquico mantido
-- [ ] Sem elementos sobrepostos
+<check-item id="1.1">
+<prompt>Defina o objetivo e tipo do diagrama</prompt>
+<action>Ex: Arquitetura, Sequência, Classe, etc.</action>
+<status>[ ] Feito / [ ] N/A</status>
+</check-item>
 
-## Ligações
+<check-item id="1.2">
+<prompt>Identifique os elementos principais</prompt>
+<action>Componentes, atores, interfaces</action>
+<status>[ ] Feito / [ ] N/A</status>
+</check-item>
 
-- [ ] Todas as setas têm `startBinding` e `endBinding`
-- [ ] `boundElements` array atualizado em componentes conectados
-- [ ] Roteamento de setas evita sobreposições
-- [ ] Tipos de relacionamento claramente indicados
+</section>
 
-## Notação e Normas
+<section n="2" title="Construção Visual">
 
-- [ ] Segue a norma de notação especificada (UML/ERD/etc)
-- [ ] Símbolos usados corretamente
-- [ ] Cardinalidade/multiplicidade mostrada onde necessário
-- [ ] Etiquetas e anotações claras
+<check-item id="2.1">
+<prompt>Desenhe a estrutura principal</prompt>
+<action>Posicione elementos chave</action>
+<status>[ ] Feito / [ ] N/A</status>
+</check-item>
 
-## Tema e Styling
+<check-item id="2.2">
+<prompt>Adicione relacionamentos</prompt>
+<action>Conecte elementos com linhas apropriadas</action>
+<status>[ ] Feito / [ ] N/A</status>
+</check-item>
 
-- [ ] Cores do tema aplicadas de forma consistente
-- [ ] Tipos de componentes visualmente distinguíveis
-- [ ] O texto é legível
-- Aparência profissional
+</section>
 
-## Qualidade da saída
+<section n="3" title="Refinamento">
 
-- Contagem de elementos abaixo de 80
-- [ ] Sem elementos com `isDeleted: true`
-- O JSON é válido.
-- [ ] Arquivo salvo para corrigir a localização
+<check-item id="3.1">
+<prompt>Adicione detalhes e anotações</prompt>
+<action>Explique partes complexas</action>
+<status>[ ] Feito / [ ] N/A</status>
+</check-item>
+
+<check-item id="3.2">
+<prompt>Validação</prompt>
+<action>Confirme com o usuário se representa a realidade</action>
+<status>[ ] Feito / [ ] N/A</status>
+</check-item>
+
+</section>
+
+</checklist>

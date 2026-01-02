@@ -1,49 +1,55 @@
-# Criar Fluxograma - Lista de Verificação de Validação
+# Lista de Verificação de Criação de Fluxograma
 
-## Estrutura do elemento
+<critical>Esta lista de verificação é executada como parte de: {project-root}/_bmad/bmm/workflows/excalidraw-diagrams/create-flowchart/workflow.yaml</critical>
 
-- [ ] Todas as formas com etiquetas têm `groupIds`
-- [ ] Todos os elementos de texto têm `containerId` apontando para a forma pai
-- [ ] Largura do texto calculada corretamente (sem corte)
-- [ ] Conjunto de alinhamento de texto (`textAlign` + `verticalAlign`)
+<checklist>
 
-## Disposição e alinhamento
+<section n="1" title="Mapeamento do Processo">
 
-- [ ] Todos os elementos ligados à grelha 20px
-- [ ] Espaçamento consistente entre elementos (mínimo 60px)
-- [ ] Alinhamento vertical mantido para a direção do fluxo
-- [ ] Sem elementos sobrepostos
+<check-item id="1.1">
+<prompt>Identifique o início e fim do processo</prompt>
+<action>Defina os limites do fluxo</action>
+<status>[ ] Feito / [ ] N/A</status>
+</check-item>
 
-## Ligações
+<check-item id="1.2">
+<prompt>Liste as etapas principais</prompt>
+<action>Ações, Decisões, Entradas/Saídas</action>
+<status>[ ] Feito / [ ] N/A</status>
+</check-item>
 
-- [ ] Todas as setas têm `startBinding` e `endBinding`
-- [ ] `boundElements` array atualizado em formas conectadas
-- [ ] Tipos de setas apropriados (para a frente, cotovelo para trás/para cima)
-- [ ] Gap definido para 10 para todas as ligações
+</section>
 
-## Tema e Styling
+<section n="2" title="Desenho do Fluxo">
 
-- [ ] Cores do tema aplicadas de forma consistente
-- [ ] Todas as formas usam a cor de preenchimento primária do tema
-- [ ] Todas as bordas usam a cor do acento do tema
-- [ ] A cor do texto é legível (# 1e1e1e)
+<check-item id="2.1">
+<prompt>Organize sequencialmente</prompt>
+<action>Use formas padrão (Retângulo=Processo, Losango=Decisão)</action>
+<status>[ ] Feito / [ ] N/A</status>
+</check-item>
 
-## Composição
+<check-item id="2.2">
+<prompt>Conecte com setas lógicas</prompt>
+<action>Garanta direção clara do fluxo</action>
+<status>[ ] Feito / [ ] N/A</status>
+</check-item>
 
-- Contagem de elementos abaixo de 50
-- [ ] Componentes da biblioteca referenciados sempre que possível
-- [ ] Sem definições de elementos duplicados
+</section>
 
-## Qualidade da saída
+<section n="3" title="Validação">
 
-- [ ] Sem elementos com `isDeleted: true`
-- O JSON é válido.
-- [ ] Arquivo salvo para corrigir a localização
+<check-item id="3.1">
+<prompt>Verifique caminhos alternativos</prompt>
+<action>Garanta que decisões (Sim/Não) tenham saídas</action>
+<status>[ ] Feito / [ ] N/A</status>
+</check-item>
 
-## Requisitos funcionais
+<check-item id="3.2">
+<prompt>Aprovação</prompt>
+<action>Valide com o usuário</action>
+<status>[ ] Feito / [ ] N/A</status>
+</check-item>
 
-- [ ] Ponto inicial claramente marcado
-- [ ] Ponto final claramente marcado
-- [ ] Todos os passos do processo marcados
-- Os pontos de decisão utilizam formas de diamante
-- [ ] A direção do fluxo é clara e lógica
+</section>
+
+</checklist>

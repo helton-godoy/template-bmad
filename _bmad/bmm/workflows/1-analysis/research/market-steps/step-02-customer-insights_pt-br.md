@@ -1,100 +1,98 @@
-# Pesquisa de Mercado Passo 2: Insights do cliente
+# Pesquisa de Mercado Passo 2: Insights do Cliente
 
-## REGRAS DE EXECUÇÃO DE MANDATÓRIA (REAL primeiro):
+## REGRAS DE EXECUÇÃO OBRIGATÓRIAS (LEIA PRIMEIRO):
 
-- 🛑 NUNCA gerar conteúdo sem verificação de pesquisa na web
-
-- 📖 CRITICAL: SEMPRE leia o arquivo de passo completo antes de tomar qualquer ação - compreensão parcial leva a decisões incompletas
-- 🔄 CRITICAL: Ao carregar o próximo passo com 'C', certifique-se de que todo o arquivo seja lido e compreendido antes de prosseguir
-- ✅ Pesquise na web para verificar e complementar seus conhecimentos com fatos atuais
-És um cliente que analisa os factos, não um gerador de conteúdo.
-- 💬 FOCUS sobre o comportamento do cliente e análise de necessidades
-- 🔍 WEB PROCURAÇÃO EXIGIDA - verificar os factos actuais contra fontes vivas
+- 🛑 NUNCA gere conteúdo sem verificação de pesquisa na web
+- 📖 CRÍTICO: SEMPRE leia o arquivo de passo completo antes de tomar qualquer ação - compreensão parcial leva a decisões incompletas
+- 🔄 CRÍTICO: Ao carregar o próximo passo com 'C', garanta que o arquivo inteiro seja lido e compreendido antes de prosseguir
+- ✅ Pesquise na web para verificar e complementar seu conhecimento com fatos atuais
+- 📋 VOCÊ É UM ANALISTA DE INSIGHTS DO CLIENTE, não um gerador de conteúdo
+- 💬 FOQUE na análise de comportamento e necessidades do cliente
+- 🔍 PESQUISA NA WEB NECESSÁRIA - verifique fatos atuais contra fontes vivas
 
 ## PROTOCOLOS DE EXECUÇÃO:
 
-- 🎯 Mostrar a análise de pesquisa na Web antes de apresentar os resultados
-- ⚠' Presente [C] continuar opção após a geração de conteúdo insights do cliente
-- 💾 APENAS salve quando o usuário escolher C (Continue)
-- 📖 Actualizar a matéria frontal `stepsCompleted: [1, 2]` antes de carregar o próximo passo
-- 🚫 PROIBIDA a carregar o próximo passo até que o C seja seleccionado
+- 🎯 Mostre a análise de pesquisa na web antes de apresentar os resultados
+- ⚠️ Apresente a opção [C] continuar após a geração de conteúdo de insights do cliente
+- 💾 SALVE APENAS quando o usuário escolher C (Continuar)
+- 📖 Atualize o frontmatter `stepsCompleted: [1, 2]` antes de carregar o próximo passo
+- 🚫 PROIBIDO carregar o próximo passo até que C seja selecionado
 
-## CONTEXTO MONTANTES:
+## LIMITES DE CONTEXTO:
 
-- Documento atual e matéria frontal da etapa-01 estão disponíveis
-- Foco no comportamento do cliente e análise de necessidades
-- Capacidades de pesquisa na Web com verificação de origem estão habilitadas
-- Pode precisar de procurar tendências atuais de comportamento do cliente
+- Documento atual e frontmatter do passo-01 estão disponíveis
+- Foco na análise de comportamento e necessidades do cliente
+- Capacidades de pesquisa na web com verificação de fonte estão habilitadas
+- Pode precisar pesquisar tendências atuais de comportamento do cliente
 
-A sua tarefa:
+## SUA TAREFA:
 
-Conduzir abrangente análise de insights do cliente com ênfase em padrões de comportamento e necessidades.
+Conduzir análise abrangente de insights do cliente com ênfase em padrões de comportamento e necessidades.
 
-## CLIENTE INSIGUE SEQUÊNCIA:
+## SEQUÊNCIA DE INSIGHTS DO CLIENTE:
 
-### 1. Comece a análise de Perspectivas do Cliente
+### 1. Iniciar Análise de Insights do Cliente
 
-**SUBPROCESSOS E SUBAGENTES DE UTILIZAÇÃO**: Utilizar subagentes de investigação, subprocessos ou processamento paralelo, se disponível para analisar cuidadosamente diferentes áreas de cliente simultaneamente e cuidadosamente
+**UTILIZE SUBPROCESSOS E SUBAGENTES**: Use subagentes de pesquisa, subprocessos ou processamento paralelo se disponível para analisar detalhadamente diferentes áreas do cliente simultaneamente e minuciosamente
 
 Comece com a abordagem de pesquisa do cliente:
-"Agora eu vou conduzir "análise de insights do cliente" para entender o comportamento e as necessidades do cliente.
+"Agora vou conduzir **análise de insights do cliente** para entender o comportamento e as necessidades do cliente.
 
-**Cliente Insights Focus:**
+**Foco dos Insights do Cliente:**
 
 - Padrões de comportamento e preferências do cliente
 - Pontos de dor e desafios
-- Processos de decisão
-- Mapeamento de viagem do cliente
-- Condutores de satisfação do cliente
+- Processos de tomada de decisão
+- Mapeamento da jornada do cliente
+- Impulsionadores de satisfação do cliente
 - Perfis demográficos e psicográficos
 
-**Deixe-me procurar insights atuais do cliente usando buscas paralelas na web para uma cobertura abrangente.**
+**Deixe-me pesquisar insights atuais do cliente usando pesquisas paralelas na web para cobertura abrangente.**"
 
-### 2. Execução de Pesquisa de Clientes Paralelos
+### 2. Execução de Pesquisa Paralela de Clientes
 
-**Execute várias pesquisas na web simultaneamente:**
+**Execute múltiplas pesquisas na web simultaneamente:**
 
 Pesquisar na web: "[produto/serviço/mercado] padrões de comportamento do cliente"
 Pesquisar na web: "[produto/serviço/mercado] desafios pontos de dor do cliente"
-Pesquise na web: "[produto/serviço/mercado] processo de decisão do cliente"
+Pesquisar na web: "[produto/serviço/mercado] processo de decisão do cliente"
 
 **Abordagem de análise:**
 
-- Procure por estudos de comportamento do cliente e pesquisas
-- Pesquisa de experiência do cliente e padrões de interação
-- Metodologias de satisfação do cliente de pesquisa
-- Variações geracionais e culturais do cliente
-- Pesquisa pontos de dor e frustrações do cliente
-- Analisar processos de tomada de decisão e critérios
+- Procure por estudos e pesquisas de comportamento do cliente
+- Pesquise padrões de experiência e interação do cliente
+- Pesquise metodologias de satisfação do cliente
+- Note variações geracionais e culturais do cliente
+- Pesquise pontos de dor e frustrações do cliente
+- Analise processos e critérios de tomada de decisão
 
 ### 3. Analisar e Agregar Resultados
 
-**Coletar e analisar resultados de todas as pesquisas paralelas:**
+**Colete e analise descobertas de todas as pesquisas paralelas:**
 
-"Após executar buscas paralelas abrangentes na web, let me analisa e agrega os insights do cliente:
+"Após executar pesquisas abrangentes e paralelas na web, deixe-me analisar e agregar os insights do cliente:
 
-**Cobertura da investigação:**
+**Cobertura da Pesquisa:**
 
 - Padrões de comportamento e preferências do cliente
 - Pontos de dor e desafios
-- Processos decisórios e mapeamento de viagens
+- Processos de tomada de decisão e mapeamento de jornada
 
-**Análise Cruz-Cliente:**
-[Identifique padrões de conexão de comportamento, pontos de dor e decisões]
+**Análise Cruzada de Clientes:**
+[Identifique padrões conectando comportamento, pontos de dor e decisões]
 
-**Avaliação da qualidade:**
-[Níveis globais de confiança e lacunas de investigação identificadas]"
+**Avaliação da Qualidade:**
+[Níveis gerais de confiança e lacunas de pesquisa identificadas]"
 
 ### 4. Gerar Conteúdo de Insights do Cliente
 
-Prepare a análise do cliente com citações de busca na web:
+Prepare a análise do cliente com citações de pesquisa na web:
 
-#### Estrutura do conteúdo:
+#### Estrutura do Conteúdo:
 
-Ao salvar no documento, adicione estas seções Nível 2 e Nível 3:
+Ao salvar no documento, anexe estas seções de Nível 2 e Nível 3:
 
 ```markdown
-
 ## Customer Insights
 
 ### Customer Behavior Patterns
@@ -131,33 +129,68 @@ _Source: [URL]_
 
 [Psychographic profiles analysis with source citations]
 _Source: [URL]_
-
 ```
 
-### 5. Apresentar análise e continuar opção
+### 5. Apresentar Análise e Opção Continuar
 
-Mostrar os insights gerados do cliente e continuar opção presente:
-"Eu completei a **análise de insights do cliente** para o comportamento e necessidades do cliente.
+Mostre os insights do cliente gerados e apresente a opção continuar:
+"Completei a **análise de insights do cliente** para comportamento e necessidades do cliente.
 
-**Consultas importantes do cliente:**
+**Descobertas Chave do Cliente:**
 
 - Padrões de comportamento do cliente claramente identificados
-- Pontos de dor e desafios completamente documentados
+- Pontos de dor e desafios documentados minuciosamente
 - Processos de tomada de decisão mapeados
-- Perspectivas de viagem do cliente capturadas
+- Insights da jornada do cliente capturados
 - Dados de satisfação e perfil analisados
 
-**Pronto para proceder à análise competitiva?**
-[C] Continuar - Guarde isso no documento e prossiga para análise competitiva
+**Pronto para prosseguir para análise competitiva?**
+[C] Continuar - Salvar isso no documento e prosseguir para análise competitiva
 
-### 6. Manipulação Continuar a Selecção
+### 6. Lidar com Seleção Continuar
 
-#### Se 'C' (Continua):
+#### Se 'C' (Continuar):
 
-- Anexar o conteúdo final ao documento de pesquisa
-- Update frontmatter: `stepsCompleted: [1, 2]`
-- Load: `./step-05-competitive-analysis.md`
+- Anexe o conteúdo final ao documento de pesquisa
+- Atualize frontmatter: `stepsCompleted: [1, 2]`
+- Carregue: `./step-05-competitive-analysis_pt-br.md`
 
-## APÊNDICE DO DOCUMENTO:
+## ANEXAR AO DOCUMENTO:
 
-Quando o usuário seleciona 'C', adicione o con
+Quando o usuário selecionar 'C', anexe o conteúdo diretamente ao documento de pesquisa usando a estrutura do passo 4.
+
+## MÉTRICAS DE SUCESSO:
+
+✅ Padrões de comportamento do cliente identificados com citações atuais
+✅ Pontos de dor e desafios claramente documentados
+✅ Processos de tomada de decisão minuciosamente analisados
+✅ Insights da jornada do cliente capturados e mapeados
+✅ Impulsionadores de satisfação do cliente identificados
+✅ Opção [C] continuar apresentada e tratada corretamente
+✅ Conteúdo devidamente anexado ao documento quando C selecionado
+
+## MODOS DE FALHA:
+
+❌ Confiar apenas em dados de treinamento sem verificação na web para fatos atuais
+❌ Faltar padrões críticos de comportamento do cliente
+❌ Não identificar pontos de dor e desafios chave
+❌ Mapeamento incompleto da jornada do cliente
+❌ Não apresentar opção [C] continuar após geração de conteúdo
+❌ Anexar conteúdo sem o usuário selecionar 'C'
+❌ **CRÍTICO**: Ler apenas parte do arquivo de passo - leva a compreensão incompleta e más decisões
+❌ **CRÍTICO**: Prosseguir com 'C' sem ler e compreender totalmente o próximo arquivo de passo
+❌ **CRÍTICO**: Tomar decisões sem compreensão completa dos requisitos e protocolos do passo
+
+## PROTOCOLOS DE PESQUISA DO CLIENTE:
+
+- Procure por estudos e pesquisas de comportamento do cliente
+- Use fontes de empresas de pesquisa de mercado e associações industriais
+- Pesquise padrões de experiência e interação do cliente
+- Note variações geracionais e culturais do cliente
+- Pesquise metodologias de satisfação do cliente
+
+## PRÓXIMO PASSO:
+
+Após o usuário selecionar 'C' e o conteúdo ser salvo no documento, carregue `./step-05-competitive-analysis_pt-br.md` para focar na análise do cenário competitivo.
+
+Lembre-se: Sempre enfatize dados atuais do cliente e verificação rigorosa de fontes!

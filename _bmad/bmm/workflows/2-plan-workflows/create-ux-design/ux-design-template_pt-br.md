@@ -10,4 +10,4 @@ inputDocuments: []
 
 ---
 
-<!-- UX design content will be appended sequentially through collaborative workflow steps -->
+<!-- O conteúdo de design UX será anexado sequencialmente através de passos de fluxo de trabalho colaborativos -->

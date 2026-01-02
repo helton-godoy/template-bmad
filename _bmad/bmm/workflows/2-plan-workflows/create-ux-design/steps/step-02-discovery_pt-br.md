@@ -1,123 +1,121 @@
-# Etapa 2: Compreensão do projeto
+# Passo 2: Compreensão do Projeto
 
-## REGRAS DE EXECUÇÃO DE MANDATÓRIA (REAL primeiro):
+## REGRAS DE EXECUÇÃO OBRIGATÓRIAS (LEIA PRIMEIRO):
 
-- 🛑 NUNCA gerar conteúdo sem entrada do usuário
-
-- 📖 CRITICAL: SEMPRE leia o arquivo de passo completo antes de tomar qualquer ação - compreensão parcial leva a decisões incompletas
-- 🔄 CRITICAL: Ao carregar o próximo passo com 'C', certifique-se de que todo o arquivo seja lido e compreendido antes de prosseguir
-- ✅ Sempre trate isso como uma descoberta colaborativa entre facilitador de UX e stakeholder
-- És um Facilitador UX, não um gerador de conteúdo.
-- 💬 FOCUS sobre a compreensão do contexto do projeto e necessidades do usuário
-- 🎯 Descoberta COLABORATIVA, não com base em suposições
+- 🛑 NUNCA gere conteúdo sem entrada do usuário
+- 📖 CRÍTICO: SEMPRE leia o arquivo de passo completo antes de tomar qualquer ação - compreensão parcial leva a decisões incompletas
+- 🔄 CRÍTICO: Ao carregar o próximo passo com 'C', garanta que o arquivo inteiro seja lido e compreendido antes de prosseguir
+- ✅ SEMPRE trate isso como descoberta colaborativa entre facilitador de UX e stakeholder
+- 📋 VOCÊ É UM FACILITADOR DE UX, não um gerador de conteúdo
+- 💬 FOQUE em entender o contexto do projeto e necessidades do usuário
+- 🎯 Descoberta COLABORATIVA, não baseada em suposições
 
 ## PROTOCOLOS DE EXECUÇÃO:
 
 - 🎯 Mostre sua análise antes de tomar qualquer ação
-- ⚠ Apresentar o menu A/P/C após gerar conteúdo de compreensão do projeto
-- 💾 APENAS salve quando o usuário escolher C (Continue)
-- 📖 Actualizar a matéria frontal `stepsCompleted: [1, 2]` antes de carregar o próximo passo
-- 🚫 PROIBIDA a carregar o próximo passo até que o C seja seleccionado
+- ⚠️ Apresente o menu A/P/C após gerar conteúdo de compreensão do projeto
+- 💾 SALVE APENAS quando o usuário escolher C (Continuar)
+- 📖 Atualize o frontmatter `stepsCompleted: [1, 2]` antes de carregar o próximo passo
+- 🚫 PROIBIDO carregar o próximo passo até que C seja selecionado
 
-## COLABORAÇÃO MENUS (A/P/C):
+## MENUS DE COLABORAÇÃO (A/P/C):
 
-Esta etapa irá gerar conteúdo e opções presentes:
+Este passo irá gerar conteúdo e apresentar opções:
 
 - **A (Elicitação Avançada)**: Use protocolos de descoberta para desenvolver insights mais profundos do projeto
-- **P (Modo de Festa)**: Trazer múltiplas perspectivas para compreender o contexto do projecto
-- **C (Continua)**: Salve o conteúdo no documento e prossiga para o próximo passo
+- **P (Modo Festa)**: Traga múltiplas perspectivas para entender o contexto do projeto
+- **C (Continuar)**: Salve o conteúdo no documento e prossiga para o próximo passo
 
-## INTEGRAÇÃO PROTOCOLO:
+## INTEGRAÇÃO DE PROTOCOLO:
 
-- Quando 'A' seleccionado: Executar {project-root}/_bmad/core/tasks/advanced-elicitation.xml
-- Quando 'P' seleccionado: Executar {project-root}/_bmad/core/workflows/party-mode/workflow.md
-- PROTOCOLOS retornam sempre ao menu A/P/C deste passo
-- O usuário aceita/rejeita alterações de protocolo antes de prosseguir
+- Quando 'A' selecionado: Execute {project-root}/_bmad/core/tasks/advanced-elicitation.xml
+- Quando 'P' selecionado: Execute {project-root}/_bmad/core/workflows/party-mode/workflow.md
+- PROTOCOLOS sempre retornam ao menu A/P/C deste passo
+- Usuário aceita/rejeita alterações de protocolo antes de prosseguir
 
-## CONTEXTO MONTANTES:
+## LIMITES DE CONTEXTO:
 
-- Documento atual e matéria frontal da etapa 1 estão disponíveis
+- Documento atual e frontmatter do passo 1 estão disponíveis
 - Documentos de entrada (PRD, resumos, épicos) já carregados estão na memória
-- Não são necessários ficheiros de dados adicionais para esta etapa
-- Foco no projeto e compreensão do usuário
+- Não são necessários arquivos de dados adicionais para este passo
+- Foco na compreensão do projeto e do usuário
 
-A sua tarefa:
+## SUA TAREFA:
 
-Compreender o contexto do projeto, direcionar usuários e o que torna este produto especial de uma perspectiva UX.
+Entender o contexto do projeto, usuários-alvo e o que torna este produto especial de uma perspectiva UX.
 
-## DESCOBERÇÃO DO PROJECTO SEQUÊNCIA:
+## SEQUÊNCIA DE DESCOBERTA DE PROJETO:
 
-### 1. Revisão Carregado Contexto
+### 1. Revisar Contexto Carregado
 
 Comece analisando o que sabemos dos documentos carregados:
-"Com base na documentação do projeto que carregamos, letER-me confirmar o que estou entendendo sobre {{project_name}}.
+"Com base na documentação do projeto que carregamos, deixe-me confirmar o que estou entendendo sobre {{project_name}}.
 
 **Dos documentos:**
-{summary of key insights from loaded PRD, briefs, and other context documents}
+{resumo dos principais insights dos documentos PRD, resumos e outros contextos carregados}
 
-**Usuários Alvo:**
-{summary of user information from loaded documents}
+**Usuários-alvo:**
+{resumo das informações do usuário dos documentos carregados}
 
-**Características-chave:**
-{summary of main features and goals from loaded documents}
+**Recursos Principais:**
+{resumo dos principais recursos e objetivos dos documentos carregados}
 
-Isto corresponde ao seu entendimento? Há algumas correções ou adições que você gostaria de fazer?"
+Isso corresponde ao seu entendimento? Há algumas correções ou adições que você gostaria de fazer?"
 
-### 2. Preencha as lacunas de contexto (Se não existirem documentos ou lacunas)
+### 2. Preencher Lacunas de Contexto (Se Sem Documentos ou Lacunas)
 
 Se nenhum documento foi carregado ou falta informação chave:
-"Como não temos documentação completa, o let começa com o essencial:
+"Como não temos documentação completa, vamos começar com o essencial:
 
-**O que estás a construir?** (Descrever o teu produto em 1-2 frases)
+**O que você está construindo?** (Descreva seu produto em 1-2 frases)
 
-**Para quem é isto?** (Descreva o seu utilizador ideal ou público-alvo)
+**Para quem é isso?** (Descreva seu usuário ideal ou público-alvo)
 
-**O que torna isto especial ou diferente?** (Qual é a proposta de valor única?)
+**O que torna isso especial ou diferente?** (Qual é a proposta de valor única?)
 
-**Qual é a coisa principal que os usuários farão com isso?** (Ação ou objetivo do usuário core)"
+**Qual é a principal coisa que os usuários farão com isso?** (Ação ou objetivo central do usuário)"
 
-### 3. Explore o contexto do usuário mais profundo
+### 3. Explorar Contexto de Usuário Mais Profundo
 
 Mergulhe na compreensão do usuário:
-"Deixe-me entender melhor seus usuários para informar o projeto UX:
+"Deixe-me entender melhor seus usuários para informar o design UX:
 
-**Questões de Contexto do Usuário:**
+**Perguntas de Contexto do Usuário:**
 
-- Que problema estão os utilizadores a tentar resolver?
+- Que problema os usuários estão tentando resolver?
 - O que os frustra com soluções atuais?
-- O que os faria dizer que era exactamente o que eu precisava?
-- Qual é o nível técnico dos utilizadores?
-- Que dispositivos usarão mais?
-- Quando/onde usarão este produto?"
+- O que os faria dizer 'isso é exatamente o que eu precisava'?
+- Qual é o nível de proficiência técnica dos usuários?
+- Que dispositivos eles usarão mais?
+- Quando/onde eles usarão este produto?"
 
-### 4. Identifique desafios de design UX
+### 4. Identificar Desafios de Design UX
 
-Surgir os principais desafios UX para enfrentar:
+Identifique os principais desafios de UX para enfrentar:
 "Pelo que discutimos, estou vendo algumas considerações importantes sobre design de UX:
 
 **Desafios de Design:**
 
 - [Identifique 2-3 principais desafios UX com base no tipo de projeto e necessidades do usuário]
 - [Note quaisquer considerações específicas da plataforma]
-- [Highlight qualquer fluxo complexo do usuário ou interações]
+- [Destaque quaisquer fluxos ou interações de usuário complexos]
 
-**Oportunidades de design:**
+**Oportunidades de Design:**
 
-- [Identifique 2-3 áreas onde grande UX poderia criar vantagem competitiva]
+- [Identifique 2-3 áreas onde um ótimo UX poderia criar vantagem competitiva]
 - [Note quaisquer oportunidades para padrões inovadores de UX]
 
 Isso captura as principais considerações de UX que precisamos abordar?"
 
-### 5. Gerar conteúdo de compreensão do projeto
+### 5. Gerar Conteúdo de Compreensão do Projeto
 
-Preparar o conteúdo para anexar ao documento:
+Prepare o conteúdo para anexar ao documento:
 
-#### Estrutura do conteúdo:
+#### Estrutura do Conteúdo:
 
-Ao salvar no documento, adicione estas seções Nível 2 e Nível 3:
+Ao salvar no documento, anexe estas seções de Nível 2 e Nível 3:
 
 ```markdown
-
 ## Executive Summary
 
 ### Project Vision
@@ -135,18 +133,60 @@ Ao salvar no documento, adicione estas seções Nível 2 e Nível 3:
 ### Design Opportunities
 
 [Design opportunities identified based on conversation]
-
 ```
 
 ### 6. Apresentar Conteúdo e Menu
 
-Mostrar o conteúdo de compreensão do projeto gerado e as opções presentes:
-"Eu documentei nossa compreensão do {{project_name}} de uma perspectiva UX. Isso guiará todas as nossas decisões de design avançando.
+Mostre o conteúdo de compreensão do projeto gerado e apresente as opções:
+"Documentei nossa compreensão de {{project_name}} de uma perspectiva UX. Isso guiará todas as nossas decisões de design daqui para frente.
 
 **Aqui está o que vou adicionar ao documento:**
 
-[Mostre o conteúdo completo da marcação do passo 5]
+[Mostre o conteúdo markdown completo do passo 5]
 
-**O que gostarias de fazer?**
+**O que você gostaria de fazer?**
 [A] Elicitação Avançada - Vamos mergulhar mais fundo na compreensão do projeto
-[P]
+[P] Modo Festa - Trazer diferentes perspectivas
+[C] Continuar - Salvar e mover para Definir a Experiência Principal"
+
+### 7. Lidar com Seleção de Menu
+
+#### SE A (Elicitação Avançada):
+
+- Execute {project-root}/_bmad/core/tasks/advanced-elicitation.xml
+- Retorne com insights aprimorados
+
+#### SE P (Modo Festa):
+
+- Execute {project-root}/_bmad/core/workflows/party-mode/workflow.md
+- Retorne com perspectivas colaborativas
+
+#### SE C (Continuar):
+
+- Anexe o conteúdo final ao documento
+- Atualize frontmatter: `stepsCompleted: [1, 2]`
+- Carregue `./step-03-core-experience_pt-br.md`
+
+## MÉTRICAS DE SUCESSO:
+
+✅ Visão do projeto claramente articulada de uma perspectiva UX
+✅ Usuários-alvo definidos com necessidades e comportamentos
+✅ Desafios de design chave identificados
+✅ Oportunidades de design capturadas
+✅ Menu A/P/C apresentado e tratado corretamente
+✅ Conteúdo devidamente anexado ao documento quando C selecionado
+
+## MODOS DE FALHA:
+
+❌ Gerar conteúdo genérico sem entrada do usuário
+❌ Falha em identificar desafios críticos de UX
+❌ Não validar o entendimento com o usuário
+❌ Prosseguir sem seleção explícita de 'C'
+
+❌ **CRÍTICO**: Ler apenas parte do arquivo de passo - leva a compreensão incompleta e más decisões
+❌ **CRÍTICO**: Prosseguir com 'C' sem ler e compreender totalmente o próximo arquivo de passo
+❌ **CRÍTICO**: Tomar decisões sem compreensão completa dos requisitos e protocolos do passo
+
+## PRÓXIMO PASSO:
+
+Após o usuário selecionar [C], carregue `./step-03-core-experience_pt-br.md` para definir os objetivos emocionais e princípios de experiência.

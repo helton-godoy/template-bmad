@@ -1,62 +1,60 @@
-# Pesquisa de mercado Etapa 5: Análise competitiva
+# Passo 5 de Pesquisa de Mercado: Análise Competitiva
 
-## REGRAS DE EXECUÇÃO DE MANDATÓRIA (REAL primeiro):
+## REGRAS DE EXECUÇÃO OBRIGATÓRIAS (LEIA PRIMEIRO):
 
-- 🛑 NUNCA gerar conteúdo sem verificação de pesquisa na web
-
-- 📖 CRITICAL: SEMPRE leia o arquivo de passo completo antes de tomar qualquer ação - compreensão parcial leva a decisões incompletas
-- 🔄 CRITICAL: Ao carregar o próximo passo com 'C', certifique-se de que todo o arquivo seja lido e compreendido antes de prosseguir
-- ✅ Pesquise na web para verificar e complementar seus conhecimentos com fatos atuais
-És um analista competitivo, não um gerador de conteúdo.
-- 💬 FOCUS sobre paisagem competitiva e posicionamento do mercado
-- 🔍 WEB PROCURAÇÃO EXIGIDA - verificar os factos actuais contra fontes vivas
+- 🛑 NUNCA gere conteúdo sem verificação de pesquisa na web
+- 📖 CRÍTICO: SEMPRE leia o arquivo de passo completo antes de tomar qualquer ação - compreensão parcial leva a decisões incompletas
+- 🔄 CRÍTICO: Ao carregar o próximo passo com 'C', garanta que o arquivo inteiro seja lido e compreendido antes de prosseguir
+- ✅ Pesquise na web para verificar e complementar seu conhecimento com fatos atuais
+- 📋 VOCÊ É UM ANALISTA COMPETITIVO, não um gerador de conteúdo
+- 💬 FOQUE no cenário competitivo e posicionamento de mercado
+- 🔍 PESQUISA NA WEB NECESSÁRIA - verifique fatos atuais contra fontes vivas
 
 ## PROTOCOLOS DE EXECUÇÃO:
 
-- 🎯 Mostrar a análise de pesquisa na Web antes de apresentar os resultados
-- ⚠; Apresentar [C] opção completa após análise competitiva geração de conteúdo
-- 💾 APENAS salve quando o usuário escolher C (Completo)
-- 📖 Actualizar a matéria frontal `stepsCompleted: [1, 2, 3, 4, 5]` antes de completar o fluxo de trabalho
-- 🚫 PROIBIDA a completar o fluxo de trabalho até que o C seja selecionado
+- 🎯 Mostre a análise de pesquisa na web antes de apresentar os resultados
+- ⚠️ Apresente a opção [C] concluir após a geração de conteúdo de análise competitiva
+- 💾 SALVE APENAS quando o usuário escolher C (Concluir)
+- 📖 Atualize o frontmatter `stepsCompleted: [1, 2, 3, 4, 5]` antes de completar o fluxo de trabalho
+- 🚫 PROIBIDO completar o fluxo de trabalho até que C seja selecionado
 
-## CONTEXTO MONTANTES:
+## LIMITES DE CONTEXTO:
 
-- Documento atual e matéria frontal das etapas anteriores estão disponíveis
-- Foco na paisagem competitiva e análise de posicionamento de mercado
-- Capacidades de pesquisa na Web com verificação de origem estão habilitadas
-- Pode ser necessário procurar informações específicas do concorrente
+- Documento atual e frontmatter das etapas anteriores estão disponíveis
+- Foco no cenário competitivo e análise de posicionamento de mercado
+- Capacidades de pesquisa na web com verificação de fonte estão habilitadas
+- Pode precisar pesquisar informações específicas de concorrentes
 
-A sua tarefa:
+## SUA TAREFA:
 
-Realizar uma análise competitiva abrangente com ênfase no posicionamento do mercado.
+Conduzir análise competitiva abrangente com ênfase no posicionamento de mercado.
 
-## Sequência de análise competitiva:
+## SEQUÊNCIA DE ANÁLISE COMPETITIVA:
 
-### 1. Iniciar análise competitiva
+### 1. Iniciar Análise Competitiva
 
-Comece com uma abordagem de investigação competitiva:
-"Agora eu vou conduzir "análise competitiva" para entender a paisagem competitiva.
+Comece com a abordagem de pesquisa competitiva:
+"Agora vou conduzir **análise competitiva** para entender o cenário competitivo.
 
-**Foco de análise competitiva:**
+**Foco da Análise Competitiva:**
 
-- Principais jogadores e parte de mercado
+- Principais players e participação de mercado
 - Estratégias de posicionamento competitivo
-- Análise das forças e fraquezas
+- Análise de forças e fraquezas
 - Oportunidades de diferenciação de mercado
 - Ameaças e desafios competitivos
 
-**Deixe-me procurar informações competitivas atuais.**
+**Deixe-me pesquisar informações competitivas atuais.**"
 
-### 2. Gerar conteúdo de análise competitiva
+### 2. Gerar Conteúdo de Análise Competitiva
 
-Preparar análise competitiva com citações de busca na web:
+Prepare a análise competitiva com citações de pesquisa na web:
 
-#### Estrutura do conteúdo:
+#### Estrutura do Conteúdo:
 
-Ao salvar no documento, adicione estas seções Nível 2 e Nível 3:
+Ao salvar no documento, anexe estas seções de Nível 2 e Nível 3:
 
 ```markdown
-
 ## Competitive Landscape
 
 ### Key Market Players
@@ -93,68 +91,83 @@ _Source: [URL]_
 
 [Competitive opportunities analysis with source citations]
 _Source: [URL]_
-
 ```
 
-### 3. Análise atual e Opção Completa
+### 3. Apresentar Análise e Opção Concluir
 
-Mostrar a análise competitiva gerada e apresentar a opção completa:
-"Completei a **análise competitiva** para a paisagem competitiva.
+Mostre a análise competitiva gerada e apresente a opção concluir:
+"Completei a **análise competitiva** para o cenário competitivo.
 
-**Conclusões Competitivas Principais:**
+**Descobertas Competitivas Chave:**
 
-- Principais intervenientes no mercado e parte de mercado identificada
+- Principais players de mercado e participação de mercado identificados
 - Estratégias de posicionamento competitivo mapeadas
-- Pontos fortes e pontos fracos completamente analisados
+- Forças e fraquezas minuciosamente analisadas
 - Oportunidades de diferenciação de mercado identificadas
 - Ameaças e desafios competitivos documentados
 
 **Pronto para completar a pesquisa de mercado?**
-[C] Pesquisa Completa - Salvar documento final e concluir
+[C] Concluir Pesquisa - Salvar documento final e encerrar
 
-### 4. Lidar com a Seleção Completa
+### 4. Lidar com Seleção Concluir
 
-#### Se 'C' (Investigação Completa):
+#### Se 'C' (Concluir Pesquisa):
 
-- Anexar o conteúdo final ao documento de pesquisa
-- Update frontmatter: `stepsCompleted: [1, 2, 3]`
+- Anexe o conteúdo final ao documento de pesquisa
+- Atualize frontmatter: `stepsCompleted: [1, 2, 3]`
 - Complete o fluxo de trabalho de pesquisa de mercado
 
-## APÊNDICE DO DOCUMENTO:
+## ANEXAR AO DOCUMENTO:
 
-Quando o usuário seleciona 'C', adicione o conteúdo diretamente ao documento de pesquisa usando a estrutura do passo 2.
+Quando o usuário selecionar 'C', anexe o conteúdo diretamente ao documento de pesquisa usando a estrutura do passo 2.
 
-## SUCESSO METRICOS:
+## MÉTRICAS DE SUCESSO:
 
-✅ Principais intervenientes no mercado identificados
-✅ Análise da quota de mercado concluída com verificação da fonte
+✅ Principais players de mercado identificados
+✅ Análise de participação de mercado concluída com verificação de fonte
 ✅ Estratégias de posicionamento competitivo claramente mapeadas
-✅ Pontos fortes e fracos analisados minuciosamente
+✅ Forças e fraquezas minuciosamente analisadas
 ✅ Oportunidades de diferenciação de mercado identificadas
-✅ [C] opção completa apresentada e tratada corretamente
+✅ Opção [C] concluir apresentada e tratada corretamente
 ✅ Conteúdo devidamente anexado ao documento quando C selecionado
 ✅ Fluxo de trabalho de pesquisa de mercado concluído com sucesso
 
-## MODELOS DE FALHA:
+## MODOS DE FALHA:
 
-❌ Confiando apenas em dados de treinamento sem verificação web para os fatos atuais
-
-❌ Faltam os principais intervenientes no mercado ou dados relativos à quota de mercado
+❌ Confiar apenas em dados de treinamento sem verificação na web para fatos atuais
+❌ Faltar principais players de mercado ou dados de participação de mercado
 ❌ Análise de posicionamento competitivo incompleta
 ❌ Não identificar oportunidades de diferenciação de mercado
 ❌ Não apresentar opção de conclusão para o fluxo de trabalho de pesquisa
-❌ Adicionando conteúdo sem selecionar usuário 'C'
+❌ Anexar conteúdo sem o usuário selecionar 'C'
+❌ **CRÍTICO**: Ler apenas parte do arquivo de passo - leva a compreensão incompleta e más decisões
+❌ **CRÍTICO**: Prosseguir com 'C' sem ler e compreender totalmente o próximo arquivo de passo
+❌ **CRÍTICO**: Tomar decisões sem compreensão completa dos requisitos e protocolos do passo
 
-❌ **CRITICAL**: A leitura de apenas um arquivo de passo parcial leva a uma compreensão incompleta e a más decisões
-❌ **CRITICAL**: Prosseguindo com **C** sem ler e compreender completamente o próximo arquivo passo
-❌ **CRITICAL**: Tomar decisões sem compreensão completa dos requisitos e protocolos de etapas
+## PROTOCOLOS DE PESQUISA COMPETITIVA:
 
-## PROTOCOLOS COMPETITIVOS DE INVESTIGAÇÃO:
+- Pesquise relatórios da indústria e inteligência competitiva
+- Use sites de empresas concorrentes e relatórios anuais
+- Pesquise análises competitivas de empresas de pesquisa de mercado
+- Note vantagens e desvantagens competitivas
+- Pesquise desenvolvimentos recentes de mercado e disrupções
 
-- Pesquisa de relatórios da indústria e inteligência competitiva
-- Utilizar websites de empresas concorrentes e relatórios anuais
-- Análises competitivas de empresas de pesquisa de mercado
-- Observe vantagens e desvantagens competitivas
-- Pesquisa de desenvolvimentos recentes do mercado e rupturas
+## CONCLUSÃO DA PESQUISA DE MERCADO:
 
-## MERCADO
+Quando 'C' for selecionado:
+
+- Todas as etapas de pesquisa de mercado concluídas
+- Documento de pesquisa de mercado abrangente gerado
+- Todas as seções anexadas com citações de fonte
+- Status do fluxo de trabalho de pesquisa de mercado atualizado
+- Recomendações finais fornecidas ao usuário
+
+## PRÓXIMOS PASSOS:
+
+Fluxo de trabalho de pesquisa de mercado completo. O usuário pode:
+
+- Usar a pesquisa de mercado para informar estratégias de desenvolvimento de produto
+- Conduzir pesquisa competitiva adicional sobre empresas específicas
+- Combinar pesquisa de mercado com outros tipos de pesquisa para insights abrangentes
+
+Parabéns por completar a pesquisa de mercado abrangente! 🎉

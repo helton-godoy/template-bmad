@@ -10,7 +10,7 @@ workflowType: 'prd'
 lastStep: 0
 ---
 
-# Documento dos requisitos do produto - {{project_name}}
+# Documento de Requisitos de Produto - {{project_name}}
 
 **Autor:** {{user_name}}
 **Data:** {{date}}

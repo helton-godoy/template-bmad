@@ -5,4 +5,4 @@
 
 ---
 
-<!-- Content will be appended sequentially through collaborative workflow steps -->
+<!-- O conteúdo será anexado sequencialmente através de passos de fluxo de trabalho colaborativos -->

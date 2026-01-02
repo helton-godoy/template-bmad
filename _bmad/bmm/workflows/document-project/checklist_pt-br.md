@@ -1,114 +1,75 @@
-# Document Project Workflow - Lista de Verificação de Validação
+# Lista de Verificação de Documentação do Projeto
 
-## Nível de digitalização e Resumebilidade (v1.2.2)
+<critical>Esta lista de verificação é executada como parte de: {project-root}/_bmad/bmm/workflows/document-project/workflow.yaml</critical>
+<critical>Execute cada seção em ordem para garantir documentação completa e consistente</critical>
 
-- [ ] Scan seleção de nível oferecido (rápido/deep/exaustive) para inicial scan e full rescan modos
-- [ ] Modo de mergulho profundo automaticamente usa varredura exaustiva (sem escolha dada)
-- [ ] Pesquisa rápida não lê arquivos de origem (somente padrões, configurações, manifestos)
-- [ ] Deep scan lê arquivos em diretórios críticos por tipo de projeto
-- [ ] Exaustive scan lê ALL source files (excluindo nó módulos, dist, build)
-- [ ] Arquivo de estado (project-scan-report.json) criado no início do fluxo de trabalho
-- [ ] Arquivo de estado atualizado após cada etapa de conclusão
-- [ ] O ficheiro de estado contém todos os campos obrigatórios por esquema
-- [ ] Prompt de recuperação mostrado se o arquivo de estado existe e é <24 hours old
-- [ ] Old state files (>24 horas) automaticamente arquivado
-- [ ] Continuar a funcionalidade carrega o estado anterior corretamente
-- [ ] Fluxo de trabalho pode saltar para corrigir o passo ao retomar
+<checklist>
 
-## Write-as-you-go Arquitetura
+<section n="1" title="Análise e Estratégia do Projeto">
 
-- [ ] Cada documento escrito no disco imediatamente após a geração
-- [ ] Validação do documento realizada logo após a escrita (nível de secção)
-- [ ] Arquivo de estado atualizado após cada documento ser escrito
-- [ ] Resultados detalhados apagados do contexto após a escrita (apenas resumos mantidos)
-- [ ] Contexto contém apenas resumos de alto nível (1-2 frases por seção)
-- [ ] Sem acumulação de análise completa do projeto na memória
+<check-item id="1.1">
+<prompt>Identifique o tipo e tecnologia do projeto</prompt>
+<action>Analise a estrutura de arquivos e dependências</action>
+<action>Determine o framework principal (ex: React, Node, Python)</action>
+<status>[ ] Feito / [ ] N/A</status>
+</check-item>
 
-## Estratégia de contracção (exames profundos/exaustivos)
+<check-item id="1.2">
+<prompt>Determine os níveis de documentação necessários</prompt>
+<action>Consulte documentation-requirements.csv</action>
+<action>Selecione documentos obrigatórios e recomendados</action>
+<status>[ ] Feito / [ ] N/A</status>
+</check-item>
 
-- [ ] Batting aplicado para níveis de varredura profunda e exaustiva
-- [ ] Batches organizados por SUBFOLDER (não contagem arbitrária de arquivos)
-- [ ] Arquivos grandes (>5000 LOC) tratados com julgamento adequado
-- [ ] Cada lote: ler arquivos, extrair informações, gravar saída, validar, limpar contexto
-- [ ] Completação de lote rastreada no arquivo de estado (array batchs completed)
-- [ ] Resumos em lote mantidos no contexto (1-2 frases máx.)
+<check-item id="1.3">
+<prompt>Verifique a documentação existente</prompt>
+<action>Verifique README.md, docs/, e outros arquivos de documentação</action>
+<action>Identifique o que precisa ser atualizado ou criado</action>
+<status>[ ] Feito / [ ] N/A</status>
+</check-item>
 
-## Detecção e Classificação do Projecto
+</section>
 
-- [ ] Tipo de projeto corretamente identificado e corresponde à pilha de tecnologia real
-- [ ] Multi-parte vs estrutura de uma só parte detectada com precisão
-- [ ] Todas as partes do projeto identificadas se multi-parte (sem cliente em falta/servidor/etc.)
-- [ ] Requisitos de documentação carregados para cada tipo de peça
-- [ ] Match de registro de arquitetura é apropriado para pilha detectada
+<section n="2" title="Geração de Documentação Principal">
 
-## Análise da pilha de tecnologia
+<check-item id="2.1">
+<prompt>Crie ou Atualize README.md</prompt>
+<action>Garanta que contém: Visão Geral, Instalação, Uso, Contribuição</action>
+<status>[ ] Feito / [ ] N/A</status>
+</check-item>
 
-- [ ] Todas as principais tecnologias identificadas (quadro, linguagem, base de dados, etc.)
-- [ ] Versões capturadas quando disponíveis
-- [ ] A tabela de decisão tecnológica é completa e precisa
-- [ ] dependências e bibliotecas documentadas
-- [ ] Ferramentas de construção e gerenciadores package identificados
+<check-item id="2.2">
+<prompt>Crie Documentação de Arquitetura</prompt>
+<action>Descreva a estrutura do sistema e componentes</action>
+<action>Gere diagramas se necessário</action>
+<status>[ ] Feito / [ ] N/A</status>
+</check-item>
 
-## Completude de Análise de Base de Código
+<check-item id="2.3">
+<prompt>Crie Guia de Configuração e Desenvolvimento</prompt>
+<action>Documente pré-requisitos e variáveis de ambiente</action>
+<action>Explique como rodar e testar localmente</action>
+<status>[ ] Feito / [ ] N/A</status>
+</check-item>
 
-- [ ] Todos os diretórios críticos digitalizados com base no tipo de projeto
-- [ ] Endpoints da API documentados (se requires api scan = true)
-- [ ] Modelos de dados capturados (se required data models = true)
-- [ ] Padrões de gestão do Estado identificados (se requires state management = true)
-- [ ] Componentes de IU inventariados (se requires ui components = true)
-- [ ] Arquivos de configuração localizados e documentados
-- [ ] Padrões de autenticação/segurança identificados
-- [ ] Pontos de entrada corretamente identificados
-- [ ] Pontos de integração mapeados (para projetos multi-partes)
-- [ ] Arquivos de teste e padrões documentados
+</section>
 
-## Análise da Árvore de Origem
+<section n="3" title="Validação e Revisão">
 
-- [ ] Árvore de diretório completa gerada sem omissões principais
-- [ ] Pastas críticas realçadas e descritas
-- [ ] Pontos de entrada claramente marcados
-- [ ] Caminhos de integração anotados (para multi-parte)
-- [ ] Locais de activos identificados (se aplicável)
-- [ ] Padrões de organização de arquivos explicados
+<check-item id="3.1">
+<prompt>Verifique a precisão técnica</prompt>
+<action>Garanta que os comandos funcionam</action>
+<action>Confirme que as descrições correspondem ao código</action>
+<status>[ ] Feito / [ ] N/A</status>
+</check-item>
 
-## Qualidade da documentação de arquitetura
+<check-item id="3.2">
+<prompt>Revise com o Usuário</prompt>
+<action>Apresente a documentação gerada</action>
+<action>Faça ajustes com base no feedback</action>
+<status>[ ] Feito / [ ] N/A</status>
+</check-item>
 
-- [ ] Documento de arquitectura utiliza o modelo adequado do registo
-- [ ] Todas as secções do modelo preenchidas com informações relevantes (sem espaços)
-- [ ] A seção de pilha de tecnologia é abrangente
-- [ ] Padrão de arquitetura claramente explicado
-- [ ] Arquitetura de dados documentada (se aplicável)
-- [ ] Design de API documentado (se aplicável)
-- [ ] Estrutura do componente explicada (se aplicável)
-- [ ] Árvore fonte incluída e anotada
-- [ ] Estratégia de teste documentada
-- [ ] Arquitetura de implantação capturada (se a configuração for encontrada)
+</section>
 
-## Documentação sobre Desenvolvimento e Operações
-
-- [ ] Pré-requisitos claramente listados
-- [ ] Passos de instalação documentados
-- [ ] Instruções de configuração do ambiente fornecidas
-- [ ] Comandos de execução local especificados
-- [ ] Processo de compilação documentado
-- [ ] Comandos de teste e abordagem explicados
-- [ ] Processo de implantação documentado (se aplicável)
-- [ ] Detalhes do gasoduto CI/CD capturados (se encontrados)
-- [ ] Orientações de contribuição extraídas (se for encontrada)
-
-## Específico do Projeto Multiparte (se aplicável)
-
-- [ ] Cada parte documentada separadamente
-- [ ] Arquivos de arquitetura específicos de partes criados (arquitetura-{part_id}.md)
-- [ ] Inventários de componentes específicos da parte criados (se aplicável)
-- [ ] Guias de desenvolvimento parcialmente específicos criados
-- [ ] Documento de arquitetura de integração criado
-- [ ] Pontos de integração claramente definidos com tipo e detalhes
-- [ ] Fluxo de dados entre as partes explicadas
-- [ ] Arquivo de metadados project-parts.json criado
-
-## Índice e Navegação
-
-- [ ] index.md criado como ponto de entrada principal
-- [ ] Estrutura do projecto claramente resumida no índice
-- Rápido.
+</checklist>

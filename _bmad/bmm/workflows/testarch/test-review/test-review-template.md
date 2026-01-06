@@ -1,388 +1,135 @@
-# Test Quality Review: {test_filename}
+# Test Review Checklist - {FEATURE_NAME}
 
-**Quality Score**: {score}/100 ({grade} - {assessment})
-**Review Date**: {YYYY-MM-DD}
-**Review Scope**: {single | directory | suite}
-**Reviewer**: {user_name or TEA Agent}
+**Date:** {DATE}
+**Reviewer:** {REVIEWER_NAME}
+**Author:** {AUTHOR_NAME}
+**Status:** {STATUS} (Draft / Approved / Changes Requested)
 
 ---
 
 ## Executive Summary
 
-**Overall Assessment**: {Excellent | Good | Acceptable | Needs Improvement | Critical Issues}
+**Review:** {PASS_COUNT} PASS, {CONCERNS_COUNT} CONCERNS, {FAIL_COUNT} FAIL
 
-**Recommendation**: {Approve | Approve with Comments | Request Changes | Block}
-
-### Key Strengths
-
-✅ {strength_1}
-✅ {strength_2}
-✅ {strength_3}
-
-### Key Weaknesses
-
-❌ {weakness_1}
-❌ {weakness_2}
-❌ {weakness_3}
-
-### Summary
-
-{1-2 paragraph summary of overall test quality, highlighting major findings and recommendation rationale}
+**Recommendation:** {OVERALL_RECOMMENDATION}
 
 ---
 
-## Quality Criteria Assessment
+## Test Architecture
 
-| Criterion                            | Status                          | Violations | Notes        |
-| ------------------------------------ | ------------------------------- | ---------- | ------------ |
-| BDD Format (Given-When-Then)         | {✅ PASS \| ⚠️ WARN \| ❌ FAIL} | {count}    | {brief_note} |
-| Test IDs                             | {✅ PASS \| ⚠️ WARN \| ❌ FAIL} | {count}    | {brief_note} |
-| Priority Markers (P0/P1/P2/P3)       | {✅ PASS \| ⚠️ WARN \| ❌ FAIL} | {count}    | {brief_note} |
-| Hard Waits (sleep, waitForTimeout)   | {✅ PASS \| ⚠️ WARN \| ❌ FAIL} | {count}    | {brief_note} |
-| Determinism (no conditionals)        | {✅ PASS \| ⚠️ WARN \| ❌ FAIL} | {count}    | {brief_note} |
-| Isolation (cleanup, no shared state) | {✅ PASS \| ⚠️ WARN \| ❌ FAIL} | {count}    | {brief_note} |
-| Fixture Patterns                     | {✅ PASS \| ⚠️ WARN \| ❌ FAIL} | {count}    | {brief_note} |
-| Data Factories                       | {✅ PASS \| ⚠️ WARN \| ❌ FAIL} | {count}    | {brief_note} |
-| Network-First Pattern                | {✅ PASS \| ⚠️ WARN \| ❌ FAIL} | {count}    | {brief_note} |
-| Explicit Assertions                  | {✅ PASS \| ⚠️ WARN \| ❌ FAIL} | {count}    | {brief_note} |
-| Test Length (≤300 lines)             | {✅ PASS \| ⚠️ WARN \| ❌ FAIL} | {lines}    | {brief_note} |
-| Test Duration (≤1.5 min)             | {✅ PASS \| ⚠️ WARN \| ❌ FAIL} | {duration} | {brief_note} |
-| Flakiness Patterns                   | {✅ PASS \| ⚠️ WARN \| ❌ FAIL} | {count}    | {brief_note} |
+### Level Selection
 
-**Total Violations**: {critical_count} Critical, {high_count} High, {medium_count} Medium, {low_count} Low
+- **Status:** {STATUS} {STATUS_ICON}
+- **Findings:** {FINDINGS_DESCRIPTION}
+- **Guidance:** Ensure tests are at the appropriate level (E2E vs API vs Component vs Unit) based on `test-levels-framework.md`.
 
----
+### Isolation & Independence
 
-## Quality Score Breakdown
+- **Status:** {STATUS} {STATUS_ICON}
+- **Findings:** {FINDINGS_DESCRIPTION}
+- **Guidance:** Tests should not depend on each other or shared mutable state. Use `fixture-architecture.md` patterns.
 
-```
-Starting Score:          100
-Critical Violations:     -{critical_count} × 10 = -{critical_deduction}
-High Violations:         -{high_count} × 5 = -{high_deduction}
-Medium Violations:       -{medium_count} × 2 = -{medium_deduction}
-Low Violations:          -{low_count} × 1 = -{low_deduction}
+### Determinism
 
-Bonus Points:
-  Excellent BDD:         +{0|5}
-  Comprehensive Fixtures: +{0|5}
-  Data Factories:        +{0|5}
-  Network-First:         +{0|5}
-  Perfect Isolation:     +{0|5}
-  All Test IDs:          +{0|5}
-                         --------
-Total Bonus:             +{bonus_total}
-
-Final Score:             {final_score}/100
-Grade:                   {grade}
-```
+- **Status:** {STATUS} {STATUS_ICON}
+- **Findings:** {FINDINGS_DESCRIPTION}
+- **Guidance:** Eliminate flaky patterns like hard waits or race conditions. See `test-quality.md`.
 
 ---
 
-## Critical Issues (Must Fix)
+## Test Implementation
 
-{If no critical issues: "No critical issues detected. ✅"}
+### Naming & Organization
 
-{For each critical issue:}
+- **Status:** {STATUS} {STATUS_ICON}
+- **Findings:** {FINDINGS_DESCRIPTION}
+- **Guidance:** Clear, descriptive names using Given-When-Then structure.
 
-### {issue_number}. {Issue Title}
+### Assertions
 
-**Severity**: P0 (Critical)
-**Location**: `{filename}:{line_number}`
-**Criterion**: {criterion_name}
-**Knowledge Base**: [{fragment_name}]({fragment_path})
+- **Status:** {STATUS} {STATUS_ICON}
+- **Findings:** {FINDINGS_DESCRIPTION}
+- **Guidance:** Use explicit assertions. Avoid "assertion roulette" (too many assertions per test).
 
-**Issue Description**:
-{Detailed explanation of what the problem is and why it's critical}
+### Selectors (if UI)
 
-**Current Code**:
+- **Status:** {STATUS} {STATUS_ICON}
+- **Findings:** {FINDINGS_DESCRIPTION}
+- **Guidance:** Use resilient selectors (e.g., `data-testid`). See `selector-resilience.md`.
 
-```typescript
-// ❌ Bad (current implementation)
-{
-  code_snippet_showing_problem;
-}
-```
+### Data Management
 
-**Recommended Fix**:
-
-```typescript
-// ✅ Good (recommended approach)
-{
-  code_snippet_showing_solution;
-}
-```
-
-**Why This Matters**:
-{Explanation of impact - flakiness risk, maintainability, reliability}
-
-**Related Violations**:
-{If similar issue appears elsewhere, note line numbers}
+- **Status:** {STATUS} {STATUS_ICON}
+- **Findings:** {FINDINGS_DESCRIPTION}
+- **Guidance:** Use factories for test data. Ensure cleanup. See `data-factories.md`.
 
 ---
 
-## Recommendations (Should Fix)
+## Code Quality
 
-{If no recommendations: "No additional recommendations. Test quality is excellent. ✅"}
+### Readability
 
-{For each recommendation:}
+- **Status:** {STATUS} {STATUS_ICON}
+- **Findings:** {FINDINGS_DESCRIPTION}
 
-### {rec_number}. {Recommendation Title}
+### Maintainability
 
-**Severity**: {P1 (High) | P2 (Medium) | P3 (Low)}
-**Location**: `{filename}:{line_number}`
-**Criterion**: {criterion_name}
-**Knowledge Base**: [{fragment_name}]({fragment_path})
+- **Status:** {STATUS} {STATUS_ICON}
+- **Findings:** {FINDINGS_DESCRIPTION}
+- **Guidance:** DRY principles (within reason for tests), modular fixtures.
 
-**Issue Description**:
-{Detailed explanation of what could be improved and why}
+### Performance
 
-**Current Code**:
-
-```typescript
-// ⚠️ Could be improved (current implementation)
-{
-  code_snippet_showing_current_approach;
-}
-```
-
-**Recommended Improvement**:
-
-```typescript
-// ✅ Better approach (recommended)
-{
-  code_snippet_showing_improvement;
-}
-```
-
-**Benefits**:
-{Explanation of benefits - maintainability, readability, reusability}
-
-**Priority**:
-{Why this is P1/P2/P3 - urgency and impact}
+- **Status:** {STATUS} {STATUS_ICON}
+- **Findings:** {FINDINGS_DESCRIPTION}
+- **Guidance:** Tests should run efficiently. Avoid unnecessary waits.
 
 ---
 
-## Best Practices Found
+## Specific Issues
 
-{If good patterns found, highlight them}
+### {ISSUE_TITLE_1}
 
-{For each best practice:}
+- **Category:** {CATEGORY} (e.g., Flakiness, Maintainability)
+- **Severity:** {SEVERITY} (Critical / Major / Minor)
+- **Description:** {ISSUE_DESCRIPTION}
+- **Recommendation:** {RECOMMENDATION}
 
-### {practice_number}. {Best Practice Title}
+### {ISSUE_TITLE_2}
 
-**Location**: `{filename}:{line_number}`
-**Pattern**: {pattern_name}
-**Knowledge Base**: [{fragment_name}]({fragment_path})
-
-**Why This Is Good**:
-{Explanation of why this pattern is excellent}
-
-**Code Example**:
-
-```typescript
-// ✅ Excellent pattern demonstrated in this test
-{
-  code_snippet_showing_best_practice;
-}
-```
-
-**Use as Reference**:
-{Encourage using this pattern in other tests}
+- **Category:** {CATEGORY}
+- **Severity:** {SEVERITY}
+- **Description:** {ISSUE_DESCRIPTION}
+- **Recommendation:** {RECOMMENDATION}
 
 ---
 
-## Test File Analysis
+## Questions & Clarifications
 
-### File Metadata
-
-- **File Path**: `{relative_path_from_project_root}`
-- **File Size**: {line_count} lines, {kb_size} KB
-- **Test Framework**: {Playwright | Jest | Cypress | Vitest | Other}
-- **Language**: {TypeScript | JavaScript}
-
-### Test Structure
-
-- **Describe Blocks**: {describe_count}
-- **Test Cases (it/test)**: {test_count}
-- **Average Test Length**: {avg_lines_per_test} lines per test
-- **Fixtures Used**: {fixture_count} ({fixture_names})
-- **Data Factories Used**: {factory_count} ({factory_names})
-
-### Test Coverage Scope
-
-- **Test IDs**: {test_id_list}
-- **Priority Distribution**:
-  - P0 (Critical): {p0_count} tests
-  - P1 (High): {p1_count} tests
-  - P2 (Medium): {p2_count} tests
-  - P3 (Low): {p3_count} tests
-  - Unknown: {unknown_count} tests
-
-### Assertions Analysis
-
-- **Total Assertions**: {assertion_count}
-- **Assertions per Test**: {avg_assertions_per_test} (avg)
-- **Assertion Types**: {assertion_types_used}
+1. {QUESTION_1}
+2. {QUESTION_2}
 
 ---
 
-## Context and Integration
+## Action Items
 
-### Related Artifacts
-
-{If story file found:}
-
-- **Story File**: [{story_filename}]({story_path})
-- **Acceptance Criteria Mapped**: {ac_mapped}/{ac_total} ({ac_coverage}%)
-
-{If test-design found:}
-
-- **Test Design**: [{test_design_filename}]({test_design_path})
-- **Risk Assessment**: {risk_level}
-- **Priority Framework**: P0-P3 applied
-
-### Acceptance Criteria Validation
-
-{If story file available, map tests to ACs:}
-
-| Acceptance Criterion | Test ID   | Status                     | Notes   |
-| -------------------- | --------- | -------------------------- | ------- |
-| {AC_1}               | {test_id} | {✅ Covered \| ❌ Missing} | {notes} |
-| {AC_2}               | {test_id} | {✅ Covered \| ❌ Missing} | {notes} |
-| {AC_3}               | {test_id} | {✅ Covered \| ❌ Missing} | {notes} |
-
-**Coverage**: {covered_count}/{total_count} criteria covered ({coverage_percentage}%)
+- [ ] {ACTION_ITEM_1}
+- [ ] {ACTION_ITEM_2}
+- [ ] {ACTION_ITEM_3}
 
 ---
 
-## Knowledge Base References
+## Sign-Off
 
-This review consulted the following knowledge base fragments:
+**Review Outcome:**
 
-- **[test-quality.md](../../../testarch/knowledge/test-quality.md)** - Definition of Done for tests (no hard waits, <300 lines, <1.5 min, self-cleaning)
-- **[fixture-architecture.md](../../../testarch/knowledge/fixture-architecture.md)** - Pure function → Fixture → mergeTests pattern
-- **[network-first.md](../../../testarch/knowledge/network-first.md)** - Route intercept before navigate (race condition prevention)
-- **[data-factories.md](../../../testarch/knowledge/data-factories.md)** - Factory functions with overrides, API-first setup
-- **[test-levels-framework.md](../../../testarch/knowledge/test-levels-framework.md)** - E2E vs API vs Component vs Unit appropriateness
-- **[tdd-cycles.md](../../../testarch/knowledge/tdd-cycles.md)** - Red-Green-Refactor patterns
-- **[selective-testing.md](../../../testarch/knowledge/selective-testing.md)** - Duplicate coverage detection
-- **[ci-burn-in.md](../../../testarch/knowledge/ci-burn-in.md)** - Flakiness detection patterns (10-iteration loop)
-- **[test-priorities.md](../../../testarch/knowledge/test-priorities.md)** - P0/P1/P2/P3 classification framework
-- **[traceability.md](../../../testarch/knowledge/traceability.md)** - Requirements-to-tests mapping
+- [ ] **Approved** - Good to merge
+- [ ] **Approved with Comments** - Address minor issues, no re-review needed
+- [ ] **Changes Requested** - Address issues and request re-review
 
-See [tea-index.csv](../../../testarch/tea-index.csv) for complete knowledge base.
+**Reviewer Signature:** {REVIEWER_NAME}
+**Date:** {DATE}
 
 ---
 
-## Next Steps
-
-### Immediate Actions (Before Merge)
-
-1. **{action_1}** - {description}
-   - Priority: {P0 | P1 | P2}
-   - Owner: {team_or_person}
-   - Estimated Effort: {time_estimate}
-
-2. **{action_2}** - {description}
-   - Priority: {P0 | P1 | P2}
-   - Owner: {team_or_person}
-   - Estimated Effort: {time_estimate}
-
-### Follow-up Actions (Future PRs)
-
-1. **{action_1}** - {description}
-   - Priority: {P2 | P3}
-   - Target: {next_sprint | backlog}
-
-2. **{action_2}** - {description}
-   - Priority: {P2 | P3}
-   - Target: {next_sprint | backlog}
-
-### Re-Review Needed?
-
-{✅ No re-review needed - approve as-is}
-{⚠️ Re-review after critical fixes - request changes, then re-review}
-{❌ Major refactor required - block merge, pair programming recommended}
-
----
-
-## Decision
-
-**Recommendation**: {Approve | Approve with Comments | Request Changes | Block}
-
-**Rationale**:
-{1-2 paragraph explanation of recommendation based on findings}
-
-**For Approve**:
-
-> Test quality is excellent/good with {score}/100 score. {Minor issues noted can be addressed in follow-up PRs.} Tests are production-ready and follow best practices.
-
-**For Approve with Comments**:
-
-> Test quality is acceptable with {score}/100 score. {High-priority recommendations should be addressed but don't block merge.} Critical issues resolved, but improvements would enhance maintainability.
-
-**For Request Changes**:
-
-> Test quality needs improvement with {score}/100 score. {Critical issues must be fixed before merge.} {X} critical violations detected that pose flakiness/maintainability risks.
-
-**For Block**:
-
-> Test quality is insufficient with {score}/100 score. {Multiple critical issues make tests unsuitable for production.} Recommend pairing session with QA engineer to apply patterns from knowledge base.
-
----
-
-## Appendix
-
-### Violation Summary by Location
-
-{Table of all violations sorted by line number:}
-
-| Line   | Severity      | Criterion   | Issue         | Fix         |
-| ------ | ------------- | ----------- | ------------- | ----------- |
-| {line} | {P0/P1/P2/P3} | {criterion} | {brief_issue} | {brief_fix} |
-| {line} | {P0/P1/P2/P3} | {criterion} | {brief_issue} | {brief_fix} |
-
-### Quality Trends
-
-{If reviewing same file multiple times, show trend:}
-
-| Review Date  | Score         | Grade     | Critical Issues | Trend       |
-| ------------ | ------------- | --------- | --------------- | ----------- |
-| {YYYY-MM-DD} | {score_1}/100 | {grade_1} | {count_1}       | ⬆️ Improved |
-| {YYYY-MM-DD} | {score_2}/100 | {grade_2} | {count_2}       | ⬇️ Declined |
-| {YYYY-MM-DD} | {score_3}/100 | {grade_3} | {count_3}       | ➡️ Stable   |
-
-### Related Reviews
-
-{If reviewing multiple files in directory/suite:}
-
-| File     | Score       | Grade   | Critical | Status             |
-| -------- | ----------- | ------- | -------- | ------------------ |
-| {file_1} | {score}/100 | {grade} | {count}  | {Approved/Blocked} |
-| {file_2} | {score}/100 | {grade} | {count}  | {Approved/Blocked} |
-| {file_3} | {score}/100 | {grade} | {count}  | {Approved/Blocked} |
-
-**Suite Average**: {avg_score}/100 ({avg_grade})
-
----
-
-## Review Metadata
-
-**Generated By**: BMad TEA Agent (Test Architect)
-**Workflow**: testarch-test-review v4.0
-**Review ID**: test-review-{filename}-{YYYYMMDD}
-**Timestamp**: {YYYY-MM-DD HH:MM:SS}
-**Version**: 1.0
-
----
-
-## Feedback on This Review
-
-If you have questions or feedback on this review:
-
-1. Review patterns in knowledge base: `testarch/knowledge/`
-2. Consult tea-index.csv for detailed guidance
-3. Request clarification on specific violations
-4. Pair with QA engineer to apply patterns
-
-This review is guidance, not rigid rules. Context matters - if a pattern is justified, document it with a comment.
+**Generated by BMad TEA Agent** - {DATE}

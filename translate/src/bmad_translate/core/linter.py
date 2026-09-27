@@ -43,19 +43,12 @@ class Linter:
                 fm_content = content[3:end_fm]
                 errors.extend([f"Frontmatter: {e}" for e in Linter.check_yaml(fm_content)])
         
-        # 2. Verifica formatação de listas aninhadas (indentação suspeita)
-        # Ex: Detectar - Text com 3 espaços (pode estar desalinhado)
-        # lines = content.split('\n')
-        # for i, line in enumerate(lines):
-        #    if re.match(r'^\s{1,3}- ', line): # Indentação ímpar/estranha?
-        #        pass # Complexo de validar sem contexto
-        
-        # 3. Verifica blocos de código não fechados
+        # 2. Verifica blocos de código não fechados
         code_blocks = content.count('```')
         if code_blocks % 2 != 0:
             errors.append("Número ímpar de delimitadores de bloco de código (```). Possível bloco não fechado.")
-            
-        # 4. Verifica negrito/itálico quebrado (ex: ** text **) - O tradutor corrige, mas o linter avisa se falhar
+
+        # 3. Verifica negrito/itálico quebrado (ex: ** text **) - O tradutor corrige, mas o linter avisa se falhar
         if re.search(r'\*\*\s+.*?\*\*', content) or re.search(r'\*\*.+?\s+\*\*', content):
              errors.append("Espaçamento inválido em negrito detectado (ex: '** texto**').")
 

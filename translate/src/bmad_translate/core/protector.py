@@ -11,6 +11,10 @@ from pathlib import Path
 class ContentProtector:
     """Protege conteúdo técnico durante a tradução."""
     
+    # Regex para pegar o novo formato, tolerando espaços que o tradutor possa adicionar
+    # Ex: BMADPROTECT 000 END
+    _RESTORE_PATTERN = re.compile(r'BMADPROTECT\s*(\d+)\s*(?:END|End|end)')
+
     def __init__(self, settings=None):
         """
         Inicializa o protetor de conteúdo.
@@ -121,9 +125,7 @@ class ContentProtector:
         # Loop para resolver placeholders aninhados (ex: placeholder dentro de placeholder)
         current_text = protected_text
         for _ in range(10): # Limite de recursão para evitar loops infinitos
-            # Regex para pegar o novo formato, tolerando espaços que o tradutor possa adicionar
-            # Ex: BMADPROTECT 000 END
-            new_text = re.sub(r'BMADPROTECT\s*(\d+)\s*(?:END|End|end)', replace_match, current_text)
+            new_text = self._RESTORE_PATTERN.sub(replace_match, current_text)
             
             if new_text == current_text:
                 return current_text

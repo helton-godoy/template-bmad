@@ -78,3 +78,32 @@ class TestContentProtector:
 
             assert len(patterns) == 7
             assert patterns[0]['description'] == 'Frontmatter YAML'
+
+
+class TestContentProtectorValidatePatterns:
+    """Testes para ContentProtector.validate_patterns (orig. PR #12)."""
+
+    def test_validate_patterns_default(self):
+        """Testa que os padrões padrão são válidos."""
+        protector = ContentProtector()
+        invalid = protector.validate_patterns()
+        assert len(invalid) == 0, f"Padrões padrão inválidos: {invalid}"
+
+    def test_validate_patterns_valid_custom(self):
+        """Testa a validação com um padrão personalizado válido."""
+        protector = ContentProtector()
+        protector.add_custom_pattern(r'[0-9]+', "Apenas números")
+        invalid = protector.validate_patterns()
+        assert len(invalid) == 0, "Padrão válido foi marcado como inválido"
+
+    def test_validate_patterns_invalid_custom(self):
+        """Testa a validação com um padrão personalizado inválido."""
+        protector = ContentProtector()
+        invalid_pattern = r'(abc'
+        protector.add_custom_pattern(invalid_pattern, "Padrão inválido")
+        invalid = protector.validate_patterns()
+
+        assert len(invalid) == 1
+        assert f"Padrão {len(protector.patterns)-1}" in invalid[0]
+        assert invalid_pattern in invalid[0]
+        assert "Erro" in invalid[0]

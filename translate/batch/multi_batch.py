@@ -63,8 +63,6 @@ class MultiBatchTranslator:
             except Exception as e:
                 print(f"❌ {e}")
                 self.stats['failed'] += 1
-            
-            time.sleep(0.3)
     
     def translate_directories(self, directories: list):
         """Traduz lista de diretórios"""

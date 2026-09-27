@@ -75,8 +75,6 @@ def translate_tree(base_dir: str, protect: bool = True):
         except Exception as e:
             print(f"❌ {e}")
             failed_count += 1
-        
-        time.sleep(0.3)
     
     # Relatório
     print(f"\n\n{'='*70}")

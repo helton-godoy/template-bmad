@@ -4,7 +4,7 @@ Proteção de conteúdo para o sistema de tradução BMAD
 
 import re
 import yaml
-from typing import Dict, List, Tuple, Any
+from typing import Dict, List, Tuple
 from pathlib import Path
 
 

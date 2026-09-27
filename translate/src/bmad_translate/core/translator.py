@@ -52,6 +52,9 @@ class _IndentDumper(yaml.SafeDumper):
 class BMADTranslator:
     """Tradutor principal do sistema BMAD."""
     
+    # Cache for installed packages to avoid redundant O(N) evaluations
+    _installed_langs_cache = None
+
     def __init__(self, settings: Optional[Settings] = None):
         """
         Inicializa o tradutor BMAD.
@@ -113,40 +116,45 @@ class BMADTranslator:
     
     def _ensure_argos_initialized(self) -> None:
         """Garante que o Argos Translate está inicializado."""
-        if not self._argos_initialized:
-            self.logger.info("Verificando pacotes de idioma Argos Translate...")
-            argostranslate.package.update_package_index()
-            
-            available_packages = argostranslate.package.get_available_packages()
+        if self._argos_initialized:
+            return
+
+        target_lang = self.settings.get_target_language()
+
+        # Initialization logic for the cache
+        if BMADTranslator._installed_langs_cache is None:
             installed_packages = argostranslate.package.get_installed_packages()
-            
-            target_lang = self.settings.get_target_language()
-            
-            # Verifica se o pacote en->target está instalado
-            is_installed = any(
-                p.from_code == 'en' and p.to_code == target_lang 
-                for p in installed_packages
-            )
-            
-            if not is_installed:
-                self.logger.info(f"Instalando pacote de idioma English -> {target_lang}...")
-                try:
-                    package_to_install = next(
-                        filter(
-                            lambda x: x.from_code == 'en' and x.to_code == target_lang,
-                            available_packages
-                        )
-                    )
-                    pkg_path = package_to_install.download()
-                    argostranslate.package.install_from_path(pkg_path)
-                    self.logger.info("Pacote de idioma instalado com sucesso.")
-                except StopIteration:
-                    self.logger.error(f"Pacote de idioma en->{target_lang} não encontrado.")
-                    raise RuntimeError(f"Pacote en->{target_lang} não disponível")
-            else:
-                self.logger.info("Pacote de idioma já instalado.")
-            
+            BMADTranslator._installed_langs_cache = {
+                (p.from_code, p.to_code) for p in installed_packages
+            }
+
+        if ('en', target_lang) in BMADTranslator._installed_langs_cache:
+            self.logger.info("Pacote de idioma já instalado.")
             self._argos_initialized = True
+            return
+
+        self.logger.info("Verificando pacotes de idioma Argos Translate...")
+        argostranslate.package.update_package_index()
+        available_packages = argostranslate.package.get_available_packages()
+
+        self.logger.info(f"Instalando pacote de idioma English -> {target_lang}...")
+        try:
+            package_to_install = next(
+                filter(
+                    lambda x: x.from_code == 'en' and x.to_code == target_lang,
+                    available_packages
+                )
+            )
+            pkg_path = package_to_install.download()
+            argostranslate.package.install_from_path(pkg_path)
+            self.logger.info("Pacote de idioma instalado com sucesso.")
+            # Update cache after installation
+            BMADTranslator._installed_langs_cache.add(('en', target_lang))
+        except StopIteration:
+            self.logger.error(f"Pacote de idioma en->{target_lang} não encontrado.")
+            raise RuntimeError(f"Pacote en->{target_lang} não disponível")
+
+        self._argos_initialized = True
     
     def _validate_path(self, filepath: str) -> str:
         """Valida se o caminho está dentro do diretório permitido."""

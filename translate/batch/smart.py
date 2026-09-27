@@ -173,6 +173,9 @@ class FormattingValidator:
 class IncrementalTranslator:
     """Tradutor incremental com validação e correção"""
     
+    # Cache for installed packages to avoid redundant O(N) evaluations
+    _installed_langs_cache = None
+
     def __init__(self, from_lang: str = 'en', to_lang: str = 'pt', max_tokens: int = 800):
         self.from_lang = from_lang
         self.to_lang = to_lang
@@ -182,6 +185,15 @@ class IncrementalTranslator:
     
     def _ensure_argos_ready(self):
         """Garante que pacote de idioma está instalado"""
+        if IncrementalTranslator._installed_langs_cache is None:
+            installed_packages = argostranslate.package.get_installed_packages()
+            IncrementalTranslator._installed_langs_cache = {
+                (p.from_code, p.to_code) for p in installed_packages
+            }
+
+        if (self.from_lang, self.to_lang) in IncrementalTranslator._installed_langs_cache:
+            return
+
         available_packages = argostranslate.package.get_available_packages()
         package_to_install = None
         
@@ -191,11 +203,10 @@ class IncrementalTranslator:
                 break
         
         if package_to_install:
-            installed_packages = argostranslate.package.get_installed_packages()
-            if not any(p.from_code == self.from_lang and p.to_code == self.to_lang 
-                      for p in installed_packages):
-                logger.info(f"Instalando pacote {self.from_lang} → {self.to_lang}")
-                argostranslate.package.install_from_path(package_to_install.download())
+            logger.info(f"Instalando pacote {self.from_lang} → {self.to_lang}")
+            argostranslate.package.install_from_path(package_to_install.download())
+            # Update cache after installation
+            IncrementalTranslator._installed_langs_cache.add((self.from_lang, self.to_lang))
     
     def translate_chunk(self, chunk: str, metadata: Dict, retry: int = 0) -> str:
         """Traduz um chunk com retry e validação"""

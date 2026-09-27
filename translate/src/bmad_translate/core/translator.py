@@ -55,6 +55,23 @@ class BMADTranslator:
     # Cache for installed packages to avoid redundant O(N) evaluations
     _installed_langs_cache = None
 
+    @classmethod
+    def clear_installed_langs_cache(cls):
+        """Invalida o cache de pacotes instalados.
+
+        Chamar após instalar/desinstalar pacotes fora deste objeto
+        (ou entre testes) para forçar uma nova leitura na próxima chamada.
+        """
+        cls._installed_langs_cache = None
+
+    @classmethod
+    def _refresh_installed_langs_cache(cls):
+        """Recarrega o cache a partir da fonte autoritativa (Argos)."""
+        installed_packages = argostranslate.package.get_installed_packages()
+        cls._installed_langs_cache = {
+            (p.from_code, p.to_code) for p in installed_packages
+        }
+
     def __init__(self, settings: Optional[Settings] = None):
         """
         Inicializa o tradutor BMAD.
@@ -123,10 +140,7 @@ class BMADTranslator:
 
         # Initialization logic for the cache
         if BMADTranslator._installed_langs_cache is None:
-            installed_packages = argostranslate.package.get_installed_packages()
-            BMADTranslator._installed_langs_cache = {
-                (p.from_code, p.to_code) for p in installed_packages
-            }
+            BMADTranslator._refresh_installed_langs_cache()
 
         if ('en', target_lang) in BMADTranslator._installed_langs_cache:
             self.logger.info("Pacote de idioma já instalado.")
@@ -148,8 +162,12 @@ class BMADTranslator:
             pkg_path = package_to_install.download()
             argostranslate.package.install_from_path(pkg_path)
             self.logger.info("Pacote de idioma instalado com sucesso.")
-            # Update cache after installation
-            BMADTranslator._installed_langs_cache.add(('en', target_lang))
+            # Releitura autoritativa: só considera instalado o que o Argos confirma.
+            try:
+                BMADTranslator._refresh_installed_langs_cache()
+            except Exception:
+                self.logger.warning("Falha ao recarregar pacotes instalados; usando atualização otimista do cache")
+                BMADTranslator._installed_langs_cache.add(('en', target_lang))
         except StopIteration:
             self.logger.error(f"Pacote de idioma en->{target_lang} não encontrado.")
             raise RuntimeError(f"Pacote en->{target_lang} não disponível")

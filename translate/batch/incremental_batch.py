@@ -78,8 +78,6 @@ def translate_pending_files(base_dir="_bmad"):
         except Exception as e:
             print(f"❌ {e}")
             failed += 1
-        
-        time.sleep(0.3)
     
     # Relatório
     print(f"\n\n{'='*70}")

@@ -7,10 +7,20 @@ import sys
 import tempfile
 import shutil
 from pathlib import Path
+from unittest.mock import MagicMock
 
 # Adiciona o src ao path para importar módulos
 src_path = Path(__file__).parent.parent / "src"
 sys.path.insert(0, str(src_path))
+
+# Mocks para dependências pesadas ou ausentes no ambiente
+if 'yaml' not in sys.modules:
+    sys.modules['yaml'] = MagicMock()
+if 'argostranslate' not in sys.modules:
+    argos = MagicMock()
+    sys.modules['argostranslate'] = argos
+    sys.modules['argostranslate.package'] = MagicMock()
+    sys.modules['argostranslate.translate'] = MagicMock()
 
 from bmad_translate.config.settings import Settings
 

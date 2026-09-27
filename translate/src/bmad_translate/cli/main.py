@@ -6,7 +6,6 @@ import argparse
 import sys
 import os
 import logging
-from typing import Optional
 
 from ..core.translator import BMADTranslator
 from ..core.linter import Linter

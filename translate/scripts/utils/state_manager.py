@@ -59,19 +59,51 @@ class StateManager:
         if file_str not in self.state["files_processed"]:
             return False
         
-        # Verificar se checksum mudou
+        stored_data = self.state["files_processed"][file_str]
+
+        # Otimização: verificar mtime e size antes de calcular checksum
+        try:
+            stat = file_path.stat()
+            current_mtime = stat.st_mtime
+            current_size = stat.st_size
+
+            if (stored_data.get("mtime") == current_mtime and
+                stored_data.get("size") == current_size):
+                return True
+        except OSError:
+            return False
+
+        # Verificar se checksum mudou (fallback)
         current_checksum = self._calculate_checksum(file_path)
-        stored_checksum = self.state["files_processed"][file_str].get("checksum")
+        stored_checksum = stored_data.get("checksum")
         
-        return current_checksum == stored_checksum
+        if current_checksum == stored_checksum:
+            # Atualizar metadados se o checksum for o mesmo
+            stored_data["mtime"] = current_mtime
+            stored_data["size"] = current_size
+            self._save_state()
+            return True
+
+        return False
     
     def mark_file_processed(self, file_path: Path, scripts_applied: List[str]):
         """Marca arquivo como processado"""
         file_str = str(file_path)
         checksum = self._calculate_checksum(file_path)
         
+        # Obter metadados para otimização futura
+        try:
+            stat = file_path.stat()
+            mtime = stat.st_mtime
+            size = stat.st_size
+        except OSError:
+            mtime = None
+            size = None
+
         self.state["files_processed"][file_str] = {
             "checksum": checksum,
+            "mtime": mtime,
+            "size": size,
             "processed_at": datetime.now().isoformat(),
             "status": "completed",
             "scripts_applied": scripts_applied

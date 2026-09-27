@@ -21,24 +21,28 @@ class TranslationValidator:
             'unmatched_brackets': self.check_unmatched_brackets,
             'broken_code_blocks': self.check_broken_code_blocks,
         }
+
+        # Pre-compiled regex patterns for optimization
+        self._truncation_patterns = [
+            (re.compile(r'\(Usar$'), 'Linha termina com "(Usar" - provavelmente truncada'),
+            (re.compile(r'<item[^>]*\)$'), 'Tag <item> parece incompleta'),
+            (re.compile(r'<[^>]*$'), 'Tag XML/HTML incompleta no final da linha'),
+            (re.compile(r'\[[^\]]*$'), 'Link Markdown incompleto'),
+            (re.compile(r'\*\*[^*]*$'), 'Negrito não fechado no final da linha'),
+        ]
+        self._incomplete_tag_pattern = re.compile(r'<(\w+)[^>]*(?<![/>])$')
+        self._link_unclosed_pattern = re.compile(r'\[([^\]]+)$')
+        self._link_no_url_pattern = re.compile(r'\]\s*$')
     
     def check_truncated_lines(self, filepath: str, content: str) -> List[Dict]:
         """Detecta linhas que parecem truncadas"""
         issues = []
         lines = content.split('\n')
         
-        # Padrões suspeitos de truncamento
-        truncation_patterns = [
-            (r'\(Usar$', 'Linha termina com "(Usar" - provavelmente truncada'),
-            (r'<item[^>]*\)$', 'Tag <item> parece incompleta'),
-            (r'<[^>]*$', 'Tag XML/HTML incompleta no final da linha'),
-            (r'\[[^\]]*$', 'Link Markdown incompleto'),
-            (r'\*\*[^*]*$', 'Negrito não fechado no final da linha'),
-        ]
-        
         for i, line in enumerate(lines, 1):
-            for pattern, message in truncation_patterns:
-                if re.search(pattern, line.strip()):
+            stripped_line = line.strip()
+            for pattern, message in self._truncation_patterns:
+                if pattern.search(stripped_line):
                     issues.append({
                         'file': filepath,
                         'line': i,
@@ -55,12 +59,9 @@ class TranslationValidator:
         issues = []
         lines = content.split('\n')
         
-        # Padrão para tags incompletas
-        incomplete_tag_pattern = r'<(\w+)[^>]*(?<![/>])$'
-        
         for i, line in enumerate(lines, 1):
             # Tag que não fecha
-            if re.search(incomplete_tag_pattern, line):
+            if self._incomplete_tag_pattern.search(line):
                 issues.append({
                     'file': filepath,
                     'line': i,
@@ -90,7 +91,7 @@ class TranslationValidator:
         
         for i, line in enumerate(lines, 1):
             # Link sem fechamento
-            if re.search(r'\[([^\]]+)$', line):
+            if self._link_unclosed_pattern.search(line):
                 issues.append({
                     'file': filepath,
                     'line': i,
@@ -101,7 +102,7 @@ class TranslationValidator:
                 })
             
             # Link sem URL
-            if re.search(r'\]\s*$', line) and '[' in line:
+            if self._link_no_url_pattern.search(line) and '[' in line:
                 issues.append({
                     'file': filepath,
                     'line': i,

@@ -8,4 +8,4 @@ tomli-w>=1.0.0
 language-tool-python
 langdetect
 tqdm
-defusedxml
+defusedxml>=0.7.1

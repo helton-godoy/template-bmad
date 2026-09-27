@@ -14,7 +14,7 @@ sys.path.append(str(project_root / 'translate' / 'scripts'))
 
 from bmad_translate.core.translator import BMADTranslator
 from utils.state_manager import StateManager
-from utils.xml_security import safe_fromstring
+from utils.xml_security import safe_fromstring, XML_PARSE_ERRORS
 
 class AgentTranslator:
     def __init__(self):
@@ -27,7 +27,7 @@ class AgentTranslator:
             # Wrap in dummy root if multiple roots? <agent> should be single root.
             # But xml_string might have whitespace/newlines around it.
             root = safe_fromstring(xml_string.strip())
-        except ET.ParseError as e:
+        except XML_PARSE_ERRORS as e:
             print(f"  ❌ XML Parse Error: {e}")
             return xml_string
 
@@ -116,7 +116,7 @@ class AgentTranslator:
         # Validate XML integrity before saving
         try:
             safe_fromstring(translated_xml.strip())
-        except ET.ParseError as e:
+        except XML_PARSE_ERRORS as e:
             print(f"  ❌ Erro de validação XML: {e} - Mantendo original para evitar quebra")
             return
 

@@ -1,7 +1,6 @@
 #!/usr/bin/env python3
 import os
 import sys
-import xml.etree.ElementTree as ET
 from pathlib import Path
 import re
 
@@ -10,7 +9,7 @@ current_dir = Path(__file__).resolve().parent
 project_root = current_dir.parent.parent
 sys.path.append(str(project_root / 'scripts'))
 
-from utils.xml_security import safe_fromstring
+from utils.xml_security import safe_fromstring, XML_PARSE_ERRORS
 
 def check_agents():
     base_dir = Path('_bmad/bmm/agents')
@@ -33,7 +32,7 @@ def check_agents():
                 # Wrap in fake root if needed? No, agent files have single root <agent>
                 safe_fromstring(xml_content)
                 print(f"✅ {f.name}: Valid XML")
-            except ET.ParseError as e:
+            except XML_PARSE_ERRORS as e:
                 print(f"❌ {f.name}: Invalid XML - {e}")
                 errors += 1
         else:

@@ -30,7 +30,7 @@ class TranslationCache:
         """Calcula hash MD5 do arquivo"""
         try:
             return hashlib.md5(Path(filepath).read_bytes()).hexdigest()
-        except:
+        except Exception:
             return ""
     
     def is_cached(self, filepath: str) -> bool:

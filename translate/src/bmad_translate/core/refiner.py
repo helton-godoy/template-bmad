@@ -407,10 +407,10 @@ class BMADRefiner:
         """
         results = {}
         suffix = self.settings.get_output_suffix()
+        skip_dirs = set(self.settings.get_skip_directories())
         
         # Procura apenas arquivos já traduzidos
         for root, dirs, files in os.walk(base_dir):
-            skip_dirs = set(self.settings.get_skip_directories())
             dirs[:] = [d for d in dirs if d not in skip_dirs]
             
             for file in files:

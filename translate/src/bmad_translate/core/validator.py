@@ -423,7 +423,7 @@ class FileValidator:
         import re
         
         # Procura links [text](url)
-        link_pattern = r'\[([^\]]+)\]\(([^)]+)\)'
+        link_pattern = r'\[([^\]]*)\]\(([^)]*)\)'
         links = re.findall(link_pattern, content)
         
         for text, url in links:

@@ -6,6 +6,7 @@ from unittest.mock import MagicMock, patch
 # This prevents loading heavy C++ libraries that cause Bus Errors in some envs
 mock_argos = MagicMock()
 mock_translate = MagicMock()
+sys.modules['yaml'] = MagicMock()
 sys.modules['argostranslate'] = mock_argos
 sys.modules['argostranslate.package'] = MagicMock()
 sys.modules['argostranslate.translate'] = mock_translate

@@ -4,7 +4,6 @@ Translation Review Helper
 Identifica pares de arquivos original→traduzido para revisão manual
 """
 
-import sys
 from pathlib import Path
 from typing import List, Tuple
 import subprocess

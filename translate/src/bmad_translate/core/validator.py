@@ -423,7 +423,7 @@ class FileValidator:
         import re
         
         # Procura links [text](url)
-        link_pattern = r'\[([^\]]+)\]\(([^)]+)\)'
+        link_pattern = r'\[([^\]]*)\]\(([^)]*)\)'
         links = re.findall(link_pattern, content)
         
         for text, url in links:
@@ -540,9 +540,9 @@ class FileValidator:
         """
         results = []
         extensions = tuple(self.settings.get_supported_extensions())
+        skip_dirs = set(self.settings.get_skip_directories())
         
         for root, dirs, files in os.walk(base_dir):
-            skip_dirs = set(self.settings.get_skip_directories())
             dirs[:] = [d for d in dirs if d not in skip_dirs]
             
             for file in files:

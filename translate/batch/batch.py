@@ -89,9 +89,6 @@ class BatchTranslator:
             except Exception as e:
                 print(f"❌ Erro: {e}")
                 failed_count += 1
-            
-            if i < len(files):
-                time.sleep(0.5)
         
         # Relatório
         print(f"\n\n{'='*70}")

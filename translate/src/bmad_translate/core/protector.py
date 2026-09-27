@@ -4,13 +4,17 @@ Proteção de conteúdo para o sistema de tradução BMAD
 
 import re
 import yaml
-from typing import Dict, List, Tuple, Any
+from typing import Dict, List, Tuple
 from pathlib import Path
 
 
 class ContentProtector:
     """Protege conteúdo técnico durante a tradução."""
     
+    # Regex para pegar o novo formato, tolerando espaços que o tradutor possa adicionar
+    # Ex: BMADPROTECT 000 END
+    _RESTORE_PATTERN = re.compile(r'BMADPROTECT\s*(\d+)\s*(?:END|End|end)')
+
     def __init__(self, settings=None):
         """
         Inicializa o protetor de conteúdo.
@@ -76,23 +80,32 @@ class ContentProtector:
             pattern = pattern_info['pattern']
             
             try:
-                matches = re.finditer(pattern, protected_content, re.MULTILINE)
+                matches = list(re.finditer(pattern, protected_content, re.MULTILINE))
+                if not matches:
+                    continue
                 
-                # Processa de trás para frente para não alterar índices
-                for match in reversed(list(matches)):
+                new_parts = []
+                last_end = 0
+                for match in matches:
                     span = match.span()
-                    original = protected_content[span[0]:span[1]]
+                    # Adiciona o texto antes do match
+                    new_parts.append(protected_content[last_end:span[0]])
+
+                    original = match.group(0)
                     # Formato robusto que sobrevive à tradução: Letras + Números + Letras
                     key = f"BMADPROTECT{count:03d}END"
                     self.placeholders[key] = original
                     self.placeholders[count] = original  # Armazena com índice numérico também
                     
-                    protected_content = (
-                        protected_content[:span[0]] + key + protected_content[span[1]:]
-                    )
+                    new_parts.append(key)
                     count += 1
+                    last_end = span[1]
+
+                # Adiciona o restante do texto
+                new_parts.append(protected_content[last_end:])
+                protected_content = "".join(new_parts)
                     
-            except re.error as e:
+            except re.error:
                 # Ignora padrões inválidos e continua
                 continue
                 
@@ -121,9 +134,7 @@ class ContentProtector:
         # Loop para resolver placeholders aninhados (ex: placeholder dentro de placeholder)
         current_text = protected_text
         for _ in range(10): # Limite de recursão para evitar loops infinitos
-            # Regex para pegar o novo formato, tolerando espaços que o tradutor possa adicionar
-            # Ex: BMADPROTECT 000 END
-            new_text = re.sub(r'BMADPROTECT\s*(\d+)\s*(?:END|End|end)', replace_match, current_text)
+            new_text = self._RESTORE_PATTERN.sub(replace_match, current_text)
             
             if new_text == current_text:
                 return current_text
